@@ -1,4 +1,4 @@
-import './App.scss';
+import './sass/style.scss';
 import Footer from "./components/layout/Footer";
 
 function App() {
