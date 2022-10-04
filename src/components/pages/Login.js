@@ -1,5 +1,9 @@
+import Heading from "../layout/Heading";
+
 export default function Login() {
-    return (
-        <h1>Login</h1>
-    );
+	return (
+		<>
+			<Heading content="Login" />
+		</>
+	);
 }
