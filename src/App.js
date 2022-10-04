@@ -1,10 +1,14 @@
 import './App.scss';
+import Footer from "./components/layout/Footer";
 
 function App() {
   return (
-    <p className="App">
-      Hello there! This is a stupid test text.
-    </p>
+    <>
+      <div className="wrapper">
+        Hello there! This is a stupid test text.
+      </div>
+      <Footer />
+    </>
   );
 }
 
