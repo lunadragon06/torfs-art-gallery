@@ -7,6 +7,7 @@ import {
 import Home from "./components/pages/Home"; 
 import About from "./components/pages/About"; 
 import Contact from "./components/pages/Contact"; 
+import Login from "./components/pages/Login"; 
 import Footer from "./components/layout/Footer";
 import Nav from "./components/layout/Nav";
 
@@ -24,6 +25,9 @@ function App() {
 					</Route>
           <Route path="/contact">
 						<Contact />
+					</Route>
+          <Route path="/login">
+						<Login />
 					</Route>
         </Switch>
       </div>
