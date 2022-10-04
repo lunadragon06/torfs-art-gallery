@@ -9,10 +9,14 @@ $--green: #1e5359;
 $--light-green: #a7d4d9;
 $--white: #ebeff2;
 
+$--default-letter-spacing: .075rem;
 $--primary-font: 'IBM Plex Serif', serif;
 $--secondary-font: 'Inter', sans-serif;
 
+$--bread-text: 14px;
+$--default-layout: 100%;
 $--layout-width: 1280px;
+$--unset: 0;
 
 //form elements 
 $--autofill: #f2faff;
@@ -26,18 +30,18 @@ body {
   background: $--white;
   color: $--black; 
   font-family: $--secondary-font;
-  margin: 0;
+  margin: $--unset;
 }
 
 html,
 body {
-	height: 100%;
+	height: $--default-layout;
 }
 
 #root {
 	display: flex;
 	flex-direction: column;
-	height: 100%;
+	height: $--default-layout;
 }
 
 .wrapper {
@@ -48,8 +52,9 @@ body {
 footer {
   background: $--dark-blue;
   color: $--input;  
-  flex-shrink: 0;
-  font-size: 14px;
+  flex-shrink: $--unset;
+  font-size: $--bread-text;
+  letter-spacing: $--default-letter-spacing;
 	line-height: .5rem;
   padding: 1.5rem;
   text-align: center;
