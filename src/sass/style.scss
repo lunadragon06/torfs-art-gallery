@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/* DESIGN VARIABLES */
+$--black: #011826;
+$--blue: #0557a8;
+$--dark-blue: #071d49;
+$--green: #1e5359;
+$--light-green: #a7d4d9;
+$--white: #ebeff2;
+
+$--primary-font: 'IBM Plex Serif', serif;
+$--secondary-font: 'Inter', sans-serif;
+
+$--layout-width: 1280px;
+
+//form elements 
+$--autofill: #f2faff;
+$--error: #fff3f3;
+$--input: #ffffff;
+$--required: #fb2828; 
+$--success: #54c111;
+
+/* CODE STARTS HERE */
+body {
+  background: $--white;
+  color: $--black; 
+  font-family: $--secondary-font;
+  margin: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.wrapper {
+  font-family: $--primary-font;
+  flex: 1 0 auto;
+}
+
+footer {
+  background: $--dark-blue;
+  color: $--input;  
+  flex-shrink: 0;
+  font-size: 14px;
+	line-height: .5rem;
+  padding: 1.5rem;
+  text-align: center;
+}
