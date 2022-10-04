@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <div className="wrapper">
-        Hello there! This is a stupid test text.
+        <h1>Newest Artwork</h1>
       </div>
       <Footer />
     </>
