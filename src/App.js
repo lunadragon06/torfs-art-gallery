@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <div className="wrapper">
-        <h1>Newest Artwork</h1>
+        <h1>Welcome to Torf's Gallery of Art</h1>
       </div>
       <Footer />
     </>
