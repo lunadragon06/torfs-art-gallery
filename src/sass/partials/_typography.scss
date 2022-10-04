@@ -1,0 +1,23 @@
+h1 {
+    display: grid;
+    font-size: 28px;
+    grid-gap: 20px;
+    grid-template-columns: 100px max-content 100px;
+    grid-template-rows: 25px 0;
+    justify-content: center;
+    text-align: center;
+}
+
+h1:after, h1:before {
+    border-bottom: 1px solid $--dark-blue;
+    content: " ";
+    display: block;
+}
+
+.wordmark {
+    color: $--dark-blue;
+    font-family: $--primary-font;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+}
