@@ -1,5 +1,9 @@
+import Heading from "../layout/Heading";
+
 export default function About() {
-    return (
-        <h1>About</h1>
-    );
+	return (
+		<>
+			<Heading content="About" />
+		</>
+	);
 }
