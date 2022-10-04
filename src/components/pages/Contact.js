@@ -1,5 +1,9 @@
+import Heading from "../layout/Heading";
+
 export default function Contact() {
-    return (
-        <h1>Contact</h1>
-    );
+	return (
+		<>
+			<Heading content="Contact" />
+		</>
+	);
 }
