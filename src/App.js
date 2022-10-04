@@ -16,7 +16,7 @@ function App() {
       <Nav />
       <div className="wrapper">
         <Switch>
-        <Route exact path="/">
+          <Route exact path="/">
 						<Home />
 					</Route>
 					<Route path="/about">
@@ -25,7 +25,7 @@ function App() {
           <Route path="/contact">
 						<Contact />
 					</Route>
-      </Switch>
+        </Switch>
       </div>
       <Footer />
     </Router>
