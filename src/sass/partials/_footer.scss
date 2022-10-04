@@ -1,0 +1,16 @@
+.wrapper {
+    font-family: $--primary-font;
+    flex: 1 0 auto;
+  }
+  
+  footer {
+    background: $--dark-blue;
+    color: $--input;  
+    flex-shrink: $--unset;
+    font-size: $--bread-text;
+    letter-spacing: $--default-letter-spacing;
+      line-height: .5rem;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
