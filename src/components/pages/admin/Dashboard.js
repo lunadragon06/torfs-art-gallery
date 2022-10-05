@@ -18,6 +18,7 @@ export default function Dashboard() {
 						Manage paintings
 					</p>
 			</nav>
+			<button className="logoutbtn" type="submit">Logout</button>
 		</>
 	);
 }
