@@ -5,15 +5,16 @@ h1, h2, h3 {
 h1 {
     display: grid;
     font-size: 28px;
-    grid-gap: 20px;
+    grid-gap: 2rem;
     grid-template-columns: 100px max-content 100px;
-    grid-template-rows: 25px 0;
+    grid-template-rows: 1.5rem 0;
     justify-content: center;
+    margin-bottom: 3rem;
     text-align: center;
 }
 
 h1:after, h1:before {
-    border-bottom: 1px solid $--dark-blue;
+    border-bottom: $--black-border;
     content: " ";
     display: block;
 }
