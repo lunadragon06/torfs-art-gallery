@@ -17,9 +17,15 @@ $--primary-font: 'IBM Plex Serif', serif;
 $--secondary-font: 'Inter', sans-serif;
 
 $--bread-text: 14px;
+$--default-text: 16px;
 $--default-layout: 100%;
 $--layout-width: 1280px;
 $--unset: 0;
+
+$--desktop-screen: 1280px;
+$--laptop-screen: 1024px;
+$--mobile-screen: 600px;
+$--tablet-screen: 991px;
 
 //form elements 
 $--autofill: #f2faff;
