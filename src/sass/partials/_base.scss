@@ -77,6 +77,11 @@ body {
   width: 200px;
 }
 
+.signature {
+  margin-bottom: 2.5rem;
+  width: 125px;
+}
+
 .what, .who {
   margin-bottom: 4rem;
 }
@@ -112,6 +117,7 @@ i {
     order: 2;
   }
   .portrait {
+    height: 100%;
     width: 100%;
   }
 }
