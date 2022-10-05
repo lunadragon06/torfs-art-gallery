@@ -1,5 +1,6 @@
 import Heading from "../layout/Heading";
 import portrait from "../../assets/portrait.jpg";
+import signature from "../../assets/signature.png";
 
 export default function About() {
 	return (
@@ -38,6 +39,7 @@ export default function About() {
                     Environments that Inspire me, are the Sea and Boats/Ships after my 20 Years as a Seaman, as well as Norwegian Mountains and Nature, after Countless Trips as a Dedicated Sports Fisherman.
 				</p>
 			</article>
+			<img className="signature" src={signature} alt="" />
 			</section>
 		</>
 	);
