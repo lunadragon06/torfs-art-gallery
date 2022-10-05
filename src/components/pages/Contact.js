@@ -5,14 +5,20 @@ export default function Contact() {
 		<>
 			<Heading content="Contact" />
 			<form>
-			    <label className="label" htmlFor="fname">
-					Name <span className="reqdot">*</span>
-				</label>
+				<section className="rowform">
+				<div>
+			        <label className="label" htmlFor="fname">
+					    Name <span className="reqdot">*</span>
+				    </label>
                     <input className="input" type="text" name="fname" required />
-			    <label className="label" htmlFor="email">
-					Email <span className="reqdot">*</span>
-				</label>
+				</div>
+				<div>
+			        <label className="label" htmlFor="email">
+					    Email <span className="reqdot">*</span>
+				    </label>
                     <input className="input" type="email" name="email" required />
+				</div>
+				</section>
 			    <label htmlFor="message">
 					Message <span className="reqdot">*</span>
 				</label>
