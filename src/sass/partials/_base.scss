@@ -12,7 +12,8 @@ $--white: #ebeff2;
 $--black-border: 1px solid #011826;
 $--blue-border: 2px solid #071d49;
 
-$--default-letter-spacing: .075rem;
+$--default-letter-spacing: .05rem;
+$--default-line-height: 1.5rem;
 $--primary-font: 'IBM Plex Serif', serif;
 $--secondary-font: 'Inter', sans-serif;
 
@@ -57,10 +58,60 @@ body {
 }
 
 /* ABOUT */
-.bio {
+.about {
+  align-items: center;
   display: flex;
+  flex-direction: row;
+  gap: 9rem;
+  justify-content: center;
+  margin: 0rem 0rem 4rem;
 }
 
-.about {
-  flex: 50%;
+.bio {
+  max-width: 1000px;
+}
+
+.portrait {
+  height: 275px;
+  object-fit: cover;
+  width: 200px;
+}
+
+.what, .who {
+  margin-bottom: 4rem;
+}
+
+article, i {
+  letter-spacing: $--default-letter-spacing;
+  line-height: $--default-line-height;
+}
+
+article {
+  font-size: $--bread-text;
+}
+
+i {
+  font-family: $--primary-font;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: $--tablet-screen) {
+  .about {
+    gap: 5rem;
+  }
+} 
+
+@media only screen and (max-width: $--mobile-screen) {
+  .about {
+    align-items: unset;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0rem 0rem 4rem;
+  }
+  .intro:first-child {
+    order: 2;
+  }
+  .portrait {
+    width: 100%;
+  }
 }
