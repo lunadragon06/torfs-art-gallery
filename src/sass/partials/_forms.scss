@@ -1,13 +1,9 @@
-form {
-    max-width: 500px;
-}
-
 button {
     background: $--blue;
     border: 2px solid $--blue;
     color: $--input;
     cursor: pointer;
-    font-size: 16px;
+    font-size: $--default-text;
     font-weight: bold;
     letter-spacing: .1rem;
     margin: 1rem 0 0;
@@ -16,16 +12,33 @@ button {
     transition: .25s;
     width: 100%;
 }
+
+button:focus {
+    background: $--input;
+    border: $--blue-border;
+    color: $--dark-blue;
+}
   
 button:hover {
     background: $--dark-blue;
     border: $--blue-border;
 }
-  
-button:focus {
-    background: $--input;
-    border: $--blue-border;
-    color: $--dark-blue;
+
+form {
+    max-width: 500px;
+}
+
+input, textarea {
+    border: $--black-border;
+    box-sizing: border-box;
+    display: inline-block; /* is this line necessary? */
+    margin: 1rem 0 2rem;
+    padding: 1rem 1rem;
+    width: $--default-layout;
+}
+
+label {
+    font-weight: bold;
 }
 
 // CONTACT FORM
@@ -45,21 +58,8 @@ textarea {
     resize: none;
 }
 
-//LOGIN FORM
-input, textarea {
-    border: $--black-border;
-    box-sizing: border-box;
-    display: inline-block; /* is this line necessary? */
-    margin: 1rem 0 2rem;
-    padding: 1rem 1rem;
-    width: $--default-layout;
-}
-
-label {
-    font-weight: bold;
-}
-
-@media only screen and (max-width: 600px) {
+/* MEDIA QUERIES */
+@media only screen and (max-width: $--mobile-screen) {
     form {
         max-width: 375px;
     }
