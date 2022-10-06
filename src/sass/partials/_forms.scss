@@ -13,7 +13,7 @@ button {
     width: 100%;
 }
 
-button:focus {
+button:active, button:focus {
     background: $--input;
     border: $--blue-border;
     color: $--dark-blue;
@@ -38,6 +38,23 @@ input, textarea {
     width: $--default-layout;
 }
 
+input[type="file"] {
+    background: $--input;
+}
+
+input[type="file"]:active, input[type="file"]:focus {
+    background: $--light-green;
+}
+
+input[type=text] {
+    font-family: $--secondary-font;
+}
+
+input:active, input:focus {
+    outline: none !important;
+    border: 2px solid $--black;
+  }
+
 label {
     font-weight: bold;
 }
@@ -55,8 +72,29 @@ label {
 }
 
 textarea {
+    font-family: $--secondary-font;
     height: 150px;
     resize: none;
+}
+
+// ADMIN FORM
+.file-input {
+    color: transparent;
+    cursor: pointer;
+}
+
+.file-input::before {
+    color: $--blue;
+    content: url('../../assets/icons/upload.png');
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    margin: 0.25rem 0 -1rem;
+}
+
+.file-input::-webkit-file-upload-button {
+    visibility: hidden;
 }
 
 /* MEDIA QUERIES */
@@ -68,4 +106,4 @@ textarea {
         flex-direction: column;
         gap: 0;
     }
-  }
+}
