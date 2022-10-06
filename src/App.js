@@ -9,6 +9,7 @@ import About from "./components/pages/About";
 import Contact from "./components/pages/Contact"; 
 import Login from "./components/pages/Login"; 
 import Dashboard from "./components/pages/admin/Dashboard"; 
+import Add from "./components/pages/admin/subpages/Add";
 import Footer from "./components/layout/Footer";
 import Nav from "./components/layout/Nav";
 
@@ -32,6 +33,9 @@ function App() {
 					</Route>
           <Route path="/dashboard">
 						<Dashboard />
+					</Route>
+          <Route path="/add">
+						<Add />
 					</Route>
         </Switch>
       </div>
