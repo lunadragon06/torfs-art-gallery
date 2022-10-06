@@ -5,18 +5,7 @@ export default function Dashboard() {
 		<>
 			<Heading content="Dashboard" />
 			<nav className="dashboard">
-					<p>
-						Inbox
-					</p>
-					<p>
-						Enquiries
-					</p>
-					<p>
-						Add new painting
-					</p>
-					<p>
-						Manage paintings
-					</p>
+				
 			</nav>
 			<button className="logoutbtn" type="submit">Logout</button>
 		</>
