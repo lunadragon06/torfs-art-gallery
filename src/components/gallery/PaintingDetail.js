@@ -53,7 +53,7 @@ function PaintingDetail() {
 	return (
 		<>
 			<section className="card">
-			    <img src={painting.image.url} alt={painting.title} />
+			    <img src={painting.image.url} alt={painting.alt} />
 				<article className="painting-content">
 				    <Heading content={painting.title} />
                     <p>Painting no. {painting.id}</p>
