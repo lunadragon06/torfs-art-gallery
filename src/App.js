@@ -12,6 +12,12 @@ import Dashboard from "./components/pages/admin/Dashboard";
 import Add from "./components/pages/admin/subpages/Add";
 import Footer from "./components/layout/Footer";
 import Nav from "./components/layout/Nav";
+//import PaintingList from "./components/gallery/Paintinglist";
+/* 
+<Route path="/gallery">
+	<PaintingList />
+</Route>
+*/
 
 function App() {
   return (
