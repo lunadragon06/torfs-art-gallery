@@ -2,6 +2,7 @@ import { API } from "../../constants/api";
 import axios from "axios";
 import ErrorMessage from "../../common/ErrorMessage";
 import Heading from '../../components/layout/Heading';
+import { Link } from "react-router-dom";
 import Loader from "../layout/Loader";
 import { useParams, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -54,6 +55,7 @@ function PaintingDetail() {
 		<>
 			<section className="card">
 			    <Heading content={painting.title} />
+				<Link to={`/gallery`}>Back to gallery</Link>
 			    <img src={painting.image.url} alt={painting.image.alternativeText} />
 				<article className="painting-content">
                     <p>Painting no. {painting.id}</p>
