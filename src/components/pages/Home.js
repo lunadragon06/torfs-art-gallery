@@ -1,7 +1,10 @@
+import { API } from "../../constants/api";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Heading from "../layout/Heading";
+
+const results = API;
 
 export default function Home() {
 	const [paintings, setPaintings] = useState([]);
@@ -10,7 +13,7 @@ export default function Home() {
 
 	useEffect(() => {
 		const loadPaintings = async()=> {
-			const response = await axios.get('https://torfs-art-gallery.herokuapp.com/products')
+			const response = await axios.get(results);
 			setPaintings(response.data);
 		}
 		loadPaintings();
@@ -46,10 +49,10 @@ export default function Home() {
 						}, 100);
 					   }}
 			    />
-				{suggestions && suggestions.map((suggestions, i) =>
-				<Link to ={`painting/${suggestions.id}`} className="result" key={i} 
-				      onClick={() => onSuggestHandler(suggestions.title)}>
-						{suggestions.title}
+				{suggestions && suggestions.map((suggestion, i) =>
+				<Link to ={`painting/${suggestion.id}`} className="result" key={i} 
+				      onClick={() => onSuggestHandler(suggestion.title)}>
+						{suggestion.title}
 				</Link>
 				)}
 			</div>
