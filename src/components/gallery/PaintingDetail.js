@@ -3,7 +3,7 @@ import axios from "axios";
 import ErrorMessage from "../../common/ErrorMessage";
 import Heading from '../../components/layout/Heading';
 import Loader from "../layout/Loader";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function PaintingDetail() {
@@ -13,7 +13,7 @@ function PaintingDetail() {
 
     const http = API;
 
-    let history = useNavigate();
+    let history = useHistory();
 
     const { id } = useParams();
 
@@ -53,9 +53,9 @@ function PaintingDetail() {
 	return (
 		<>
 			<section className="card">
+			    <Heading content={painting.title} />
 			    <img src={painting.image.url} alt={painting.image.alternativeText} />
 				<article className="painting-content">
-				    <Heading content={painting.title} />
                     <p>Painting no. {painting.id}</p>
 					<span>{painting.category}</span>
 				</article>
