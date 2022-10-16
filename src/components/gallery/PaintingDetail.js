@@ -56,6 +56,7 @@ function PaintingDetail() {
 			<section className="card">
 			    <Heading content={painting.title} />
 				<Link to={`/gallery`}>Back to gallery</Link>
+				
 			    <img src={painting.image.url} alt={painting.image.alternativeText} />
 				<article className="painting-content">
                     <p>Painting no. {painting.id}</p>
