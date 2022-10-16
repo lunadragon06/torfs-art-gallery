@@ -13,9 +13,8 @@ function PaintingItem({ id, title, image, alt }) {
 }
 
 PaintingItem.propTypes = {
-	alt: PropTypes.string.isRequired,
 	id: PropTypes.number.isRequired,
-	image: PropTypes.string.isRequired,
+	image: PropTypes.any.isRequired,
 	title: PropTypes.string.isRequired,
 };
 
