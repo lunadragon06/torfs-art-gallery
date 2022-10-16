@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function PaintingItem({ id, title, category, image }) {
 	return (
 		<article className="painting">
-		    <Link to={`#0`}>
+		    <Link to={`detail/${id}`}>
 				<img src={image.url} alt={image.alternativeText} width="100%" />
 				<h2>{title}</h2> <p>Painting no. {id}</p>
 				<span>{category}</span>
