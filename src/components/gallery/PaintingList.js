@@ -1,7 +1,6 @@
 import { API } from "../../constants/api";
 import axios from "axios";
 import ErrorMessage from "../../common/ErrorMessage";
-//import PaintingDetail from "./PaintingDetail";
 import PaintingItem from "./PaintingItem";
 import Heading from "../layout/Heading";
 import Loader from "../layout/Loader";
