@@ -12,14 +12,9 @@ import Dashboard from "./components/pages/admin/Dashboard";
 import Add from "./components/pages/admin/subpages/Add";
 import Footer from "./components/layout/Footer";
 import Nav from "./components/layout/Nav";
-//import PaintingDetail from "./components/gallery/PaintingDetail"; 
+import PaintingDetail from "./components/gallery/PaintingDetail"; 
 import PaintingList from "./components/gallery/PaintingList";
 
-/* 
-<Route path="/detail/:id">
-	<PaintingDetail />
-</Route>
-*/
 
 function App() {
   return (
@@ -33,6 +28,9 @@ function App() {
 					<Route path="/gallery">
 						<PaintingList />
 					</Route>
+          <Route path="/detail/:id">
+	          <PaintingDetail />
+          </Route>
           <Route path="/about">
 						<About />
 					</Route>
