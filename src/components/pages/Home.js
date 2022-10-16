@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Heading from "../layout/Heading";
 
@@ -46,10 +47,10 @@ export default function Home() {
 					   }}
 			    />
 				{suggestions && suggestions.map((suggestions, i) =>
-				<div className="result" key={i} 
-				     onClick={() => onSuggestHandler(suggestions.title)}>
+				<Link to ={`painting/${suggestions.id}`} className="result" key={i} 
+				      onClick={() => onSuggestHandler(suggestions.title)}>
 						{suggestions.title}
-				</div>
+				</Link>
 				)}
 			</div>
 		</>
