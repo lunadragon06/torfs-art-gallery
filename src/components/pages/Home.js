@@ -6,23 +6,27 @@ export default function Home() {
 	const [paintings, setPaintings] = useState([]);
 	const [text, setText] = useState('');
 	const [suggestions, setSuggestions] = useState([]);
+
 	useEffect(() => {
 		const loadPaintings = async()=> {
 			const response = await axios.get('https://torfs-art-gallery.herokuapp.com/products')
-			setPaintings(response.data)
+			setPaintings(response.data);
 		}
 		loadPaintings();
 
 	}, [])
+	const onSuggestHandler = (text)=> {
+		setText(text);
+		setSuggestions([]);
+	}
 	const onChangeHandler = (text)=> {
 		let matches = []
 		if (text.length>0) {
 			matches = paintings.filter(paint=> {
-				return paint.title.match(text)
+				return paint.title.match(text);
 			})
 		}
-		console.log('matches', matches)
-		setSuggestions(matches)
+		setSuggestions(matches);
 		setText(text);
 	}
 
@@ -34,10 +38,18 @@ export default function Home() {
 			           type="text" 
 				       placeholder="Search for paintings .."
 					   onChange={e=>onChangeHandler(e.target.value)} 
-					   value={text}
+					   value={text} 
+					   onBlur={()=>{ 
+						setTimeout(() => {
+							setSuggestions([])
+						}, 100);
+					   }}
 			    />
 				{suggestions && suggestions.map((suggestions, i) =>
-				<div className="result" key={i}>{suggestions.title}</div>
+				<div className="result" key={i} 
+				     onClick={() => onSuggestHandler(suggestions.title)}>
+						{suggestions.title}
+				</div>
 				)}
 			</div>
 		</>
