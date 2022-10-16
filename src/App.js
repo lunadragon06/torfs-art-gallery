@@ -28,7 +28,7 @@ function App() {
 					<Route path="/gallery">
 						<PaintingList />
 					</Route>
-          <Route path="/detail/:id">
+          <Route path="/painting/:id">
 	          <PaintingDetail />
           </Route>
           <Route path="/about">
