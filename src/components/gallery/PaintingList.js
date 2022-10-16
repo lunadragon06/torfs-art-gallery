@@ -45,7 +45,7 @@ function PaintingList() {
 		<>
 		    <Heading content="Gallery" />
 		    <section className="gallery">
-			    {paintings.map(function (painting) {
+			    {paintings.slice(0).reverse().map(function (painting) {
 				    const { id, title, image, category } = painting;
 				    return <PaintingItem key={id} id={id} title={title} image={image} category={category} />;
 			    })}
