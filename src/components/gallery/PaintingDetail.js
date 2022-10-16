@@ -60,6 +60,7 @@ function PaintingDetail() {
 				<article className="painting-content">
                     <p>Painting no. {painting.id}</p>
 					<span>{painting.category}</span>
+					<p>{painting.description}</p>
 				</article>
 			</section>
 		</>
