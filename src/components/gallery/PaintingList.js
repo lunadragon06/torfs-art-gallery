@@ -47,8 +47,8 @@ function PaintingList() {
 		    <Heading content="Gallery" />
 		    <section className="gallery">
 			    {paintings.map(function (painting) {
-				    const { id, title, image } = painting;
-				    return <PaintingItem key={id} id={id} title={title} image={image} />;
+				    const { id, title, image, category } = painting;
+				    return <PaintingItem key={id} id={id} title={title} image={image} category={category} />;
 			    })}
 		    </section>
 		</>
