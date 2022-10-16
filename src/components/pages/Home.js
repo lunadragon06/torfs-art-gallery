@@ -1,8 +1,9 @@
 import { API } from "../../constants/api";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
 import Heading from "../layout/Heading";
+import { FaSearch } from 'react-icons/fa';
+import { useEffect, useState } from "react";
 
 const results = API;
 
@@ -38,6 +39,12 @@ export default function Home() {
 		<>
 			<Heading content="Home" />
 			<div className="searchcont">
+			    <FaSearch className="icon"
+                          style={{
+						  left: '16px',
+                          position: 'relative',
+						  top: '54px',
+                }} />
 			    <input className="searchbar" 
 			           type="text" 
 				       placeholder="Search for paintings .."
@@ -50,10 +57,10 @@ export default function Home() {
 					   }}
 			    />
 				{suggestions && suggestions.map((suggestion, i) =>
-				<Link to ={`painting/${suggestion.id}`} className="result" key={i} 
-				      onClick={() => onSuggestHandler(suggestion.title)}>
-						{suggestion.title}
-				</Link>
+				    <Link to ={`painting/${suggestion.id}`} className="result" key={i} 
+				          onClick={() => onSuggestHandler(suggestion.title)}>
+						    {suggestion.title}
+				    </Link>
 				)}
 			</div>
 		</>
