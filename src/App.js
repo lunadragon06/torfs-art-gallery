@@ -13,12 +13,9 @@ import Add from "./components/pages/admin/subpages/Add";
 import Footer from "./components/layout/Footer";
 import Nav from "./components/layout/Nav";
 //import PaintingDetail from "./components/gallery/PaintingDetail"; 
-//import PaintingList from "./components/gallery/PaintingList";
+import PaintingList from "./components/gallery/PaintingList";
 
 /* 
-<Route path="/gallery">
-	<PaintingList />
-</Route>
 <Route path="/detail/:id">
 	<PaintingDetail />
 </Route>
@@ -33,7 +30,10 @@ function App() {
           <Route exact path="/">
 						<Home />
 					</Route>
-					<Route path="/about">
+					<Route path="/gallery">
+						<PaintingList />
+					</Route>
+          <Route path="/about">
 						<About />
 					</Route>
           <Route path="/contact">
