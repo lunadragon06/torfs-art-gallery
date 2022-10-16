@@ -5,7 +5,7 @@ import Heading from "../layout/Heading";
 export default function Home() {
 	const [paintings, setPaintings] = useState([]);
 	const [text, setText] = useState('');
-	const [suggestions, setSuggestions] = useState([])
+	const [suggestions, setSuggestions] = useState([]);
 	useEffect(() => {
 		const loadPaintings = async()=> {
 			const response = await axios.get('https://torfs-art-gallery.herokuapp.com/products')
@@ -37,7 +37,7 @@ export default function Home() {
 					   value={text}
 			    />
 				{suggestions && suggestions.map((suggestions, i) =>
-				<div className="results" key={i}>{suggestions.title}</div>
+				<div className="result" key={i}>{suggestions.title}</div>
 				)}
 			</div>
 		</>
