@@ -57,13 +57,28 @@ function PaintingDetail() {
 			    <Heading content={painting.title} />
 				<Link to={`/gallery`}>Back to gallery</Link>
 				<article className="painting-content">
-			    <img src={painting.image.url} 
-				     alt={painting.image.alternativeText} 
-					 onContextMenu={(e) => {
-						e.preventDefault(); 
-					}} 
-				/>
-
+				{/* MODAL START */}
+				<input type="checkbox" id="modal" />
+				<label htmlFor="modal" className="premodal">	
+			        <img src={painting.image.url} 
+				         alt={painting.image.alternativeText} 
+					     onContextMenu={(e) => {
+						 e.preventDefault(); 
+					    }} 
+				    />
+				</label>
+				<label htmlFor="modal" className="modal-background" />
+				<div className="modal">
+				    <label htmlFor="modal">
+					    <img src={painting.image.url} 
+				             alt={painting.image.alternativeText} 
+					         onContextMenu={(e) => {
+						        e.preventDefault(); 
+					        }} 
+				        />
+				    </label>
+				</div>
+				{/* MODAL END */}
 				<div className="infobox">
                     <p>Painting no. {painting.id}</p>
 					<span>{painting.category}</span>
