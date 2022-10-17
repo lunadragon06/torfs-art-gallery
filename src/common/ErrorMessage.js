@@ -1,7 +1,10 @@
+import { FaSadTear } from 'react-icons/fa';
 import PropTypes from "prop-types";
 
 export default function ErrorMessage({ message }) {
-	return <div className="errormsg">{message}</div>;
+	return <div className="errormsg">
+		{message} <FaSadTear />
+	</div>;
 }
 
 ErrorMessage.propTypes = {
