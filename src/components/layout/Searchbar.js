@@ -54,12 +54,14 @@ export default function Searchbar() {
 						}, 100);
 					   }}
 			    />
+                <div className="tab">
 				{suggestions && suggestions.map((suggestion, i) =>
 				    <Link to ={`painting/${suggestion.id}`} className="result" key={i} 
 				          onClick={() => onSuggestHandler(suggestion.title)}>
 						    {suggestion.title}
 				    </Link>
 				)}
+                </div>
 			</div>
 		</>
 	);
