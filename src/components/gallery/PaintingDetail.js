@@ -53,19 +53,20 @@ function PaintingDetail() {
 
 	return (
 		<>
-			<section className="card">
-			    <Heading content={painting.title} />
-				<Link to={`/gallery`}>Back to gallery</Link>
-				<article className="painting-content">
+			<Heading content={painting.title} />
+			<section className="painting">
+				<article className="painting-image">
 				{/* MODAL START */}
 				<input type="checkbox" id="modal" />
-				<label htmlFor="modal" className="premodal">	
+				<label htmlFor="modal" className="premodal">
+					<div className="img-hover-zoom">	
 			        <img src={painting.image.url} 
 				         alt={painting.image.alternativeText} 
 					     onContextMenu={(e) => {
 						 e.preventDefault(); 
 					    }} 
 				    />
+					</div>
 				</label>
 				<label htmlFor="modal" className="modal-background" />
 				<div className="modal">
@@ -79,13 +80,16 @@ function PaintingDetail() {
 				    </label>
 				</div>
 				{/* MODAL END */}
-				<div className="infobox">
-                    <p>Painting no. {painting.id}</p>
-					<span>{painting.category}</span>
+				</article>
+				<article className="painting-content">
+					<div className="painting-titles">
+                        <h2><b>Painting no.</b> {painting.id}</h2>
+					    <span className="category-tag">{painting.category}</span>
+					</div>
 					<p>{painting.description}</p>
-				</div>
 				</article>
 			</section>
+			<Link to={`/gallery`}>Back to gallery</Link>
 		</>
 	);
 }
