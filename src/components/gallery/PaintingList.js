@@ -4,6 +4,7 @@ import ErrorMessage from "../../common/ErrorMessage";
 import PaintingItem from "./PaintingItem";
 import Heading from "../layout/Heading";
 import Loader from "../layout/Loader";
+import Searchbar from "../layout/Searchbar";
 import {useState, useEffect} from "react";
 
 const api = API;
@@ -44,6 +45,7 @@ function PaintingList() {
     return (
 		<>
 		    <Heading content="Gallery" />
+			<Searchbar />
 		    <section className="galleri">
 				<article className="gallery__list">
 			        {paintings.slice(0).reverse().map(function (painting) {
