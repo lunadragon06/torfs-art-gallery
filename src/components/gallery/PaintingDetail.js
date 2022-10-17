@@ -55,18 +55,22 @@ function PaintingDetail() {
 		<>
 			<Heading content={painting.title} />
 			<section className="painting">
+				<div className="breadcrumb">
+			        <Link to={`/gallery`}>
+				        Gallery  
+			        </Link>
+					<span className="current-link"> / <b> {painting.title}</b></span>
+				</div>
 				<article className="painting-image">
 				{/* MODAL START */}
 				<input type="checkbox" id="modal" />
 				<label htmlFor="modal" className="premodal">
-					<div className="img-hover-zoom">	
 			        <img src={painting.image.url} 
 				         alt={painting.image.alternativeText} 
 					     onContextMenu={(e) => {
 						 e.preventDefault(); 
 					    }} 
 				    />
-					</div>
 				</label>
 				<label htmlFor="modal" className="modal-background" />
 				<div className="modal">
@@ -89,7 +93,6 @@ function PaintingDetail() {
 					<p>{painting.description}</p>
 				</article>
 			</section>
-			<Link to={`/gallery`}>Back to gallery</Link>
 		</>
 	);
 }
