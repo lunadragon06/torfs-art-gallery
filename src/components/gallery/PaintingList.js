@@ -44,11 +44,13 @@ function PaintingList() {
     return (
 		<>
 		    <Heading content="Gallery" />
-		    <section className="gallery">
-			    {paintings.slice(0).reverse().map(function (painting) {
-				    const { id, title, image, category } = painting;
-				    return <PaintingItem key={id} id={id} title={title} image={image} category={category} />;
-			    })}
+		    <section className="galleri">
+				<article className="gallery__list">
+			        {paintings.slice(0).reverse().map(function (painting) {
+				        const { id, title, image, category } = painting;
+				        return <PaintingItem key={id} id={id} title={title} image={image} category={category} />;
+			        })}
+				</article>
 		    </section>
 		</>
     );
