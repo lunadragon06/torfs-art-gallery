@@ -4,11 +4,9 @@ import { Link } from "react-router-dom";
 function PaintingItem({ id, title, category, image }) {
 	return (
 		    <span>
-				<figure>
-		            <Link to={`painting/${id}`}>
+		            <Link className="link" to={`painting/${id}`}>
 				        <img src={image.url} alt={image.alternativeText} width="100%" />
 		            </Link>
-				</figure>
 			</span>
 	);
 }
