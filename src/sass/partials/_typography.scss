@@ -31,3 +31,18 @@ h2 {
     font-weight: bold;
     text-decoration: none;
 }
+
+.breadcrumb {
+    margin-bottom: 1.5rem;
+}
+
+.breadcrumb a {
+    padding: 0rem 0rem;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.breadcrumb a:hover {
+    font-weight: bold;
+    color: $--link-blue;
+}
