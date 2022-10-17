@@ -56,12 +56,19 @@ function PaintingDetail() {
 			<section className="card">
 			    <Heading content={painting.title} />
 				<Link to={`/gallery`}>Back to gallery</Link>
-				
-			    <img src={painting.image.url} alt={painting.image.alternativeText} />
 				<article className="painting-content">
+			    <img src={painting.image.url} 
+				     alt={painting.image.alternativeText} 
+					 onContextMenu={(e) => {
+						e.preventDefault(); 
+					}} 
+				/>
+
+				<div className="infobox">
                     <p>Painting no. {painting.id}</p>
 					<span>{painting.category}</span>
 					<p>{painting.description}</p>
+				</div>
 				</article>
 			</section>
 		</>
