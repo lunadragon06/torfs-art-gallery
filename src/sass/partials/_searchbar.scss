@@ -20,10 +20,14 @@ input::placeholder {
 .result {
     background: white;
     border: $--black-border;
+    border-bottom: 0;
     display: flex;
     flex-direction: column;
-    margin-top: -0.75rem;
     padding: 1rem 1.5rem 1.5rem 3rem;
+}
+
+.result:last-child {
+    border-bottom: 1px solid $--black;
 }
 
 .result:hover {
@@ -31,6 +35,7 @@ input::placeholder {
 }
 
 .tab {
+    margin-top: -2rem;
     position: absolute;
     width: 1000px;
 }
