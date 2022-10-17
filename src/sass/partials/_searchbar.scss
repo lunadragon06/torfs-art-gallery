@@ -29,3 +29,8 @@ input::placeholder {
 .result:hover {
     background: $--light-green;
 }
+
+.tab {
+    position: absolute;
+    width: 1000px;
+}
