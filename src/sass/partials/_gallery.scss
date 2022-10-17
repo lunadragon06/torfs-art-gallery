@@ -22,3 +22,31 @@
     background: $--light-green;
     padding: .5rem 1.5rem;
 }
+
+/* */
+.galleri {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.galleri > .gallery__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+    grid-template-rows: repeat(3, 140px);
+    grid-gap: 0;
+}
+  
+.galleri > .gallery__list > span > figure {
+    height: 100%;
+}
+  
+.galleri > .gallery__list > span > figure > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.galleri > .gallery__list > span {
+    grid-column: span 1;
+    grid-row: span 2;
+}
