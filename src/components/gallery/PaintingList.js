@@ -1,9 +1,9 @@
 import { API } from "../../constants/api";
 import axios from "axios";
 import ErrorMessage from "../../common/ErrorMessage";
-import PaintingItem from "./PaintingItem";
 import Heading from "../layout/Heading";
 import Loader from "../layout/Loader";
+import PaintingItem from "./PaintingItem";
 import Searchbar from "../layout/Searchbar";
 import {useState, useEffect} from "react";
 
@@ -39,7 +39,9 @@ function PaintingList() {
 	}
 
 	if (error) {
-		return <ErrorMessage message={`Error: ${error}`} />;
+		return <>
+		            <ErrorMessage message={`Error: ${error}.`} />
+				</>
 	}
 
     return (
