@@ -32,12 +32,8 @@
 .galleri > .gallery__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
-    grid-template-rows: repeat(3, 140px);
-    grid-gap: 0;
-}
-  
-.galleri > .gallery__list > span > figure {
-    height: 100%;
+    grid-template-rows: repeat(3, 150px);
+    grid-gap: 2rem;
 }
   
 .galleri > .gallery__list > span > figure > img {
@@ -49,4 +45,13 @@
 .galleri > .gallery__list > span {
     grid-column: span 1;
     grid-row: span 2;
+}
+
+.link {
+    padding: 0;
+}
+
+.link img {
+    height: 100%;
+    object-fit: cover;
 }
