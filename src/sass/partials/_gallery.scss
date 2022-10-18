@@ -3,46 +3,37 @@
     max-width: 1000px;
 }
 
-.galleri > .gallery__list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
-    grid-template-rows: repeat(1, 150px);
-    grid-gap: 2.5rem;
-}
-  
-.galleri > .gallery__list > span > figure > img {
-    object-fit: cover;
-    width: 100%;
-    height: 100vh;
-}
-  
-.galleri > .gallery__list > span {
-    grid-column: span 1;
-    grid-row: span 2;
+.gallery__list {
+    display:inline-block;    
+    margin-right: auto;    
+    margin-left: auto;  
+    line-height: 0;       
+    -webkit-column-count: 5;    
+    -webkit-column-gap: 0px;    
+    -moz-column-count: 5;
+    -moz-column-gap: 0px;
+     column-count: 5;    
+     column-gap: 0px;   
 }
 
-.link {
-    padding: 0;
-}
-
-.link img {
-    height: 100%;
-    object-fit: cover;
+.gallery-list img {
+    width: 100% !important;    
+    height: auto !important;  
 }
 
 /* Gallery zoom-in effect on hover */
 .img-hover-zoom {
-    height: auto; 
+    height: 100%; 
     overflow: hidden; 
 }
   
 .img-hover-zoom img {
     transition: transform 1s, filter 2s ease-in-out;
-    transform: scale(1.1);
+    transform: scale(1.24);
 }
   
 .img-hover-zoom:hover img {
-    transform: scale(1);
+    transform: scale(1.06);
 }
 
 /* PAINTING DETAIL PAGE */ 
