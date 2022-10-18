@@ -11,9 +11,9 @@
 }
   
 .galleri > .gallery__list > span > figure > img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
+    width: 100%;
+    height: 100vh;
 }
   
 .galleri > .gallery__list > span {
@@ -32,16 +32,17 @@
 
 /* Gallery zoom-in effect on hover */
 .img-hover-zoom {
-    height: 300px; 
+    height: auto; 
     overflow: hidden; 
 }
   
 .img-hover-zoom img {
-    transition: transform .5s ease;
+    transition: transform 1s, filter 2s ease-in-out;
+    transform: scale(1.1);
 }
   
 .img-hover-zoom:hover img {
-    transform: scale(1.5);
+    transform: scale(1);
 }
 
 /* PAINTING DETAIL PAGE */ 
