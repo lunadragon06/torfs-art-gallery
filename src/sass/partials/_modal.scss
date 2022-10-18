@@ -34,7 +34,7 @@ input[type="checkbox"]:checked ~ .modal-background {
   margin: auto;	
   height: auto;
   max-width: 1000px;
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
   transform: translate(0%, 10%);
