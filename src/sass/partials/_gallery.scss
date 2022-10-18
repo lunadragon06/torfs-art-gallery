@@ -32,8 +32,8 @@
 .galleri > .gallery__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
-    grid-template-rows: repeat(3, 150px);
-    grid-gap: 2rem;
+    grid-template-rows: repeat(1, 150px);
+    grid-gap: 2rem 2.5rem;
 }
   
 .galleri > .gallery__list > span > figure > img {
