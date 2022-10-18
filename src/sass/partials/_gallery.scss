@@ -3,39 +3,6 @@
     max-width: 1000px;
 }
 
-.gallery__list {
-    display:inline-block;    
-    margin-right: auto;    
-    margin-left: auto;  
-    line-height: 0;       
-    -webkit-column-count: 5;    
-    -webkit-column-gap: 0px;    
-    -moz-column-count: 5;
-    -moz-column-gap: 0px;
-     column-count: 5;    
-     column-gap: 0px;   
-}
-
-.gallery-list img {
-    width: 100% !important;    
-    height: auto !important;  
-}
-
-/* Gallery zoom-in effect on hover */
-.img-hover-zoom {
-    height: 100%; 
-    overflow: hidden; 
-}
-  
-.img-hover-zoom img {
-    transition: transform 1s, filter 2s ease-in-out;
-    transform: scale(1.24);
-}
-  
-.img-hover-zoom:hover img {
-    transform: scale(1.06);
-}
-
 /* PAINTING DETAIL PAGE */ 
 .painting {
     display: flex;
