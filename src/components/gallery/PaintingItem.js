@@ -3,19 +3,15 @@ import { Link } from "react-router-dom";
 
 function PaintingItem({ id, image }) {
 	return (
-		    <span>
-		            <Link className="link" to={`painting/${id}`}>
-						<div className="img-hover-zoom">
-				            <img src={image.url} 
-							     alt={image.alternativeText} 
-								 width="100%" 			     
-								 onContextMenu={(e) => {
-									e.preventDefault(); 
-								}} 
-							/>
-						</div>
+		            <Link className="img" to={`painting/${id}`}>
+				        <img src={image.url} 
+							 alt={image.alternativeText} 
+							 width="300px"		     
+							 onContextMenu={(e) => {
+								e.preventDefault(); 
+							}} 
+						/>
 		            </Link>
-			</span>
 	);
 }
 
