@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-function PaintingItem({ id, title, category, image }) {
+function PaintingItem({ id, image }) {
 	return (
 		    <span>
 		            <Link className="link" to={`painting/${id}`}>
