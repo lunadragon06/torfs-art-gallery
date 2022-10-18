@@ -7,7 +7,6 @@ export default function Home() {
 		<>
 			<Heading content="Home" />
 			<Searchbar />
-			
 		</>
 	);
 }
