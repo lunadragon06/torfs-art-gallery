@@ -6,7 +6,7 @@ export default function Home() {
 
 	return (
 		<>
-			<Heading content="Home" />
+			<Heading content="Newest artwork" />
 			<Slider />
 			<Searchbar />
 		</>
