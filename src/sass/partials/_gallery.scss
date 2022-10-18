@@ -1,29 +1,3 @@
-.painting {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 768px;
-}
-
-.painting-content {
-    background: white;
-    margin-top: -.4rem;
-    padding: 1.1rem 2rem 3rem;
-}
-
-.painting-titles {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.category-tag {
-    background: $--light-green;
-    padding: .5rem 1.5rem;
-}
-
-/* */
 .galleri {
     margin: 0 auto;
     max-width: 1000px;
@@ -54,4 +28,44 @@
 .link img {
     height: 100%;
     object-fit: cover;
+}
+
+/* Gallery zoom-in effect on hover */
+.img-hover-zoom {
+    height: 300px; 
+    overflow: hidden; 
+}
+  
+.img-hover-zoom img {
+    transition: transform .5s ease;
+}
+  
+.img-hover-zoom:hover img {
+    transform: scale(1.5);
+}
+
+/* PAINTING DETAIL PAGE */ 
+.painting {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 768px;
+}
+
+.painting-content {
+    background: white;
+    margin-top: -.4rem;
+    padding: 1.1rem 2rem 3rem;
+}
+
+.painting-titles {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.category-tag {
+    background: $--light-green;
+    padding: .5rem 1.5rem;
 }
