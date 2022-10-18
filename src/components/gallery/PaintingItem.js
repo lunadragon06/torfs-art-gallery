@@ -5,7 +5,9 @@ function PaintingItem({ id, title, category, image }) {
 	return (
 		    <span>
 		            <Link className="link" to={`painting/${id}`}>
-				        <img src={image.url} alt={image.alternativeText} width="100%" />
+						<div className="img-hover-zoom">
+				            <img src={image.url} alt={image.alternativeText} width="100%" />
+						</div>
 		            </Link>
 			</span>
 	);
