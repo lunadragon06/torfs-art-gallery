@@ -1,6 +1,7 @@
 import Heading from "../layout/Heading";
 import portrait from "../../assets/portrait.jpg";
 import signature from "../../assets/signature.png";
+import SubHeading from "../layout/SubHeading";
 
 export default function About() {
 	return (
@@ -18,7 +19,7 @@ export default function About() {
 				</div>
 			</article>
 			<article className="who">
-				<h2>Who am I?</h2>
+			    <SubHeading subcontent="Who Am I?" />
 				<p>
 				    Unfortunately (for me), I am Not a Professionally Educated Artist, but just Only Attended a few Painting Courses led by Skilled Artists. Nor can I say that I Sticks to any of the Techniques and Styles Taught on those Courses I have Participated in, but I have received some useful tips that I use when needed and when it fits into my work.
                 </p>
@@ -30,7 +31,7 @@ export default function About() {
 				</p>
 			</article>
 			<article className="what">
-				<h2>What inspires me</h2>
+			    <SubHeading subcontent="What inspires me" />
 				<p>
 				    Some of which are Painted with Acrylic, while the Vast Majority are Oil Paintings on Canvas. My Preferred Style, when I Paint, is Figurative Maritime Motifs, then come Other Types of Motifs with Water and Waterways as an Important Component, but Sometimes I also may Try along Testing with Shape and Color.
 				</p>
