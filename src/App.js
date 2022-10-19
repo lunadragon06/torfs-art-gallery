@@ -1,3 +1,4 @@
+// import { AuthProvider } from "./context/authContext";
 import './sass/style.scss';
 import { 
   BrowserRouter as Router, 
@@ -9,15 +10,14 @@ import About from "./components/pages/About";
 import Contact from "./components/pages/Contact"; 
 import Login from "./components/pages/Login"; 
 import Dashboard from "./components/pages/admin/Dashboard"; 
-import Add from "./components/pages/admin/subpages/Add";
 import Footer from "./components/layout/Footer";
 import Nav from "./components/layout/Nav";
 import PaintingDetail from "./components/gallery/PaintingDetail"; 
 import PaintingList from "./components/gallery/PaintingList";
 
-
-function App() {
+function App() {  
   return (
+    /* <AuthProvider> */
     <Router>
       <Nav />
       <div className="wrapper">
@@ -43,13 +43,11 @@ function App() {
           <Route path="/dashboard">
 						<Dashboard />
 					</Route>
-          <Route path="/add">
-						<Add />
-					</Route>
         </Switch>
       </div>
       <Footer />
     </Router>
+    /* </AuthProvider> */
   );
 }
 
