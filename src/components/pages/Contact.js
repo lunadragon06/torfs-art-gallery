@@ -2,6 +2,13 @@
 import Heading from "../layout/Heading";
 
 export default function Contact() {
+	/* 
+	function SendEmail(e) {
+		e.preventDefault();
+
+		emailjs.sendForm(); 
+	}
+	*/
 	return (
 		<>
 			<Heading content="Contact" />
