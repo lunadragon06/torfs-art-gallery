@@ -1,4 +1,4 @@
-button {
+button, .sendbtn {
     background: $--blue;
     border: 2px solid $--blue;
     color: $--input;
@@ -19,7 +19,7 @@ button:active, button:focus {
     color: $--dark-blue;
 }
   
-button:hover {
+button:hover, .sendbtn:hover {
     background: $--dark-blue;
     border: $--blue-border;
 }
