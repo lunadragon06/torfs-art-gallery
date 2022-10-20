@@ -22,8 +22,8 @@ export default function Contact() {
 			    <label htmlFor="message">
 					Message <span className="reqdot">*</span>
 				</label>
-			        <textarea id="msg" name="msg"></textarea>
-                <button className="sendbtn" type="submit">Send</button>
+			        <textarea id="msg" name="msg" required></textarea>
+				<input type="submit" value="Send" className="sendbtn" />
             </form>
 		</>
 	);
