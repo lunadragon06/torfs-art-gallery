@@ -3,16 +3,24 @@ import Heading from "../layout/Heading";
 
 export default function Contact() {
 	/* 
-	function SendEmail(e) {
+	function sendEmail(e) {
 		e.preventDefault();
 
-		emailjs.sendForm(); 
+		emailjs.sendForm(
+			"service_k7mcnpl", 
+		    "template_yjqrb65",
+			e.target, 
+			"jiyj71ORX3nS0yNsf"
+		).then(res=> {
+			console.log(res);
+		}).catch(err=> console.log(err));  
 	}
 	*/
 	return (
 		<>
 			<Heading content="Contact" />
 			<form>
+			{/* <form onSubmit={sendEmail}> */}
 				<section className="rowform">
 				<div>
 			        <label className="label" htmlFor="fname">
