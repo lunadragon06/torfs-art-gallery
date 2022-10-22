@@ -33,7 +33,7 @@ form {
     max-width: 500px;
 }
 
-input, textarea {
+input, select, textarea {
     border: $--black-border;
     box-sizing: border-box;
     display: inline-block; /* is this line necessary? */
@@ -78,6 +78,16 @@ textarea {
     font-family: $--secondary-font;
     height: 150px;
     resize: none;
+}
+
+// ENQUIRY 
+.enquiry {
+    background: white;
+    padding: 1rem 3rem 4rem;
+}
+
+select {
+    font-family: $--secondary-font !important;
 }
 
 // ADMIN FORM
