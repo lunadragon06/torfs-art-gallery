@@ -11,6 +11,7 @@ export default function Contact() {
 			e.target, 
 			"jiyj71ORX3nS0yNsf"
 		).then(res=> {
+			alert("Your message has been sent!");
 			console.log(res);
 		}).catch(err=> console.log(err));  
 	}
