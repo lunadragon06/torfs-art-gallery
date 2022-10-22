@@ -1,8 +1,7 @@
-//import emailjs from "emailjs-com"; 
+import emailjs from "emailjs-com"; 
 import Heading from "../layout/Heading";
 
 export default function Contact() {
-	/* 
 	function sendEmail(e) {
 		e.preventDefault();
 
@@ -15,12 +14,11 @@ export default function Contact() {
 			console.log(res);
 		}).catch(err=> console.log(err));  
 	}
-	*/
+
 	return (
 		<>
 			<Heading content="Contact" />
-			<form>
-			{/* <form onSubmit={sendEmail}> */}
+			<form onSubmit={sendEmail}>
 				<section className="rowform">
 				<div>
 			        <label className="label" htmlFor="fname">
