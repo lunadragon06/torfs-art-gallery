@@ -1,10 +1,7 @@
-import SubHeading from "../layout/SubHeading";
-
 export default function EnquiryForm() {
     return (
         <>
         <form className="enquiry">
-            <SubHeading subcontent="Send me your request here:" /> 
             <label htmlFor="fname">
                 Name <span className="reqdot">*</span>
             </label>
