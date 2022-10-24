@@ -9,11 +9,14 @@ import Home from "./components/pages/Home";
 import About from "./components/pages/About"; 
 import Contact from "./components/pages/Contact"; 
 import Login from "./components/pages/Login"; 
-import Dashboard from "./components/pages/admin/Dashboard"; 
 import Footer from "./components/layout/Footer";
 import Nav from "./components/layout/Nav";
 import PaintingDetail from "./components/gallery/PaintingDetail"; 
 import PaintingList from "./components/gallery/PaintingList";
+import Dashboard from './components/pages/admin/Dashboard';
+import Add from "./components/pages/admin/subpages/Add";
+import Enquiries from "./components/pages/admin/subpages/Enquiries";
+import Inbox from "./components/pages/admin/subpages/Inbox";
 
 function App() {  
   return (
@@ -40,8 +43,18 @@ function App() {
           <Route path="/login">
 						<Login />
 					</Route>
+          {/* ADMIN MENU - will be visible when logged in */}
           <Route path="/dashboard">
 						<Dashboard />
+					</Route>
+          <Route path="/inbox">
+						<Inbox />
+					</Route>
+          <Route path="/enquiries">
+						<Enquiries />
+					</Route>
+          <Route path="/add">
+						<Add />
 					</Route>
         </Switch>
       </div>
