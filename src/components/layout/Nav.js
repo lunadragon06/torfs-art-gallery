@@ -13,14 +13,6 @@ function Nav() {
 		setAuth(null);
 		history("/");
 	}
-
-    const onLinkClick = () => {
-        document.querySelector("#nav").checked = false; 
-    };
-  
-    document
-        .querySelectorAll("a")
-        .forEach((element) => element.addEventListener("click", onLinkClick));
     */
 
 	return (
@@ -46,8 +38,8 @@ function Nav() {
                 <li>
                     <Link to="/dashboard">Dashboard</Link>
                 </li>
-                {/* <li onClick={logout} className="logbtn">
-                        <Link to="/" onClick="onLinkClick()">Logout</Link>
+                {/* <li>
+                        <button onClick={logout}>Logout</button>
                 </li> 
                 </>
                 ) : (
