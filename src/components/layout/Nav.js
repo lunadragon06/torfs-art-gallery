@@ -29,7 +29,7 @@ function Nav() {
                     <Link to="/about">About</Link>
                 </li>
                 <li>
-                <Link to="/contact">Contact</Link>
+                    <Link to="/contact">Contact</Link>
                 </li>
                 {auth ? (
 				<>
@@ -37,7 +37,7 @@ function Nav() {
                     <Link to="/dashboard">Dashboard</Link>
                 </li>
                 <li>
-                        <button onClick={logout}>Logout</button>
+                    <button onClick={logout}>Logout</button>
                 </li> 
                 </>
                 ) : (
