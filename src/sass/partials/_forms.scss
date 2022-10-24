@@ -28,6 +28,10 @@ button:hover, .sendbtn:hover {
 }
 
 // FORM DEFAULT STYLING
+fieldset {
+    border: none;
+}
+
 form {
     margin: 2.5rem auto 5rem;
     max-width: 500px;
