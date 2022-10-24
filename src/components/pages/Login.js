@@ -1,5 +1,5 @@
 /* import axios from "axios";
-import AuthContext from "../../context/authContext";
+import AuthContext from "../../context/AuthContext";
 import { BASE_URL, TOKEN_PATH } from "../../constants/data";
 import FormError from "../../common/FormError"; */
 import Heading from "../layout/Heading";
