@@ -5,7 +5,10 @@ function AdminMenu() {
         <>
             <nav className="admin_nav">
                 <li>
-                    <Link to="/dashboard">Dashboard</Link>
+                    <Link to="/inbox">Inbox</Link>
+                </li>
+                <li>
+                    <Link to="/enquiries">Enquiries</Link>
                 </li>
                 <li>
                     <Link to="/add">Add new painting</Link>
