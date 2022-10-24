@@ -1,32 +1,32 @@
-/* import axios from "axios";
+import * as yup from "yup";
+import axios from "axios";
 import AuthContext from "../../context/AuthContext";
 import { BASE_URL, TOKEN_PATH } from "../../constants/data";
-import FormError from "../../common/FormError"; */
+import FormError from "../../common/FormError";
 import Heading from "../layout/Heading";
-/* import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { useHistory } from "react-router-dom";
 import { useState, useContext } from "react";
-import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 const url = BASE_URL + TOKEN_PATH;
 
 const schema = yup.object().shape({
-	username: yup.string().required("Please enter your username"),
-	password: yup.string().required("Please enter your password"),
-}); */
+	username: yup.string().required("Please enter your username or email."),
+	password: yup.string().required("Please enter your correct password."),
+});
 
-export default function Login() {
-    /* 
-    const [submitting, setSubmitting] = useState(false);
+export default function LoginForm() {
+	const [submitting, setSubmitting] = useState(false);
 	const [loginError, setLoginError] = useState(null);
 
-	const history = useNavigate();
+	const history = useHistory();
 
     const { register, handleSubmit, formState: { errors } } = useForm ({
         resolver: yupResolver(schema),
     });
 
+	// eslint-disable-next-line
 	const [auth, setAuth] = useContext(AuthContext);
 
 	async function onSubmit(data) {
@@ -47,20 +47,28 @@ export default function Login() {
 			setSubmitting(false);
 		}
 	}
-    */
 
 	return (
 		<>
-			<Heading content="Login" />
-			<form>
-            <fieldset>
-                <label htmlFor="uname">Username/email</label>
-                    <input type="text" name="uname" required />
-                <label htmlFor="psw">Password</label>
-                    <input type="password" name="psw" required />
-                <button className="loginbtn" type="submit">Login</button>
-            </fieldset>
-            </form>
+        	<Heading content="Login" />
+			<form onSubmit={handleSubmit(onSubmit)}>
+				{loginError && <FormError>{loginError}</FormError>}
+				<fieldset className="form-container" disabled={submitting}>
+					<div>
+					    <label>Username or Email</label>
+						<input name="username" placeholder="Username" {...register("username")} />
+						{errors.username && <FormError>{errors.username.message}</FormError>}
+					</div>
+					<div>
+					    <label>Password</label>
+						<input name="password" placeholder="Password" {...register("password")} type="password" />
+						{errors.password && <FormError>{errors.password.message}</FormError>}
+					</div>
+					<div className="button-wrapper">
+					<button className="register">{submitting ? "Loggin in ..." : "Login"}</button>
+					</div>
+				</fieldset>
+			</form>
 		</>
 	);
 }
