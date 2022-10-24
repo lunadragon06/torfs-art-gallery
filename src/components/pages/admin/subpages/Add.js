@@ -58,7 +58,7 @@ export default function Add() {
 			<label htmlFor="img">
 				Image <span className="reqdot">*</span>
 			</label>
-				<input className="file-input" type="file" multiple {...register("image")} />
+				<input className="file-input" type="file" {...register} />
 				{errors.image && <FormError>
                     {errors.image.message}
 				</FormError>}
