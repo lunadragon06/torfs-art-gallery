@@ -1,4 +1,4 @@
-//import { AuthProvider } from "./context/authContext";
+import { AuthProvider } from "./context/AuthContext";
 import './sass/style.scss';
 import { 
   BrowserRouter as Router, 
@@ -20,7 +20,7 @@ import Inbox from "./components/pages/admin/subpages/Inbox";
 
 function App() {  
   return (
-    /* <AuthProvider> */
+    <AuthProvider>
     <Router>
       <Nav />
       <div className="wrapper">
@@ -60,7 +60,7 @@ function App() {
       </div>
       <Footer />
     </Router>
-    /* </AuthProvider> */
+    </AuthProvider>
   );
 }
 
