@@ -3,6 +3,7 @@ import * as yup from "yup";
 import FormError from "../../components/common/FormError"; 
 */
 import Heading from "../../../layout/Heading";
+import { Link } from "react-router-dom";
 /*
 import React from 'react';
 import { useForm } from 'react-hook-form';
@@ -57,7 +58,13 @@ export default function Add() {
 	*/
 	return (
 		<>
-			<Heading content="Add" />
+		<div className="breadcrumb">
+			<Link to="/dashboard">
+				Dashboard
+			</Link>
+			<span className="current-link"> / <b> Add painting</b></span>
+		</div>
+		<Heading content="Add new painting" />
 			<form>
                 <label htmlFor="title">
 					Title <span className="reqdot">*</span>
