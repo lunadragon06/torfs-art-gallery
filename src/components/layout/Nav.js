@@ -1,19 +1,17 @@
-//import AuthContext from "../../context/authContext";
-import { Link } from "react-router-dom";
-//import { useContext } from "react";
+import AuthContext from "../../context/AuthContext";
+import { Link, useHistory } from "react-router-dom";
+import { useContext } from "react";
 
 
 function Nav() {
-    /* 
     const [auth, setAuth] = useContext(AuthContext);
 
-	const history = useNavigate();
+	const history = useHistory();
 
 	function logout() {
 		setAuth(null);
 		history("/");
 	}
-    */
 
 	return (
 		<nav>
@@ -33,21 +31,20 @@ function Nav() {
                 <li>
                 <Link to="/contact">Contact</Link>
                 </li>
-                {/* {auth ? (
-				<> */}
+                {auth ? (
+				<>
                 <li>
                     <Link to="/dashboard">Dashboard</Link>
                 </li>
-                {/* <li>
+                <li>
                         <button onClick={logout}>Logout</button>
                 </li> 
                 </>
                 ) : (
-                */}
                 <li className="logbtn">
                     <Link to="/login">Login</Link>
                 </li>
-                {/* )} */}
+                )}
             </ul>
 		</nav>
 	);
