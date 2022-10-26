@@ -17,15 +17,6 @@ button, .sendbtn {
     transition: .25s;
     width: 100%;
 }
-
-button:active, 
-button:focus,
-.sendbtn:active, 
-.sendbtn:focus {
-    background: $--input;
-    border: $--blue-border;
-    color: $--dark-blue;
-}
   
 button:hover, .sendbtn:hover {
     background: $--dark-blue;
@@ -79,6 +70,16 @@ input:active, input:focus {
 
 label {
     font-weight: bold;
+}
+
+.message-sent {
+    background: $--success;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 1.25rem;
+    margin-bottom: 3rem;
+    padding: 1.6rem;
 }
 
 // CONTACT FORM
