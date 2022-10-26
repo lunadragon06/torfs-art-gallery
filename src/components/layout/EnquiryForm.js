@@ -12,8 +12,7 @@ const schema = yup.object().shape({
     mail: yup.string()
             .email("The email adress is not valid.")
             .required("Please enter your email adress."),
-    phone: yup.string()
-            .matches(/^(|.{8,})$/, "The phone number must be at least 8 characters."), 
+    phone: yup.string().matches(/^(|.{8,})$/, "The phone number must be at least 8 characters."), 
     subject: yup.string()
             .required("Please enter your request subject.")
             .min(12, "The subject must contain at least 12 characters."),
