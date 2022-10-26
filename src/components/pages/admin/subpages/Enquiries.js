@@ -11,6 +11,7 @@ export default function Enquiries() {
 			    <span className="current-link"> / <b> Enquiries</b></span>
 		    </div>
 			<Heading content="Enquiries" />
+			
 		</>
 	);
 }
