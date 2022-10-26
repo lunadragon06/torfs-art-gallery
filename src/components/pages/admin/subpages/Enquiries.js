@@ -14,7 +14,6 @@ function Enquiries() {
     const http = useAxios();
 
     useEffect(function () {
-
         async function showEnquiries() {
             try {
                 const response = await http.get("/enquiries");
@@ -23,6 +22,7 @@ function Enquiries() {
             } catch (error) {
                 console.log("error", error);
                 setError(error.toString());
+                
             } finally {
                 setLoading(false);
             }
