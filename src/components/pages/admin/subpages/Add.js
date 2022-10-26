@@ -1,30 +1,58 @@
 import * as yup from "yup";
 import FormError from "../../../../common/FormError"; 
 import Heading from "../../../layout/Heading";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import React from "react";
+import useAxios from "../../../../hooks/useAxios";
 import { useForm } from 'react-hook-form';
+import { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 
 const schema = yup.object().shape({
     title: yup.string().required("A title for your painting is required."),
 	category: yup.string().required("Please select a painting category."),
-    image: yup.mixed().required("Please upload your painting image."),
+    file: yup.mixed().required("Please upload your painting image."),
 	description: yup.string().required("Description for your painting is required."),
 });
 
-export default function Add() {
-    const { register, handleSubmit, reset, formState: { errors } } = useForm ({
+function Add() {
+	const [submitting, setSubmitting] = useState(false);
+    const [serverError, setServerError] = useState(null);
+
+    const history = useHistory();;
+    const http = useAxios();
+
+    const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(schema),
     });
+    async function onSubmit(inputData) {
+        setSubmitting(true);
+        setServerError(null);
 
-    function onSubmit(data) {
-        console.log(data);
-        alert("A new painting has been successfully added to your page!");
-        reset();
+        inputData.status = "published";
+
+        //Images
+        const formData = new FormData();
+        for (const image of inputData.file) {
+            formData.append('file.images', image);
+        }
+
+        const { image, ...data } = inputData;
+        formData.append("data", JSON.stringify(data));
+
+        try {
+            const response = await http.post("/add", formData);
+			console.log(response);
+            history("/dashboard");
+
+        } catch (error) {
+            setServerError("Failed to add new painting! Please try again later.");
+			console.log("error", error);
+        } finally {
+            setSubmitting(false);
+        }
     }
-
-    console.log(errors);
 
 	return (
 	<>
@@ -36,17 +64,19 @@ export default function Add() {
 		</div>
 		<Heading content="Add new painting" />
 		<form onSubmit={handleSubmit(onSubmit)}>
+		{/* {serverError && <FormError>{serverError}</FormError>} */}
+		{serverError && <FormError>{serverError}</FormError>}
             <label htmlFor="title">
 				Title <span className="reqdot">*</span>
 			</label>
-                <input name="title" {...register("title")} />
+                <input name="title" type="title" {...register("title")} />
 				{errors.title && <FormError>
                     {errors.title.message}
 				</FormError>}
 			<label htmlFor="cat">
 				Category <span className="reqdot">*</span>
 			</label>
-				<select {...register("category")}>
+				<select name="category" type="category" {...register("category")}>
                     <option value="">Please select a painting category</option>
                     <option className="subject-option" value="abstract">Abstract</option>
 					<option className="subject-option" value="maritime">Maritime</option>
@@ -58,19 +88,23 @@ export default function Add() {
 			<label htmlFor="img">
 				Image <span className="reqdot">*</span>
 			</label>
-				<input className="file-input" type="file" {...register} />
-				{errors.image && <FormError>
-                    {errors.image.message}
+				<input className="file-input" name="file" type="file" multiple {...register("file")} />
+				{errors.file && <FormError>
+                    {errors.file.message}
 				</FormError>}
 			<label htmlFor="description">
 				Description <span className="reqdot">*</span>
 			</label>
-			    <textarea name="description" {...register("description")} />
+			    <textarea type="description" name="description" {...register("description")} />
 				{errors.description && <FormError>
                     {errors.description.message}
 				</FormError>}
-            <button className="addbtn" type="submit">Add painting</button>
+            <button className="addbtn" type="submit" name="add">
+			    {submitting ? "Adding..." : "Add"}
+			</button>
         </form>
 	</>
 	);
 }
+
+export default Add;
