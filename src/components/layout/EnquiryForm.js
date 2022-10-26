@@ -12,7 +12,8 @@ const schema = yup.object().shape({
     mail: yup.string()
             .email("The email adress is not valid.")
             .required("Please enter your email adress."),
-    phone: yup.string().matches(/^(|.{8,})$/, "The phone number must be at least 8 characters."), 
+    phone: yup.string()
+            .matches(/^(|.{8,})$/, "The phone number must contain at least 8 numbers."), 
     subject: yup.string()
             .required("Please enter your request subject.")
             .min(12, "The subject must contain at least 12 characters."),
@@ -68,7 +69,7 @@ function EnquiryForm() {
             </label>
                 <input type="tlf" 
                        name="tlf" 
-                       placeholder="+47 987 65 432 or 98765432" {...register("phone")} />
+                       placeholder="e.g. 98765432" {...register("phone")} />
                 {errors.phone && 
                     <FormError>
                         {errors.phone.message}
