@@ -42,7 +42,7 @@ function Add() {
         formData.append("data", JSON.stringify(data));
 
         try {
-            const response = await http.post("/add", formData);
+            const response = await http.post("/products", formData);
 			console.log(response);
             history("/dashboard");
 
