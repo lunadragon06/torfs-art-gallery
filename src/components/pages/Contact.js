@@ -8,16 +8,16 @@ import SentForm from "../../common/SentForm";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
-const url = BASE_URL + "/inbox";
+const url = BASE_URL + "/contacts";
 
 const schema = yup.object().shape({
-    name: yup.string()
-            .required("You must enter your name."),
+    first_name: yup.string()
+            .required("Enter your first name."),
     email: yup.string()
             .email("The email is not valid.")
             .required("Please enter your email."),
     message: yup.string()
-            .required("Please enter your message here.")
+            .required("You must enter your message here.")
             .min(15, "Your message must contain at least 15 characters long."),
 });
 
@@ -40,7 +40,7 @@ function Contact() {
             setFormSentMessage(true);
 
             reset({
-                name: "",
+                first_name: "",
                 email: "",
                 message:""
             });
@@ -55,9 +55,9 @@ function Contact() {
 	return (
 		<>
 			<Heading content="Contact" />
+			<form onSubmit={handleSubmit(onSubmit)}>
             {submitError && <FormError>{submitError}</FormError>}
             {formSentMessage && <SentForm></SentForm>}
-			<form onSubmit={handleSubmit(onSubmit)}>
 				<section className="rowform">
 				<div>
 			        <label className="label" htmlFor="fname">
@@ -66,8 +66,8 @@ function Contact() {
                     <input className="input" 
                            type="text" 
                            name="first_name"
-                           {...register("name")} />
-                    {errors.name && <FormError>{errors.name.message}</FormError>}
+                           {...register("first_name")} />
+                    {errors.first_name && <FormError>{errors.first_name.message}</FormError>}
 				</div>
 				<div>
 			        <label className="label" htmlFor="email">
