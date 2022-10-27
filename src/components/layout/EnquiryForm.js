@@ -1,10 +1,14 @@
 import * as yup from "yup";
+import axios from "axios";
+import { BASE_URL } from "../../constants/data";
 import FormError from "../../common/FormError";
 import React from "react";
 import SentForm from "../../common/SentForm";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
+
+const url = BASE_URL + "/enquiries";
 
 const schema = yup.object().shape({
     name: yup.string()
@@ -13,7 +17,7 @@ const schema = yup.object().shape({
             .email("The email adress is not valid.")
             .required("Please enter your email adress."),
     phone: yup.string()
-            .matches(/^(|.{8,})$/, "The phone number must contain at least 8 numbers."), 
+            .matches(/^(|.{8,})$/, "The phone number must contain at least 8 characters only containing numbers."), 
     subject: yup.string()
             .required("Please enter your request subject.")
             .min(12, "The subject must contain at least 12 characters."),
@@ -23,17 +27,35 @@ const schema = yup.object().shape({
 
 function EnquiryForm() {
     const [submitting, setSubmitting] = useState(false);
+    const [submitError, setSubmitError] = useState(null);
     const [formSentMessage, setFormSentMessage] = useState(false);
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm({
         resolver: yupResolver(schema),
     });
 
-    function onSubmit(data) {
-        console.log(data);
+    async function onSubmit(data) {
         setSubmitting(true);
         setFormSentMessage(true);
-        reset();
+
+        try {
+            const response = await axios.post(url, data);
+            console.log(response); 
+            setFormSentMessage(true);
+
+            reset({
+                name: "",
+                mail: "",
+                phone: "",
+                subject: "",
+                note: ""
+            });
+        } catch (error) {
+            console.log("error", error);
+            setSubmitError(error.toString());
+        } finally {
+            setSubmitting(false);
+        }
     }
 
     console.log(errors);
@@ -41,6 +63,7 @@ function EnquiryForm() {
     return (
     <>
         <form className="enquiry" onSubmit={handleSubmit(onSubmit)}>
+        {formSentMessage && <FormError>{submitError}</FormError>}
         {formSentMessage && <SentForm></SentForm>}
             <label htmlFor="fname">
                 Name <span className="reqdot">*</span>
