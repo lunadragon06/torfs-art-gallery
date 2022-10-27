@@ -19,7 +19,7 @@ function Inbox() {
     useEffect(function () {
         async function showContact() {
             try {
-                const response = await http.get("/inbox");
+                const response = await http.get("/contacts");
                 setContacts(response.data);
 
             } catch (error) {
@@ -55,7 +55,7 @@ function Inbox() {
                             return (
                                 <div key={contact.id}>
                                         <p>{contact.created_at.slice(0, -5)}</p>
-                                        <p>{contact.name}</p>
+                                        <p>{contact.first_name}</p>
                                         <p>{contact.email}</p>
                                         <p>{contact.message}</p>
                                 </div>
