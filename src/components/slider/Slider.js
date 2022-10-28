@@ -45,14 +45,16 @@ function Slider() {
 
     return (
         <>
-		    <main className="header" 					     
-			     onContextMenu={(e) => {
-					e.preventDefault(); 
-				 }} 
-			     style={{
-					backgroundImage: "url(" + slide.hero_banner.url + ")", backgroundPosition: 'center',
-					backgroundSize: 'cover', backgroundRepeat: 'no-repeat'
-			}}></main>
+        {slide.map(function (slider) {
+            return <main className="header" 
+                         key={slider.id} 
+                         id={slider.id} 
+                         style={{
+                            backgroundImage: "url(" + slider.image[0].url + ")", backgroundPosition: 'center',
+                            backgroundSize: 'cover', backgroundRepeat: 'no-repeat'
+                    }}>
+                   </main>
+            })}
         </>
     )
 }
