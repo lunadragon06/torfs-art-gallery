@@ -16,13 +16,11 @@ const schema = yup.object().shape({
     mail: yup.string()
             .email("The email adress is not valid.")
             .required("Please enter your email adress."),
-    phone: yup.string()
+    phone: yup.string().typeError("This field must contain only numbers.")
             .matches(/^(|.{8,})$/, "The phone number must contain at least 8 characters only containing numbers."), 
     subject: yup.string()
-            .required("Please enter your request subject.")
-            .min(12, "The subject must contain at least 12 characters."),
-    note: yup.string()
-            .required("Please spesify your request details."),
+            .required("Please enter your request subject."),
+    note: yup.string(),
 });
 
 function EnquiryForm() {
@@ -79,7 +77,7 @@ function EnquiryForm() {
             <label htmlFor="mail">
                 Email <span className="reqdot">*</span>
             </label>
-                <input type="email" 
+                <input type="mail" 
                        name="mail" 
                        placeholder="name@email.com" {...register("mail")} />
                 {errors.mail && 
@@ -101,16 +99,22 @@ function EnquiryForm() {
             <label htmlFor="subject">
                 What can I do for you? <span className="reqdot">*</span> 
             </label>
-            <input type="subject" 
+            <select type="subject" 
                    name="subject" 
-                   placeholder="Write down your request title or subject" {...register("subject")} />
+                   placeholder="Write down your request title or subject" {...register("subject")}>
+                    <option value="">Select your subject request type</option>
+                    <option className="subject-option" value="one">one</option>
+                    <option className="subject-option" value="two">two</option>
+                    <option className="subject-option" value="three">three</option>
+                    <option className="subject-option" value="four">four</option>
+            </select>
             {errors.subject && 
                 <FormError>
                     {errors.subject.message}
                 </FormError>
             }
             <label htmlFor="note">
-				Note <span className="reqdot">*</span>
+				Note
 			</label>
 			    <textarea type="note" 
                           name="note" 
