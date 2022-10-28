@@ -13,12 +13,13 @@ const url = BASE_URL + "/contacts";
 const schema = yup.object().shape({
     first_name: yup.string()
             .required("Enter your first name."),
+    last_name: yup.string(),
     email: yup.string()
             .email("The email is not valid.")
             .required("Please enter your email."),
     message: yup.string()
             .required("You must enter your message here.")
-            .min(15, "Your message must contain at least 15 characters long."),
+            .min(12, "Your message must contain at least 12 characters long."),
 });
 
 function Contact() {
@@ -41,6 +42,7 @@ function Contact() {
 
             reset({
                 first_name: "",
+                last_name: "",
                 email: "",
                 message:""
             });
@@ -61,7 +63,7 @@ function Contact() {
 				<section className="rowform">
 				<div>
 			        <label className="label" htmlFor="fname">
-					    Name <span className="reqdot">*</span>
+					    First Name <span className="reqdot">*</span>
 				    </label>
                     <input className="input" 
                            type="text" 
@@ -70,6 +72,17 @@ function Contact() {
                     {errors.first_name && <FormError>{errors.first_name.message}</FormError>}
 				</div>
 				<div>
+			        <label className="label" htmlFor="fname">
+					    Last Name <span className="optxt">(optional)</span>
+				    </label>
+                    <input className="input" 
+                           type="text" 
+                           name="first_name"
+                           {...register("last_name")} />
+                    {errors.last_name && <FormError>{errors.last_name.message}</FormError>}
+				</div>
+				</section>
+                <div>
 			        <label className="label" htmlFor="email">
 					    Email <span className="reqdot">*</span>
 				    </label>
@@ -79,7 +92,6 @@ function Contact() {
                            {...register("email")} />
                     {errors.email && <FormError>{errors.email.message}</FormError>}
 				</div>
-				</section>
 			    <label htmlFor="message">
 					Message <span className="reqdot">*</span>
 				</label>
