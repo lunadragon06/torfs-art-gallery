@@ -16,7 +16,7 @@ function Enquiries() {
     useEffect(function () {
         async function showEnquiries() {
             try {
-                const response = await http.get("/enquiries");
+                const response = await http.get("/requests");
                 setEnquiries(response.data);
 
             } catch (error) {
