@@ -83,6 +83,10 @@ label {
 }
 
 // CONTACT FORM
+#first_name {
+    width: 110%;
+}
+
 .reqdot {
     color: $--required;
     font-weight: bold;
@@ -91,7 +95,7 @@ label {
 .rowform {
     display: flex;
     flex-direction: row;
-    gap: 2.75rem;
+    gap: 4rem;
 }
 
 textarea {
@@ -137,6 +141,9 @@ select {
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: $--mobile-screen) {
+    #first_name {
+        width: 100% !important;
+    }
     form {
         max-width: 375px;
     }
