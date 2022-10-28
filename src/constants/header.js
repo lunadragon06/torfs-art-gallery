@@ -1,1 +1,1 @@
-export const HEADER = "https://torfs-art-gallery.herokuapp.com/home";
+export const HEADER = "https://torfs-art-gallery.herokuapp.com/sliders";
