@@ -13,7 +13,7 @@ const url = BASE_URL + "/enquiries";
 const schema = yup.object().shape({
     name: yup.string()
             .required("You must enter your name."),
-    mail: yup.string()
+    email: yup.string()
             .email("The email adress is not valid.")
             .required("Please enter your email adress."),
     phone: yup.string().typeError("This field must contain only numbers.")
@@ -43,7 +43,7 @@ function EnquiryForm() {
 
             reset({
                 name: "",
-                mail: "",
+                email: "",
                 phone: "",
                 subject: "",
                 note: ""
@@ -77,12 +77,12 @@ function EnquiryForm() {
             <label htmlFor="mail">
                 Email <span className="reqdot">*</span>
             </label>
-                <input type="mail" 
-                       name="mail" 
-                       placeholder="name@email.com" {...register("mail")} />
-                {errors.mail && 
+                <input type="email" 
+                       name="email" 
+                       placeholder="name@email.com" {...register("email")} />
+                {errors.email && 
                     <FormError>
-                        {errors.mail.message}
+                        {errors.email.message}
                     </FormError>
                 }
             <label htmlFor="tlf">
