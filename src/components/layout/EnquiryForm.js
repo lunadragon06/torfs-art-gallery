@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 
-const url = BASE_URL + "/enquiries";
+const url = BASE_URL + "/requests";
 
 const schema = yup.object().shape({
     name: yup.string()
@@ -34,7 +34,7 @@ function EnquiryForm() {
 
     async function onSubmit(data) {
         setSubmitting(true);
-        setFormSentMessage(true);
+        setSubmitError(null);
 
         try {
             const response = await axios.post(url, data);
