@@ -66,6 +66,7 @@ function Contact() {
 					    First Name <span className="reqdot">*</span>
 				    </label>
                     <input className="input" 
+                           id="first_name"
                            type="text" 
                            name="first_name"
                            {...register("first_name")} />
@@ -76,6 +77,7 @@ function Contact() {
 					    Last Name <span className="optxt">(optional)</span>
 				    </label>
                     <input className="input" 
+                           id="last_name"
                            type="text" 
                            name="first_name"
                            {...register("last_name")} />
