@@ -19,7 +19,7 @@ const schema = yup.object().shape({
     phone: yup.string().typeError("This field must contain only numbers.")
             .matches(/^(|.{8,})$/, "The phone number must contain at least 8 characters only containing numbers."), 
     subject: yup.string()
-            .required("Please enter your request subject."),
+            .required("Please enter your subject title."),
     note: yup.string(),
 });
 
@@ -63,18 +63,18 @@ function EnquiryForm() {
         <form className="enquiry" onSubmit={handleSubmit(onSubmit)}>
         {formSentMessage && <FormError>{submitError}</FormError>}
         {formSentMessage && <SentForm></SentForm>}
-            <label htmlFor="fname">
+            <label htmlFor="name">
                 Name <span className="reqdot">*</span>
             </label>
                 <input type="text" 
-                       name="fname" 
+                       name="name" 
                        placeholder="Ola Nordmann" {...register("name")} />
                 {errors.name && 
                     <FormError>
                         {errors.name.message}
                     </FormError>
                 }
-            <label htmlFor="mail">
+            <label htmlFor="email">
                 Email <span className="reqdot">*</span>
             </label>
                 <input type="email" 
@@ -99,20 +99,14 @@ function EnquiryForm() {
             <label htmlFor="subject">
                 What can I do for you? <span className="reqdot">*</span> 
             </label>
-            <select type="subject" 
+            <input type="text" 
                    name="subject" 
-                   placeholder="Write down your request title or subject" {...register("subject")}>
-                    <option value="">Select your subject request type</option>
-                    <option className="subject-option" value="commission">Commission</option>
-                    <option className="subject-option" value="cooperation">Cooperation work</option>
-                    <option className="subject-option" value="networking">Networking</option>
-                    <option className="subject-option" value="other">Other</option>
-            </select>
-            {errors.subject && 
-                <FormError>
-                    {errors.subject.message}
-                </FormError>
-            }
+                   placeholder="Ola Nordmann" {...register("subject")} />
+                {errors.subject && 
+                    <FormError>
+                        {errors.subject.message}
+                    </FormError>
+                }
             <label htmlFor="note">
 				Note
 			</label>
