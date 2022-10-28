@@ -103,10 +103,10 @@ function EnquiryForm() {
                    name="subject" 
                    placeholder="Write down your request title or subject" {...register("subject")}>
                     <option value="">Select your subject request type</option>
-                    <option className="subject-option" value="one">one</option>
-                    <option className="subject-option" value="two">two</option>
-                    <option className="subject-option" value="three">three</option>
-                    <option className="subject-option" value="four">four</option>
+                    <option className="subject-option" value="commission">Commission</option>
+                    <option className="subject-option" value="cooperation">Cooperation work</option>
+                    <option className="subject-option" value="networking">Networking</option>
+                    <option className="subject-option" value="other">Other</option>
             </select>
             {errors.subject && 
                 <FormError>
