@@ -29,7 +29,7 @@ function EnquiryForm() {
     const [formSentMessage, setFormSentMessage] = useState(false);
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm({
-        resolver: yupResolver(schema),
+        resolver: yupResolver(schema)
     });
 
     async function onSubmit(data) {
@@ -61,7 +61,7 @@ function EnquiryForm() {
     return (
     <>
         <form className="enquiry" onSubmit={handleSubmit(onSubmit)}>
-        {formSentMessage && <FormError>{submitError}</FormError>}
+        {submitError && <FormError>{submitError}</FormError>}
         {formSentMessage && <SentForm></SentForm>}
             <label htmlFor="name">
                 Name <span className="reqdot">*</span>
