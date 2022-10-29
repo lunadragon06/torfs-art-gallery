@@ -17,7 +17,7 @@ function Nav() {
 	return (
 		    <nav className="main-nav">
             <input type="checkbox" id="check" />
-            <label htmlFor="check" className="menu-btn">
+            <label id="close-button" htmlFor="check" className="menu-btn">
                 <HiOutlineMenuAlt4 size={40} color='aliceblue' />
             </label>
             <a className="logo" href="/">
@@ -25,18 +25,18 @@ function Nav() {
             </a>
                 <ul className="navlinks">
                     <li>
-                        <Link to="/gallery">Gallery</Link>
+                        <Link onClick={() => {document.getElementById("close-button").click()}} to="/gallery">Gallery</Link>
                     </li>
                     <li>
-                        <Link to="/about">About</Link>
+                        <Link onClick={() => {document.getElementById("close-button").click()}} to="/about">About</Link>
                     </li>
                     <li>
-                        <Link to="/contact">Contact</Link>
+                        <Link onClick={() => {document.getElementById("close-button").click()}} to="/contact">Contact</Link>
                     </li>
                     {auth ? (
 				    <>
                     <li>
-                        <Link to="/dashboard">Dashboard</Link>
+                        <Link onClick={() => {document.getElementById("close-button").click()}} to="/dashboard">Dashboard</Link>
                     </li>
                     <li>
                         <button onClick={logout}>Logout</button>
@@ -44,7 +44,7 @@ function Nav() {
                     </>
                     ) : (
                     <li className="logbtn">
-                        <Link to="/login">Login</Link>
+                        <Link onClick={() => {document.getElementById("close-button").click()}} to="/login">Login</Link>
                     </li>
                     )}
                 </ul>
