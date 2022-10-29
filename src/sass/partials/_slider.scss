@@ -1,6 +1,30 @@
-.header {
-    height: 600px;
-    margin: auto;
+.carousel {
+    margin: 0 auto;
     max-width: 1000px;
-    object-fit: cover;
+}
+
+.carousel-caption {
+    bottom: 4.25rem;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    background: $--dark-blue;
+    opacity: 0.75;
+    width: 10%;
+}
+
+.carousel-control-next-icon {
+    background: url('../../assets/icons/slider/Nxtbtn.svg');
+}
+
+.carousel-control-prev-icon {
+    background: url('../../assets/icons/slider/Bckbtn.svg');
+}
+
+.carousel-indicators {
+    margin-bottom: 3rem;
+}
+
+.carousel-indicators [data-bs-target] {
+    height: 5px;
 }
