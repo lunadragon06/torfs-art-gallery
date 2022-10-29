@@ -15,10 +15,10 @@ function Nav() {
 
 	return (
 		<nav>
-            <a className="wordmark" href="/">
+            <a id="logo" href="/">
                 Torf's Gallery of Art
             </a>
-            <ul>
+            <ul id="nav-bar">
                 <li>
                     <Link to="/gallery">Gallery</Link>
                 </li>
