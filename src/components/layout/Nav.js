@@ -21,7 +21,7 @@ function Nav() {
                 <HiOutlineMenuAlt4 size={40} color='aliceblue' />
             </label>
             <a className="logo" href="/">
-                Torf's Gallery of Arte
+                Torf's Gallery of Art
             </a>
                 <ul className="navlinks">
                     <li>
