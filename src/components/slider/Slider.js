@@ -5,6 +5,7 @@ import { HEADER } from '../../constants/header';
 import Loader from "../layout/Loader";
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 
 const url = HEADER;
 
@@ -47,19 +48,27 @@ function Slider() {
         <Carousel interval={null}>
             {slide.map(function (slider) {
             return <Carousel.Item key={slider.id} id={slider.id}>
-                <img className="d-block w-100"
-                     src={slider.image[0].url}
-                     alt={slider.title}
-                     style={{
-                        filter: 'brightness(90%)',
-                        height: 600,
-                        objectFit: 'cover',
-                     }}
-                />
-                <Carousel.Caption>
-                    <h2>{slider.title}</h2>
-                    <p>{slider.year} | {slider.category}</p>
-                </Carousel.Caption>
+                    <Link to="#" style={{ display: 'block', padding: '0', }}>
+                        <img className="sliderimg d-block w-100"
+                             src={slider.image[0].url}
+                             alt={slider.title}
+                             style={{
+                                filter: 'brightness(75%)',
+                                height: 600,
+                                objectFit: 'cover',
+                            }}
+                        />
+                        <Carousel.Caption>
+                            <h2 style={{ fontSize: '21px', }}>{slider.title}</h2>
+                            <p className="caption" 
+                               style={{ 
+                                fontSize: '14px', 
+                                textTransform: 'capitalize', 
+                            }}>
+                                {slider.year} | {slider.category}
+                            </p>
+                        </Carousel.Caption>
+                    </Link>
                 </Carousel.Item>
             })}
         </Carousel>
