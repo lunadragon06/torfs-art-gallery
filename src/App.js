@@ -1,3 +1,4 @@
+import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import { AuthProvider } from "./context/AuthContext";
 import './sass/style.scss';
 import { 
