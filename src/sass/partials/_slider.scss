@@ -1,3 +1,16 @@
+.caption {
+    letter-spacing: 2.5px;
+}
+
+.sliderimg {
+    transition: .5s;
+}
+
+.sliderimg:hover {
+    filter: brightness(1) !important;
+}
+
+// Overwritten styles
 .carousel {
     margin: 0 auto;
     max-width: 1000px;
@@ -5,6 +18,15 @@
 
 .carousel-caption {
     bottom: 4.25rem;
+    letter-spacing: 1px;
+}
+
+.carousel-control-prev:hover, 
+.carousel-control-prev:focus, 
+.carousel-control-next:hover, 
+.carousel-control-next:focus {
+    opacity: 1;
+    transition: .5s;
 }
 
 .carousel-control-prev, .carousel-control-next {
