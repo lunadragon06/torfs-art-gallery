@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { Carousel } from 'react-bootstrap';
 import ErrorMessage from "../../common/ErrorMessage";
 import { HEADER } from '../../constants/header';
 import Loader from "../layout/Loader";
@@ -43,18 +44,25 @@ function Slider() {
     }
 
     return (
-        <>
-        {slide.map(function (slider) {
-            return <main className="header" 
-                         key={slider.id} 
-                         id={slider.id} 
-                         style={{
-                            backgroundImage: "url(" + slider.image[0].url + ")", backgroundPosition: 'center',
-                            backgroundSize: 'cover', backgroundRepeat: 'no-repeat'
-                    }}>
-                   </main>
+        <Carousel interval={null}>
+            {slide.map(function (slider) {
+            return <Carousel.Item key={slider.id} id={slider.id}>
+                <img className="d-block w-100"
+                     src={slider.image[0].url}
+                     alt={slider.title}
+                     style={{
+                        filter: 'brightness(90%)',
+                        height: 600,
+                        objectFit: 'cover',
+                     }}
+                />
+                <Carousel.Caption>
+                    <h2>{slider.title}</h2>
+                    <p>{slider.year} | {slider.category}</p>
+                </Carousel.Caption>
+                </Carousel.Item>
             })}
-        </>
+        </Carousel>
     )
 }
 
