@@ -50,3 +50,12 @@
 .carousel-indicators [data-bs-target] {
     height: 5px;
 }
+
+@media (max-width: 768px) {
+    .carousel-control-prev, .carousel-control-next {
+        display: none;
+    }
+    .sliderimg {
+        height: 300px !important;
+    }
+}
