@@ -1,10 +1,9 @@
-import React from 'react';
+import axios from 'axios';
 import ErrorMessage from "../../common/ErrorMessage";
 import { HEADER } from '../../constants/header';
-import axios from 'axios';
-import { useState, useEffect } from 'react';
 import Loader from "../layout/Loader";
-
+import React from 'react';
+import { useState, useEffect } from 'react';
 
 const url = HEADER;
 
