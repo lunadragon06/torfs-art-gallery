@@ -64,7 +64,6 @@ function Add() {
 		</div>
 		<Heading content="Add new painting" />
 		<form onSubmit={handleSubmit(onSubmit)}>
-		{/* {serverError && <FormError>{serverError}</FormError>} */}
 		{serverError && <FormError>{serverError}</FormError>}
             <label htmlFor="title">
 				Title <span className="reqdot">*</span>
