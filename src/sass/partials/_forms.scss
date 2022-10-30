@@ -1,6 +1,7 @@
 ::-webkit-input-placeholder {    
     color: $--black !important; 
     font-family: $--secondary-font; 
+    font-size: 14px;
 }
 
 button, .sendbtn {
@@ -39,8 +40,8 @@ form {
     border: 1px solid $--required;
     color: $--required;
     font-size: 14px;
-    margin: -1.25rem 0 1.75rem;
-    padding: 1rem;
+    margin: -1.25rem 0 1.25rem;
+    padding: .5rem 1rem;
 }
 
 input, select, textarea {
@@ -102,17 +103,6 @@ textarea {
     font-family: $--secondary-font;
     height: 156px;
     resize: none;
-}
-
-// ENQUIRY 
-.enquiry {
-    background: white;
-    padding: 3rem 3rem 4rem;
-}
-
-// Optional field 
-.optxt {
-    font-weight: normal;
 }
 
 select {
