@@ -1,11 +1,20 @@
 .enquiry {
     background: white;
+    margin-bottom: 2.5rem;
     padding: 0 2rem 0;
 }
 
+#enquirybtn {
+    padding: 1rem;
+}
+
 .enquiry input, .enquiry textarea {
-    margin: 1rem 0 2rem;
+    margin: 1rem 0 1.25rem;
     padding: .5rem 1rem;
+}
+
+.enquiry label {
+    font-size: 14px;
 }
 
 .notetab {
@@ -91,11 +100,13 @@
     color: #c0392b;
   }
   /* When popup is targeted, by clicking on link with #popup in HTML */
-  .popup:target{
+  .popup:target {
     opacity: 1;
     top: 0;
   }
-  .popup .closePopUpOutSide{
+
+  .popup .closePopUpOutSide {
+    cursor: unset;
     position: absolute;
     left:0;
     width: 100%;
@@ -110,15 +121,15 @@
       transition: top 0.75s ease;
   }
   
-  @media  (max-width: 796px) {
+  @media  (max-width: 768px) {
     .popup .popUpContainer{
-      width: 90%;
+      width: 80%;
       max-width: none;
-      left: 5%;
+      left: 10%;
       margin-left: 0;
     }
     .popup:target .popUpContainer{
-      top: 25px;
+      top: 40px;
       -webkit-transition: top  0.75s ease;
       -moz-transition: top 0.75s ease;
       -o-transition: top 0.75s ease;
