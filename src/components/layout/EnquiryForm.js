@@ -59,11 +59,12 @@ function EnquiryForm() {
 
     return (
     <>
-        <a href="#popUp" id="openPopUp">Open it!</a>
+        {/* TO OPEN THE ENQUIRY FORM */}  
+        <a href="#popUp" id="openPopUp">Make a request</a>
         <aside id="popUp" className="popup">
           <div className="popUpContainer">
             <form className="enquiry" onSubmit={handleSubmit(onSubmit)}>
-            {/* POP UP */}
+            {/* #! in order to get back to the same position as where the inquiry was after closing the form */} 
             <a href="#!" className="closePopUp">X</a>
         {submitError && <FormError>{submitError}</FormError>}
         {formSentMessage && <SentForm></SentForm>}
@@ -117,7 +118,8 @@ function EnquiryForm() {
                 {submitting ? "Sending..." : "SEND"} 
             </button>
         </form>
-          </div>        
+          </div>    
+          {/* REMOVE THE WARNINGS FROM THE TERMINAL */}    
           <Link to="#!" className="closePopUpOutSide" />    
         </aside>
     </>
