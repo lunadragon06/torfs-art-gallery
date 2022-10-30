@@ -2,6 +2,7 @@ import * as yup from "yup";
 import axios from "axios";
 import { BASE_URL } from "../../constants/data";
 import FormError from "../../common/FormError";
+import { Link } from "react-router-dom";
 import React from "react";
 import SentForm from "../../common/SentForm";
 import { useForm } from "react-hook-form";
@@ -59,10 +60,10 @@ function EnquiryForm() {
     return (
     <>
         <a href="#popUp" id="openPopUp">Open it!</a>
-        {/* POP UP */}
         <aside id="popUp" className="popup">
           <div className="popUpContainer">
             <form className="enquiry" onSubmit={handleSubmit(onSubmit)}>
+            {/* POP UP */}
             <a href="#!" className="closePopUp">X</a>
         {submitError && <FormError>{submitError}</FormError>}
         {formSentMessage && <SentForm></SentForm>}
@@ -112,12 +113,12 @@ function EnquiryForm() {
                         {errors.note.message}
                     </FormError>
                 }
-            <button className="sendbtn" type="submit">
+            <button className="sendbtn" id="enquirybtn" type="submit">
                 {submitting ? "Sending..." : "SEND"} 
             </button>
         </form>
           </div>        
-          <a href="#!" className="closePopUpOutSide" />    
+          <Link to="#!" className="closePopUpOutSide" />    
         </aside>
     </>
     );
