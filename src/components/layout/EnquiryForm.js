@@ -16,8 +16,6 @@ const schema = yup.object().shape({
     email: yup.string()
             .email("The email adress is not valid.")
             .required("Please enter your email adress."),
-    phone: yup.string().typeError("This field must contain only numbers.")
-            .matches(/^(|.{8,})$/, "The phone number must contain at least 8 characters only containing numbers."), 
     subject: yup.string()
             .required("Please enter your subject title."),
     note: yup.string(),
@@ -44,7 +42,6 @@ function EnquiryForm() {
             reset({
                 name: "",
                 email: "",
-                phone: "",
                 subject: "",
                 note: ""
             });
@@ -56,11 +53,17 @@ function EnquiryForm() {
         }
     }
 
+     // eslint-disable-next-line
     console.log(errors);
 
     return (
     <>
-        <form className="enquiry" onSubmit={handleSubmit(onSubmit)}>
+        <a href="#popUp" id="openPopUp">Open it!</a>
+        {/* POP UP */}
+        <aside id="popUp" className="popup">
+          <div className="popUpContainer">
+            <form className="enquiry" onSubmit={handleSubmit(onSubmit)}>
+            <a href="#!" className="closePopUp">X</a>
         {submitError && <FormError>{submitError}</FormError>}
         {formSentMessage && <SentForm></SentForm>}
             <label htmlFor="name">
@@ -85,17 +88,6 @@ function EnquiryForm() {
                         {errors.email.message}
                     </FormError>
                 }
-            <label htmlFor="tlf">
-                Phone number <span className="optxt">(optional)</span>
-            </label>
-                <input type="tlf" 
-                       name="tlf" 
-                       placeholder="e.g. 98765432" {...register("phone")} />
-                {errors.phone && 
-                    <FormError>
-                        {errors.phone.message}
-                    </FormError>
-                }
             <label htmlFor="subject">
                 What can I do for you? <span className="reqdot">*</span> 
             </label>
@@ -108,10 +100,11 @@ function EnquiryForm() {
                     </FormError>
                 }
             <label htmlFor="note">
-				Note
+				Note <span className="optxt">(optional)</span>
 			</label>
 			    <textarea type="note" 
-                          name="note" 
+                          name="note"
+                          className="notetab" 
                           placeholder="Please spesify your request in more details here." {...register("note")}>
                 </textarea>
                 {errors.note && 
@@ -123,6 +116,9 @@ function EnquiryForm() {
                 {submitting ? "Sending..." : "SEND"} 
             </button>
         </form>
+          </div>        
+          <a href="#!" className="closePopUpOutSide" />    
+        </aside>
     </>
     );
 }
