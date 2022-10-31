@@ -61,7 +61,7 @@ function PaintingDetail() {
 			        </Link>
 					<span className="current-link"> / <b> {painting.title}</b></span>
 				</div>
-				<div className="painting-image">
+				<article className="painting-image">
 				{/* MODAL START */}
 			        <img src={painting.image.url} 
 				         alt={painting.image.alternativeText} 
@@ -69,14 +69,14 @@ function PaintingDetail() {
 						 e.preventDefault(); 
 					    }} 
 				    />
-				</div>
-				<div className="painting-content">
+				</article>
+				<article className="painting-content">
 					<div className="painting-titles">
                         <h2><b>Painting no.</b> {painting.id}</h2>
 					    <span className="category-tag">{painting.category}</span>
 					</div>
 					<p>{painting.description}</p>
-				</div>
+				</article>
 			</section>
 		</>
 	);
