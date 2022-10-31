@@ -61,37 +61,22 @@ function PaintingDetail() {
 			        </Link>
 					<span className="current-link"> / <b> {painting.title}</b></span>
 				</div>
-				<article className="painting-image">
+				<div className="painting-image">
 				{/* MODAL START */}
-				<input type="checkbox" id="modal" />
-				<label htmlFor="modal" className="premodal">
 			        <img src={painting.image.url} 
 				         alt={painting.image.alternativeText} 
 					     onContextMenu={(e) => {
 						 e.preventDefault(); 
 					    }} 
 				    />
-				</label>
-				<label htmlFor="modal" className="modal-background" />
-				<div className="modal">
-				    <label htmlFor="modal">
-					    <img src={painting.image.url} 
-				             alt={painting.image.alternativeText} 
-					         onContextMenu={(e) => {
-						        e.preventDefault(); 
-					        }} 
-				        />
-				    </label>
 				</div>
-				{/* MODAL END */}
-				</article>
-				<article className="painting-content">
+				<div className="painting-content">
 					<div className="painting-titles">
                         <h2><b>Painting no.</b> {painting.id}</h2>
 					    <span className="category-tag">{painting.category}</span>
 					</div>
 					<p>{painting.description}</p>
-				</article>
+				</div>
 			</section>
 		</>
 	);
