@@ -7,9 +7,9 @@ export default function Home() {
 
 	return (
 		<>
-			<Searchbar />
 			<Heading content="Newest artwork" />
 			<Slider />
+			<Searchbar />
 			<EnquiryForm />
 		</>
 	);
