@@ -50,7 +50,7 @@ function PaintingList() {
 		    <Heading content="Gallery" />
 			<Searchbar />
 				<section className="galleri">
-			        {paintings.slice(0).reverse().map(function (painting) {
+			        {paintings.sort( (a,b) => a.id > b.id ? 1 : -1 ).map(function (painting) {
 				        const { id, title, image, category } = painting;
 				        return <PaintingItem key={id} id={id} title={title} image={image} category={category} />;
 			        })}
