@@ -1,1 +1,1 @@
-export const API = "https://torfs-art-gallery.herokuapp.com/products";
+export const API = "https://torfs-art-gallery.herokuapp.com/paintings";
