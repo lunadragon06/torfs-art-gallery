@@ -48,7 +48,7 @@ function PaintingList() {
 		<>
 		    <Heading content="Gallery" />
 				<section className="galleri">
-			        {paintings.sort( (a,b) => a.id > b.id ? 1 : -1 ).reverse().map(function (painting) {
+			        {paintings.sort( (a,b) => a.id > b.id ? 1 : -1 ).filter(paint => paint.featured === true).reverse().map(function (painting) {
 				        const { id, title, image, category, year } = painting;
 				        return <PaintingItem key={id} id={id} title={title} image={image} category={category} year={year} />;
 			        })}
