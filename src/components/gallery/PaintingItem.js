@@ -4,12 +4,14 @@ import { Link } from "react-router-dom";
 function PaintingItem({ id, image }) {
 	return (
 		            <Link className="img" to={`painting/${id}`}>
-				        <img src={image.url} 
-							 alt={image.alternativeText} 	     
-							 onContextMenu={(e) => {
-								e.preventDefault(); 
+						<article className="galleri_item">
+				            <img src={image.url} 
+							     alt={image.alternativeText} 	     
+							     onContextMenu={(e) => {
+								    e.preventDefault(); 
 							}} 
 						/>
+						</article>
 		            </Link>
 	);
 }
