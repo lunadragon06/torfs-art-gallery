@@ -2,7 +2,6 @@ import EnquiryForm from "../layout/EnquiryForm";
 import Featured from "../gallery/featured/Featured"; 
 import Heading from "../layout/Heading";
 import Searchbar from "../layout/Searchbar";
-import SubHeading from "../layout/SubHeading";
 import Slider from "../slider/Slider";
 
 export default function Home() {
@@ -12,7 +11,6 @@ export default function Home() {
 			<Heading content="Newest artwork" />
 			<Slider />
 			<Searchbar />
-			<SubHeading subcontent="Featured" />
 			<Featured />
 			<EnquiryForm />
 		</>
