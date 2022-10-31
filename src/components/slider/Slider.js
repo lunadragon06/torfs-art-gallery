@@ -52,6 +52,9 @@ function Slider() {
                         <img className="sliderimg d-block w-100"
                              src={slider.image[0].url}
                              alt={slider.title}
+                             onContextMenu={(e) => {
+                                e.preventDefault(); 
+                             }} 
                              style={{
                                 filter: 'brightness(75%)',
                                 height: 600,
