@@ -46,7 +46,7 @@ function Slider() {
 
     return (
         <Carousel interval={null}>
-            {slide.map(function (slider) {
+            {slide.slice(0, 2).map(function (slider) {
             return <Carousel.Item key={slider.id} id={slider.id}>
                     <Link to="#" style={{ display: 'block', padding: '0', }}>
                         <img className="sliderimg d-block w-100"
