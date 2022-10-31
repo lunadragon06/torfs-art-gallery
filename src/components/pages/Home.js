@@ -1,4 +1,5 @@
 import EnquiryForm from "../layout/EnquiryForm";
+//import Featured from "../gallery/featured/Featured"; <Featured />
 import Heading from "../layout/Heading";
 import Searchbar from "../layout/Searchbar";
 import SubHeading from "../layout/SubHeading";
@@ -12,6 +13,7 @@ export default function Home() {
 			<Slider />
 			<Searchbar />
 			<SubHeading subcontent="Featured" />
+			
 			<EnquiryForm />
 		</>
 	);
