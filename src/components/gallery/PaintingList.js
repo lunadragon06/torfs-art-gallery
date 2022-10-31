@@ -4,7 +4,6 @@ import ErrorMessage from "../../common/ErrorMessage";
 import Heading from "../layout/Heading";
 import Loader from "../layout/Loader";
 import PaintingItem from "./PaintingItem";
-import Searchbar from "../layout/Searchbar";
 import {useState, useEffect} from "react";
 
 const api = API;
@@ -48,7 +47,6 @@ function PaintingList() {
     return (
 		<>
 		    <Heading content="Gallery" />
-			<Searchbar />
 				<section className="galleri">
 			        {paintings.sort( (a,b) => a.id > b.id ? 1 : -1 ).reverse().map(function (painting) {
 				        const { id, title, image, category } = painting;
