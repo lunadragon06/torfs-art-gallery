@@ -20,6 +20,7 @@ function PaintingList() {
                 const response = await axios.get(api);
                 if (response.status === 200) {
                     setPainting(response.data);
+					console.log(response.data);
                 } else {
                     setError("A server error occured! Failed to upload paintings.");
 					console.log(setError);
@@ -48,14 +49,12 @@ function PaintingList() {
 		<>
 		    <Heading content="Gallery" />
 			<Searchbar />
-		    <section className="galleri">
-				<article className="list">
+				<section className="galleri">
 			        {paintings.slice(0).reverse().map(function (painting) {
 				        const { id, title, image, category } = painting;
 				        return <PaintingItem key={id} id={id} title={title} image={image} category={category} />;
 			        })}
-				</article>
-		    </section>
+				</section>
 		</>
     );
 }
