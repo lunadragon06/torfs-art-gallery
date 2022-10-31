@@ -11,6 +11,10 @@
     text-decoration: none;
     margin-left: 30px;
   }
+
+  .logo:hover {
+    color: $--link-blue;
+  }
   
   .navlinks {
     list-style: none;
