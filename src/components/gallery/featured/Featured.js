@@ -1,6 +1,6 @@
 import { API } from "../../../constants/api"
 import axios from 'axios';
-import { Carousel, Card, Stack } from "react-bootstrap";
+import { Carousel, Stack } from "react-bootstrap";
 import ErrorMessage from "../../../common/ErrorMessage";
 import Loader from "../../layout/Loader";
 import React from 'react';
@@ -44,29 +44,27 @@ function Featured() {
     }
 
     return (
-        <div className="bg-dark bg-opacity-25 container-fluid">
-        <Carousel interval={null} style={{ height: 500 }}>
+        <Carousel interval={null}>
             {feature.filter(paint => paint.featured === true).map(function (feature) {
-            return <Carousel.Item key={feature.id} id={feature.id} style={{ height: 500 }}>
+            return <Carousel.Item key={feature.id} id={feature.id} >
                 <Stack
-                direction="horizontal"
-                className="h-100 justify-content-center align-items-center"
-                gap={3}
-              >
-                <Card style={{ width: "18rem" }}>
-                                  <Card.Body>
-                    <Card.Title>{feature.title}</Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-                    </Stack>
+    direction="horizontal"
+    className="h-100 justify-content-center align-items-center"
+    gap={3}
+  >
+                        <img src={feature.image.url}
+                             alt={feature.title}
+                             onContextMenu={(e) => {
+                                e.preventDefault(); 
+                             }} 
+                             style={{
+                                width: '100%',
+                            }}
+                        />
+                        </Stack>
                 </Carousel.Item>
             })}
         </Carousel>
-        </div>
     )
 }
 
