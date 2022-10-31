@@ -2,10 +2,10 @@ import axios from 'axios';
 import { Carousel } from 'react-bootstrap';
 import ErrorMessage from "../../common/ErrorMessage";
 import { HEADER } from '../../constants/header';
+import { Link } from "react-router-dom";
 import Loader from "../layout/Loader";
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
 
 const url = HEADER;
 
