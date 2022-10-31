@@ -6,7 +6,7 @@ function PaintingItem({ id, image }) {
 		            <Link className="img" to={`painting/${id}`}>
 				        <img src={image.url} 
 							 alt={image.alternativeText} 
-							 width="300px"		     
+							 width="100%"		     
 							 onContextMenu={(e) => {
 								e.preventDefault(); 
 							}} 
