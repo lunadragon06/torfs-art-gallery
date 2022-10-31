@@ -1,7 +1,8 @@
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import SubHeading from "../layout/SubHeading";
 
-function PaintingItem({ id, image }) {
+function PaintingItem({ id, image, title, category }) {
 	return (
 		            <Link className="img" to={`painting/${id}`}>
 						<article className="galleri_item">
@@ -11,6 +12,14 @@ function PaintingItem({ id, image }) {
 								    e.preventDefault(); 
 							}} 
 						/>
+						<div className="galleri_content">
+							<span className="galleri_detail">
+							    <SubHeading subcontent={title} />
+								<p style={{ textTransform: 'capitalize', }}>
+									{category} | {category}
+								</p>
+							</span>
+						</div>
 						</article>
 		            </Link>
 	);
