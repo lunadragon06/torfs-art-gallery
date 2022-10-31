@@ -49,8 +49,8 @@ function PaintingList() {
 		    <Heading content="Gallery" />
 				<section className="galleri">
 			        {paintings.sort( (a,b) => a.id > b.id ? 1 : -1 ).reverse().map(function (painting) {
-				        const { id, title, image, category } = painting;
-				        return <PaintingItem key={id} id={id} title={title} image={image} category={category} />;
+				        const { id, title, image, category, year } = painting;
+				        return <PaintingItem key={id} id={id} title={title} image={image} category={category} year={year} />;
 			        })}
 				</section>
 		</>
