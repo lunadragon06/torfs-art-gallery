@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 /* DESIGN VARIABLES */
+$--box-color: #cee6e9;
 $--black: #011826;
 $--blue: #0557a8;
 $--dark-blue: #071d49;
@@ -131,11 +132,16 @@ i {
   justify-content: center;
 }
 
-.img {
-  background: white;
-  width: 100%;
+.txt {
+  background: $--box-color;
+  color: $--green;
+  padding: 2rem 2rem 0rem;
 }
 
-.txt {
-  padding: 0rem 2rem 0rem;
+hr {
+  width: 75px;
+}
+
+.sub h2 {
+  line-height: 1.25rem;
 }
