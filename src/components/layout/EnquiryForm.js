@@ -58,7 +58,8 @@ function EnquiryForm() {
     console.log(errors);
 
     return (
-    <>
+    <section className="request">
+    <h3 style={{ fontSize: '20px', textAlign: 'center', }}>Make a request?</h3>
         {/* TO OPEN THE ENQUIRY FORM */}  
         <a href="#popUp" id="openPopUp">Make a request</a>
         <aside id="popUp" className="popup">
@@ -122,7 +123,7 @@ function EnquiryForm() {
           {/* REMOVE THE WARNINGS FROM THE TERMINAL */}    
           <Link to="#!" className="closePopUpOutSide" />    
         </aside>
-    </>
+    </section>
     );
 }
 
