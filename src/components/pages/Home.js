@@ -1,10 +1,9 @@
 import EnquiryForm from "../layout/EnquiryForm";
 import Featured from "../gallery/featured/Featured"; 
 import Heading from "../layout/Heading";
-import { Link } from "react-router-dom";
 import Searchbar from "../layout/Searchbar";
 import Slider from "../slider/Slider";
-import SubHeading from "../layout/SubHeading";
+import thumbnail from "../../assets/images/thumbnail.jpg";
 
 export default function Home() {
 
@@ -16,24 +15,31 @@ export default function Home() {
 			<Featured />
 			<section className="welcome" style={{ margin: '3rem auto 4rem', maxWidth: '1000px', }}>
 				<article className="img">
-					
+				<img src={thumbnail}
+                             alt="thumbnail"
+							 style={{ width: '318px', }}
+                             onContextMenu={(e) => {
+                                e.preventDefault(); 
+                             }} 
+                        />
 				</article>
 				<article className="txt">
-					<SubHeading subcontent="Hello! I am Torfinn," />
-					<SubHeading subcontent="but you can just call me Torf." />
+					<div className="sub">
+					    <h2>Hello, I'm <span style={{ textDecoration: 'underline', }}>Torfinn</span>,</h2>
+					    <h2>but you can just call me <b>Torf</b>.</h2>
+					</div>
+					<hr />
 					<p>
 						I am a self-taught hobby artist based outside Trondheim, Norway. 
 						I primarily work with oil painting on canvas, but occasionally I 
-						use acryl as well. Much of my artwork features mostly maritime 
+						use acryl. Much of my artwork features mostly maritime 
 						motives and nature landscapes inspired by places I've been 
-						travelling across my homeland, as well as abstract pictures from 
+						travelling in my homeland, as well as abstract pictures from 
 						time to time.
 					</p>
-					<p>Currently available for collaboration or networking.</p>
-					<Link to="/about">Learn more</Link>
+					<b>Currently available for collaboration or networking.</b>
 				</article>
 			</section>
-			<hr />
 			<EnquiryForm />
 		</>
 	);
