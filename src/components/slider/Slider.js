@@ -4,7 +4,6 @@ import ErrorMessage from "../../common/ErrorMessage";
 import { HEADER } from '../../constants/header';
 import { Link } from "react-router-dom";
 import Loader from "../layout/Loader";
-//import SubHeading from "../layout/SubHeading";         <SubHeading subcontent="Featured" />
 import React from 'react';
 import { useState, useEffect } from 'react';
 
