@@ -123,3 +123,19 @@ i {
     width: 100%;
   }
 }
+
+/* HOME - ABOUT SECTION*/
+.welcome {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.img {
+  background: white;
+  width: 100%;
+}
+
+.txt {
+  padding: 0rem 2rem 0rem;
+}
