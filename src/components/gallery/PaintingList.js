@@ -2,6 +2,7 @@ import { API } from "../../constants/api";
 import axios from "axios";
 import ErrorMessage from "../../common/ErrorMessage";
 import Heading from "../layout/Heading";
+import { Link } from "react-router-dom";
 import Loader from "../layout/Loader";
 import PaintingItem from "./PaintingItem";
 import {useState, useEffect} from "react";
@@ -45,15 +46,21 @@ function PaintingList() {
 	}
 
     return (
-		<>
+		<div className="gal" style={{ margin: '0 auto', maxWidth: '1000px', }}>
 		    <Heading content="Gallery" />
+			<div className="breadcrumb">
+			        <Link to={`/`}>
+				        Home
+			        </Link>
+					<span className="current-link"> / <b> Gallery</b></span>
+				</div>
 				<section className="galleri">
 			        {paintings.sort( (a,b) => a.id > b.id ? 1 : -1 ).reverse().map(function (painting) {
 				        const { id, title, image, category, year } = painting;
 				        return <PaintingItem key={id} id={id} title={title} image={image} category={category} year={year} />;
 			        })}
 				</section>
-		</>
+		</div>
     );
 }
 
