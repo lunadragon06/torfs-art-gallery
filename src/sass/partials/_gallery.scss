@@ -48,6 +48,32 @@
     width: 85%;
   }
 
+  /* FEATURED */
+  .featured {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 312px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.gallery:img hover {
+  transform: scale(1.2);
+}
+
 /* PAINTING DETAIL PAGE */ 
 .painting {
     display: flex;
