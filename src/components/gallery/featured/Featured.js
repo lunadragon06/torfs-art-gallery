@@ -1,9 +1,9 @@
 import { API } from "../../../constants/api"
 import axios from 'axios';
-import { Carousel, Stack } from "react-bootstrap";
 import ErrorMessage from "../../../common/ErrorMessage";
 import Loader from "../../layout/Loader";
 import React from 'react';
+import SubHeading from "../../layout/SubHeading";
 import { useState, useEffect } from 'react';
 
 const url = API;
@@ -44,27 +44,24 @@ function Featured() {
     }
 
     return (
-        <Carousel interval={null}>
-            {feature.filter(paint => paint.featured === true).map(function (feature) {
-            return <Carousel.Item key={feature.id} id={feature.id} >
-                <Stack
-    direction="horizontal"
-    className="h-100 justify-content-center align-items-center"
-    gap={3}
-  >
+        <section className="featured">
+        <SubHeading subcontent="Featured paintings" />
+        <div className="gallery">
+            {feature.filter(paint => paint.featured === true).sort( (a,b) => a.id > b.id ? 1 : -1 ).reverse().map(function (feature) {
+            return <article key={feature.id} id={feature.id} >
                         <img src={feature.image.url}
                              alt={feature.title}
                              onContextMenu={(e) => {
                                 e.preventDefault(); 
                              }} 
                              style={{
-                                width: '100%',
+                                transition: 'transform .3s ease-out',
                             }}
                         />
-                        </Stack>
-                </Carousel.Item>
+                </article>
             })}
-        </Carousel>
+        </div>
+        </section>
     )
 }
 
