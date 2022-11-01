@@ -1,6 +1,7 @@
 import { API } from "../../../constants/api"
 import axios from 'axios';
 import ErrorMessage from "../../../common/ErrorMessage";
+import { Link } from "react-router-dom";
 import Loader from "../../layout/Loader";
 import React from 'react';
 import SubHeading from "../../layout/SubHeading";
@@ -49,6 +50,7 @@ function Featured() {
         <div className="gallery">
             {feature.filter(paint => paint.featured === true).sort( (a,b) => a.id > b.id ? 1 : -1 ).reverse().map(function (feature) {
             return <article key={feature.id} id={feature.id} className="galleri_item" >
+                <Link to="#" style={{ display: 'block', padding: '0', }}>
                         <img src={feature.image.url}
                              alt={feature.title}
                              onContextMenu={(e) => {
@@ -63,6 +65,7 @@ function Featured() {
 								</p>
 							</span>
 						</div>
+                        </Link>
                 </article>
             })}
         </div>
