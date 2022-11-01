@@ -48,16 +48,21 @@ function Featured() {
         <SubHeading subcontent="Featured paintings" />
         <div className="gallery">
             {feature.filter(paint => paint.featured === true).sort( (a,b) => a.id > b.id ? 1 : -1 ).reverse().map(function (feature) {
-            return <article key={feature.id} id={feature.id} >
+            return <article key={feature.id} id={feature.id} className="galleri_item" >
                         <img src={feature.image.url}
                              alt={feature.title}
                              onContextMenu={(e) => {
                                 e.preventDefault(); 
                              }} 
-                             style={{
-                                transition: 'transform .3s ease-out',
-                            }}
                         />
+                        <div className="galleri_content">
+							<span className="galleri_detail">
+							    <h3 style={{ fontSize: '20px', }}>{feature.title}</h3>
+								<p style={{ textTransform: 'capitalize', }}>
+									{feature.category} | {feature.year}
+								</p>
+							</span>
+						</div>
                 </article>
             })}
         </div>
