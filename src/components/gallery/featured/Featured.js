@@ -1,6 +1,7 @@
 import { API } from "../../../constants/api"
 import axios from 'axios';
 import ErrorMessage from "../../../common/ErrorMessage";
+import { HiArrowRight } from 'react-icons/hi'; 
 import { Link } from "react-router-dom";
 import Loader from "../../layout/Loader";
 import React from 'react';
@@ -46,7 +47,10 @@ function Featured() {
 
     return (
         <section className="featured">
-        <SubHeading subcontent="Featured paintings" />
+        <article className="subhead">
+            <SubHeading subcontent="Featured paintings" />
+            <Link to="/gallery" className="view">View all <HiArrowRight /></Link>
+        </article>
         <div className="gallery">
             {feature.filter(paint => paint.featured === true).sort( (a,b) => a.id > b.id ? 1 : -1 ).reverse().map(function (feature) {
             return <article key={feature.id} id={feature.id} className="galleri_item" >
@@ -69,7 +73,6 @@ function Featured() {
                 </article>
             })}
         </div>
-        <Link to="/gallery" className="cta" style={{ display: 'block', textAlign: 'center', }}>View gallery</Link>
         </section>
     )
 }
