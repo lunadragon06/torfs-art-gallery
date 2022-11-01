@@ -49,6 +49,18 @@
   }
 
   /* FEATURED */
+  .subhead {
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.view {
+  font-size: 16px;
+  text-decoration: none;
+}
+
   .featured {
     max-width: 1000px;
     margin: 0 auto;
