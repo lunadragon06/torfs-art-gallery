@@ -5,6 +5,7 @@ import Heading from "../layout/Heading";
 import { Link } from "react-router-dom";
 import Loader from "../layout/Loader";
 import PaintingItem from "./PaintingItem";
+import Searchbar from "../layout/Searchbar";
 import {useState, useEffect} from "react";
 
 const api = API;
@@ -54,6 +55,7 @@ function PaintingList() {
 			        </Link>
 					<span className="current-link"> / <b> Gallery</b></span>
 				</div>
+				<Searchbar />
 				<section className="galleri">
 			        {paintings.sort( (a,b) => a.id > b.id ? 1 : -1 ).reverse().map(function (painting) {
 				        const { id, title, image, category, year } = painting;
