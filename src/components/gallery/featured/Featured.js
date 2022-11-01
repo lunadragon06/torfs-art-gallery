@@ -69,6 +69,7 @@ function Featured() {
                 </article>
             })}
         </div>
+        <Link to="/gallery" className="cta" style={{ display: 'block', textAlign: 'center', }}>View gallery</Link>
         </section>
     )
 }
