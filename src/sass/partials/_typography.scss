@@ -49,15 +49,20 @@ h2 {
 
 @media (max-width: 768px) {
     h1 {
-        grid-template-columns: 50px max-content 50px;
         grid-gap: 1rem;
         grid-template-rows: 1.25rem 0;
     }  
 }
 
-@media (max-width: 500px) {
+@media (max-width: $--mobile-screen) {
+    .breadcrumb {
+        margin: 1.5rem 0 0;
+    }
+    h1:after, h1:before {
+        border-bottom: none;
+    }
     h1 {
-        grid-template-columns: 25px max-content 25px;
-        grid-template-rows: 1.25rem 0;
-    }  
+        display: block;
+        text-align: left;
+    }
 }
