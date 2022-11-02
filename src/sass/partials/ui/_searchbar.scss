@@ -43,3 +43,7 @@ input::placeholder {
     position: absolute;
     z-index: 999;
 }
+
+@media  (max-width: $--tablet-screen) {
+    /* write something here */
+}
