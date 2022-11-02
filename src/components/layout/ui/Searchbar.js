@@ -36,12 +36,12 @@ export default function Searchbar() {
 
 	return (
 		<>
-			<div className="searchcont">
+			<div className="searchcont" style={{ width: '100%', }}>
 			    <FaSearch className="icon"
                           style={{
 						  left: '16px',
                           position: 'relative',
-						  top: '46px',
+						  top: '50px',
                 }} />
 			    <input className="searchbar" 
 			           type="text" 
