@@ -96,3 +96,12 @@
     padding: .5rem 1.5rem;
     text-transform: capitalize;
 }
+
+@media only screen and (max-width: $--mobile-screen) {
+  .galleri {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .subhead {
+    flex-direction: column;
+  }
+}
