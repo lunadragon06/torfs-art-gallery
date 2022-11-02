@@ -3,7 +3,6 @@
 @import "partials/forms";
 @import "partials/gallery";
 @import "partials/layout";
-@import "partials/loader";
 @import "partials/messages";
 @import "partials/nav";
 @import "partials/slider";
@@ -11,4 +10,5 @@
 
 /* UI components */
 @import "partials/ui/enquiry";
+@import "partials/ui/loader";
 @import "partials/ui/searchbar";
