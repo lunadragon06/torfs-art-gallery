@@ -46,9 +46,9 @@ function Slider() {
 
     return (
         <Carousel interval={null}>
-
             {slide.filter(paint => paint.year > 2021).slice(0, 2).map(function (slider) {
             return <Carousel.Item key={slider.id} id={slider.id}>
+                {/* ... */}
                     <Link to="#" style={{ display: 'block', padding: '0', }}>
                         <img className="sliderimg d-block w-100"
                              src={slider.image[0].url}
@@ -73,6 +73,7 @@ function Slider() {
                             </p>
                         </Carousel.Caption>
                     </Link>
+                    {/* ... */}
                 </Carousel.Item>
             })}
         </Carousel>
