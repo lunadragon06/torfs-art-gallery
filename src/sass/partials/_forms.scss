@@ -154,6 +154,6 @@ option {
     }
     .rowform {
         flex-direction: column;
-        gap: 0;
+        gap: 0 !important;
     }
 }
