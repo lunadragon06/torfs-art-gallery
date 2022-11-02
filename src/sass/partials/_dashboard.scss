@@ -1,7 +1,7 @@
 .adminav {
     background: $--light-green;
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 650px;
     padding: 2rem 0 3rem;
 }
 
@@ -29,4 +29,10 @@
     background: $--green;
     color: white;
     font-weight: normal;
+}
+
+@media (max-width: $--mobile-screen) {
+    .adminav {
+        margin-top: 2rem;
+    }
 }
