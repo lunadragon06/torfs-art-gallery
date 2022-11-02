@@ -49,18 +49,45 @@
 
 .carousel-indicators [data-bs-target] {
     height: 5px;
+    width: 30px;
 }
 
 @media (max-width: 768px) {
+    .caption {
+        display: none;
+    }
+    .carousel-caption {
+        bottom: 2.5rem;
+    }
     .carousel-control-prev, .carousel-control-next {
         display: none;
     }
+    .carousel-indicators {
+        margin-bottom: 1.5rem;
+    }
+    .carousel-indicators [data-bs-target] {
+        height: 10px;
+        width: 15px;
+    }
     .sliderimg {
-        height: 300px !important;
+        height: 375px !important;
     }
 }
 
 @media (max-width: 600px) {
+    .carousel-caption {
+        bottom: 2rem;
+    }
+    .carousel-caption h2 {
+        font-size: 16px !important;
+    }
+    .carousel-indicators {
+        margin-bottom: 1rem;
+    }
+    .carousel-indicators [data-bs-target] {
+        height: 15px;
+        width: 15px;
+    }
     .sliderimg {
         height: 250px !important;
     }
