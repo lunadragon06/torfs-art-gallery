@@ -1,7 +1,7 @@
 import { API } from "../../constants/api";
 import axios from "axios";
 import ErrorMessage from "../../common/ErrorMessage";
-import Heading from "../layout/Heading";
+import Heading from "../layout/typography/Heading";
 import { Link } from "react-router-dom";
 import Loader from "../layout/Loader";
 import PaintingItem from "./PaintingItem";
