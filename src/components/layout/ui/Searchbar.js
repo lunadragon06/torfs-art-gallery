@@ -54,11 +54,11 @@ export default function Searchbar() {
 						}, 100);
 					   }}
 			    />
-                <div className="tab">
+                <div className="tab" style={{ width: '100%', }}>
 				{suggestions && suggestions.map((suggestion, i) =>
 				    <Link to ={`painting/${suggestion.id}`} className="result" key={i} 
 				          onClick={() => onSuggestHandler(suggestion.title || suggestion.year)}>
-						    {suggestion.title} | {suggestion.year}
+						    {suggestion.title} ({suggestion.year})
 				    </Link>
 				)}
                 </div>
