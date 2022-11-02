@@ -54,7 +54,7 @@ function Featured() {
         <div className="galleri">
             {feature.filter(paint => paint.featured === true).sort( (a,b) => a.id > b.id ? 1 : -1 ).reverse().map(function (feature) {
             return <article key={feature.id} id={feature.id} className="galleri_item" >
-                <Link to="#" style={{ display: 'block', padding: '0', }}>
+                <Link to={`painting/${feature.id}`} style={{ display: 'block', padding: '0', }}>
                         <img src={feature.image.url}
                              alt={feature.title}
                              onContextMenu={(e) => {
