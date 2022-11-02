@@ -36,7 +36,7 @@
     transition: all 0.3s linear 0s;
   }
   
-  .navlinks li a:hover {
+  .navlinks li a:focus, .navlinks li a:hover {
     color: $--link-blue;
     padding-bottom: 8px;
     border-bottom: 2px solid $--dark-blue;
