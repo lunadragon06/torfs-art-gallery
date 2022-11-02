@@ -59,11 +59,6 @@
     width: 100vw;
     height: 100vh;
     opacity: 0;
-  
-      -webkit-transition: opacity  0.75s ease;
-      -moz-transition: opacity 0.75s ease;
-      -o-transition: opacity 0.75s ease;
-      transition: opacity 0.75s ease;
   }
   .popup .popUpContainer{
     width: 100%;
@@ -71,13 +66,6 @@
     position: absolute; 
     left: 50%;
     top: -110vh;
-      -webkit-transition: top  0.75s ease;
-      -moz-transition: top 0.75s ease;
-      -o-transition: top 0.75s ease;
-      transition: top 0.75s ease;
-  
-    /* Trick to properly center the element by using negative 
-    1/2 length of element as margin left and top */
     margin-left: -250px;
     background-color: #ffffff;
     z-index: 9999999; 
@@ -115,10 +103,6 @@
   }
   .popup:target .popUpContainer{
     top: 2.5%;
-      -webkit-transition: top  0.75s ease;
-      -moz-transition: top 0.75s ease;
-      -o-transition: top 0.75s ease;
-      transition: top 0.75s ease;
   }
   
   @media  (max-width: $--tablet-screen) {
@@ -130,10 +114,6 @@
     }
     .popup:target .popUpContainer{
       top: 50px;
-      -webkit-transition: top  0.75s ease;
-      -moz-transition: top 0.75s ease;
-      -o-transition: top 0.75s ease;
-      transition: top 0.75s ease;
     }
     .request {
       margin: 0 0 1rem;
