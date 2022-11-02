@@ -1,6 +1,6 @@
 import EnquiryForm from "../layout/ui/EnquiryForm";
 import Featured from "../gallery/featured/Featured"; 
-import Heading from "../layout/Heading";
+import Heading from "../layout/typography/Heading";
 import Searchbar from "../layout/ui/Searchbar";
 import Slider from "../gallery/slider/Slider";
 import thumbnail from "../../assets/images/thumbnail.jpg";
