@@ -1,4 +1,4 @@
-import Heading from "../layout/Heading";
+import Heading from "../layout/typography/Heading";
 import portrait from "../../assets/portrait.jpg";
 import signature from "../../assets/signature.png";
 import SubHeading from "../layout/SubHeading";
