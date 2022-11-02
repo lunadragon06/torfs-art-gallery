@@ -61,8 +61,14 @@
 }
 
 .view {
+  color: $--link-blue;
   font-size: 16px;
   text-decoration: none;
+}
+
+.view:hover {
+  padding-bottom: 0;
+  border-bottom: 2px solid $--link-blue;
 }
 
   .featured {
