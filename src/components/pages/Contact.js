@@ -2,7 +2,7 @@ import * as yup from "yup";
 import axios from "axios";
 import { BASE_URL } from "../../constants/data";
 import FormError from "../../common/FormError";
-import Heading from "../layout/Heading";
+import Heading from "../layout/typography/Heading";
 import React, { useState } from 'react';
 import SentForm from "../../common/SentForm";
 import { useForm } from "react-hook-form";
