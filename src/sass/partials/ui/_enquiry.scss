@@ -127,7 +127,7 @@
       transition: top 0.75s ease;
   }
   
-  @media  (max-width: 768px) {
+  @media  (max-width: $--tablet-screen) {
     .popup .popUpContainer{
       width: 80%;
       max-width: none;
@@ -140,5 +140,14 @@
       -moz-transition: top 0.75s ease;
       -o-transition: top 0.75s ease;
       transition: top 0.75s ease;
+    }
+    .request {
+      margin: 0 0 1rem;
+    }
+  }
+
+  @media  (max-width: $--mobile-screen) {
+    #openPopUp {
+      width: 100%;
     }
   }
