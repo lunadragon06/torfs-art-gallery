@@ -5,6 +5,7 @@ import FormError from "../../../common/FormError";
 import { Link } from "react-router-dom";
 import React from "react";
 import SentForm from "../../../common/SentForm";
+import { RiCloseFill } from 'react-icons/ri';
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -66,7 +67,9 @@ function EnquiryForm() {
           <div className="popUpContainer">
             <form className="enquiry" onSubmit={handleSubmit(onSubmit)}>
             {/* #! in order to get back to the same position as where the inquiry was after closing the form */} 
-            <a href="#!" className="closePopUp">X</a>
+            <a href="#!" className="closePopUp">
+                <RiCloseFill />
+            </a>
         {submitError && <FormError>{submitError}</FormError>}
         {formSentMessage && <SentForm></SentForm>}
             <label htmlFor="name">
