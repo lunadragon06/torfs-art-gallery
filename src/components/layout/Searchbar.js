@@ -41,7 +41,7 @@ export default function Searchbar() {
                           style={{
 						  left: '16px',
                           position: 'relative',
-						  top: '54px',
+						  top: '46px',
                 }} />
 			    <input className="searchbar" 
 			           type="text" 
