@@ -1,5 +1,4 @@
 @import "partials/base";
-@import "partials/ui/enquiry";
 @import "partials/footer";
 @import "partials/forms";
 @import "partials/gallery";
@@ -8,6 +7,9 @@
 @import "partials/messages";
 @import "partials/modal";
 @import "partials/nav";
-@import "partials/ui/searchbar";
 @import "partials/slider";
 @import "partials/typography";
+
+/* UI components */
+@import "partials/ui/enquiry";
+@import "partials/ui/searchbar";
