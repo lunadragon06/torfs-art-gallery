@@ -149,3 +149,15 @@ hr {
 .sub h2 {
   line-height: 1.25rem;
 }
+
+@media only screen and (max-width: $--tablet-screen) {
+  .welcome {
+    flex-direction: column-reverse;
+  }
+  .img img {
+    width: 100% !important;
+  }
+  .txt {
+    padding-bottom: 3rem;
+  }
+}
