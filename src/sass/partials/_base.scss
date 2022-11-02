@@ -109,7 +109,7 @@ i {
 
 @media only screen and (max-width: $--tablet-screen) {
   .about {
-    gap: 5rem;
+    gap: 3rem;
   }
 } 
 
@@ -151,13 +151,21 @@ hr {
 }
 
 @media only screen and (max-width: $--tablet-screen) {
+  hr {
+    margin-bottom: 2rem;
+  }
   .welcome {
     flex-direction: column-reverse;
+    margin: 2rem auto 2rem !important;
   }
   .img img {
     width: 100% !important;
   }
+  .sub h2 {
+    line-height: 30px;
+    margin-bottom: 0;
+  }
   .txt {
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
   }
 }
