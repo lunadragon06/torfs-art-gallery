@@ -1,12 +1,12 @@
 .searchcont {
-    margin: 0 auto -1rem;
+    margin: 0 auto -2rem;
     max-width: 1000px;
 }
 
 .searchbar {
     font-size: .9rem;
-    margin-bottom: 3.1rem;
-    padding-left: 3rem;
+    margin-bottom: 5rem;
+    padding: .75rem 3rem .75rem 3rem;
 }
 
 input::placeholder {
@@ -31,6 +31,7 @@ input::placeholder {
 
 .result:last-child {
     border-bottom: 1px solid $--black;
+    z-index: 999;
 }
 
 .result:hover {
@@ -39,11 +40,20 @@ input::placeholder {
 }
 
 .tab {
-    margin-top: -3.2rem;
-    position: absolute;
-    z-index: 999;
+    position: relative;
+    top: -5.1rem;
+    width: 100%;
+    z-index: 1;
 }
 
 @media  (max-width: $--tablet-screen) {
-    /* write something here */
+    .searchcont {
+        margin: -.5rem auto -3rem;
+    }
+}
+
+@media (max-width: $--mobile-screen) {
+    .searchcont {
+        margin: -1rem auto -2.75rem;
+    }
 }
