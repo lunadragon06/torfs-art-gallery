@@ -22,9 +22,10 @@ input::placeholder {
     border: $--black-border;
     border-bottom: 0;
     color: black;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 1.5rem 1.5rem 3rem;
+    display: block;
+    max-width: 1000px;
+    font-size: 14px;
+    padding: .75rem 3rem .75rem;
     text-decoration: none;
 }
 
@@ -40,6 +41,5 @@ input::placeholder {
 .tab {
     margin-top: -3.2rem;
     position: absolute;
-    width: 1000px;
     z-index: 999;
 }
