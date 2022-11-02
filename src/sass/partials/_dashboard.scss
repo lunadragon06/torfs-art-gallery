@@ -1,0 +1,32 @@
+.adminav {
+    background: $--light-green;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 2rem 0 3rem;
+}
+
+.adminav__inner {
+    list-style: none;
+    padding: 1rem 0 0;
+}
+
+.adminav_link, #active {
+    color: $--green;
+    display: block;
+    font-weight: bold;
+    padding: 1rem;
+    text-decoration: none;
+    transition: .5s;
+    width: 100%;
+}
+
+.adminav_link:hover {
+    background: $--box-color;
+    color: $--dark-blue;
+}
+
+#active {
+    background: $--green;
+    color: white;
+    font-weight: normal;
+}
