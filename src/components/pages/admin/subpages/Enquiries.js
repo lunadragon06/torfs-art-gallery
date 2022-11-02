@@ -1,5 +1,5 @@
 import FormError from "../../../../common/FormError";
-import Heading from "../../../layout/Heading";
+import Heading from "../../../layout/typography/Heading";
 import { Link } from "react-router-dom";
 import Loader from "../../../layout/Loader";
 import React from 'react';
