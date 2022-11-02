@@ -25,6 +25,9 @@ function Nav() {
             </a>
                 <ul className="navlinks">
                     <li>
+                        <Link onClick={() => {document.getElementById("close-button").click()}} to="/">Home</Link>
+                    </li>
+                    <li>
                         <Link onClick={() => {document.getElementById("close-button").click()}} to="/gallery">Gallery</Link>
                     </li>
                     <li>
