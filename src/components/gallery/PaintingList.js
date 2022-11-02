@@ -5,7 +5,7 @@ import Heading from "../layout/Heading";
 import { Link } from "react-router-dom";
 import Loader from "../layout/Loader";
 import PaintingItem from "./PaintingItem";
-import Searchbar from "../layout/Searchbar";
+import Searchbar from "../layout/ui/Searchbar";
 import {useState, useEffect} from "react";
 
 const api = API;
