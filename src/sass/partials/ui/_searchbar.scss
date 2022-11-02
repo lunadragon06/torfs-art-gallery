@@ -1,0 +1,45 @@
+.searchcont {
+    margin: 0 auto -1rem;
+    max-width: 1000px;
+}
+
+.searchbar {
+    font-size: .9rem;
+    margin-bottom: 3.1rem;
+    padding-left: 3rem;
+}
+
+input::placeholder {
+    color: $--black;
+}
+
+.icon {
+    color: $--black;
+}
+
+.result {
+    background: white;
+    border: $--black-border;
+    border-bottom: 0;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem 1.5rem 3rem;
+    text-decoration: none;
+}
+
+.result:last-child {
+    border-bottom: 1px solid $--black;
+}
+
+.result:hover {
+    background: $--light-green;
+    color: black;
+}
+
+.tab {
+    margin-top: -3.2rem;
+    position: absolute;
+    width: 1000px;
+    z-index: 999;
+}
