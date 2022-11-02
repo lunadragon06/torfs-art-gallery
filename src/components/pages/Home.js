@@ -2,7 +2,7 @@ import EnquiryForm from "../layout/EnquiryForm";
 import Featured from "../gallery/featured/Featured"; 
 import Heading from "../layout/Heading";
 import Searchbar from "../layout/Searchbar";
-import Slider from "../slider/Slider";
+import Slider from "../gallery/slider/Slider";
 import thumbnail from "../../assets/images/thumbnail.jpg";
 
 export default function Home() {
