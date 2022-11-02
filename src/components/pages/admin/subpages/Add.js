@@ -12,6 +12,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 const schema = yup.object().shape({
     title: yup.string().required("A title for your painting is required."),
 	category: yup.string().required("Please select a painting category."),
+	year: yup.string(), 
+	month: yup.string(), 
     file: yup.mixed().required("Please upload your painting image."),
 	description: yup.string().required("Description for your painting is required."),
 });
@@ -72,6 +74,32 @@ function Add() {
 				{errors.title && <FormError>
                     {errors.title.message}
 				</FormError>}
+
+				<section className="rowform" style={{ gap: '2rem', }}>
+				<div>
+			        <label className="label" htmlFor="year">
+					    Year 
+				    </label>
+                    <input className="input" 
+                           id="year"
+                           type="text" 
+                           name="year"
+                           {...register("year")} />
+                    {errors.year && <FormError>{errors.year.message}</FormError>}
+				</div>
+				<div>
+			        <label className="label" htmlFor="month">
+					    Month 
+				    </label>
+                    <input className="input" 
+                           id="month"
+                           type="text" 
+                           name="month"
+                           {...register("month")} />
+                    {errors.month && <FormError>{errors.month.message}</FormError>}
+				</div>
+				</section>
+
 			<label htmlFor="cat">
 				Category <span className="reqdot">*</span>
 			</label>
