@@ -32,26 +32,21 @@
 
 #openPopUp {
     display: block;
-    text-align:center;
-    background-color:transparent;
+    text-align: center;
+    background: $--blue;
+    color: white !important;
     padding: 15px 15px;
-    border: $--blue-border;
     color: $--dark-blue;
-    font-weight: bold;
     margin: 2rem auto 0;
     text-decoration: none;
-    transition:background-color 0.75s linear;
-    -webkit-transition:background-color 0.75s linear;
-    -moz-transition:background-color 0.75s linear;
-    -o-transition:background-color 0.75s linear;
+    transition: all .5s;
     width: 250px;
   }
 
-  a#openPopUp:hover{
+  a#openPopUp:hover {
+    color: white;
     cursor: pointer;
     background-color: $--black;
-    border: $--blue-border;
-    color: white;
     font-weight: normal;
   }
 
@@ -134,7 +129,7 @@
       margin-left: 0;
     }
     .popup:target .popUpContainer{
-      top: 40px;
+      top: 50px;
       -webkit-transition: top  0.75s ease;
       -moz-transition: top 0.75s ease;
       -o-transition: top 0.75s ease;
