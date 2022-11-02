@@ -62,7 +62,6 @@ function PaintingDetail() {
 					<span className="current-link"> / <b> {painting.title}</b></span>
 				</div>
 				<article className="painting-image">
-				{/* MODAL START */}
 			        <img src={painting.image.url} 
 				         alt={painting.image.alternativeText} 
 					     onContextMenu={(e) => {
