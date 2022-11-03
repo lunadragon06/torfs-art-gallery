@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Carousel } from 'react-bootstrap';
 import ErrorMessage from "../../../common/ErrorMessage";
 import { HEADER } from '../../../constants/header';
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import Loader from "../../../components/layout/Loader";
 import React from 'react';
 import { useState, useEffect } from 'react';
@@ -48,8 +48,7 @@ function Slider() {
         <Carousel interval={null}>
             {slide.filter(paint => paint.year > 2021).slice(0, 2).map(function (slider) {
             return <Carousel.Item key={slider.id} id={slider.id}>
-                {/* ... */}
-                    <Link to="#" style={{ display: 'block', padding: '0', }}>
+                {/* <Link to="#" style={{ display: 'block', padding: '0', }}> */}
                         <img className="sliderimg d-block w-100"
                              src={slider.image[0].url}
                              alt={slider.title}
@@ -72,8 +71,7 @@ function Slider() {
                                 {slider.year} | {slider.category}
                             </p>
                         </Carousel.Caption>
-                    </Link>
-                    {/* ... */}
+                    {/* </Link> */}
                 </Carousel.Item>
             })}
         </Carousel>
