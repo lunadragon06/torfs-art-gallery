@@ -2,6 +2,7 @@ import { API } from "../../constants/api";
 import axios from "axios";
 import ErrorMessage from "../../common/ErrorMessage";
 import Heading from '../../components/layout/typography/Heading';
+import { HiArrowLeft } from 'react-icons/hi'; 
 import { Link } from "react-router-dom";
 import Loader from "../layout/Loader";
 import { useParams, useHistory } from "react-router-dom";
@@ -53,12 +54,7 @@ function PaintingDetail() {
 
 	return (
 		<section style={{ margin: 'auto', maxWidth: '750px', }}>
-			<div className="breadcrumb" style={{ marginBottom: '2.5rem', }}>
-			    <Link to={`/gallery`}>
-				    Gallery  
-			    </Link>
-				<span className="current-link"> / <b> {painting.title}</b></span>
-			</div>
+			<Link to="/gallery" className="view" style={{ display: 'inline-block', marginBottom: '2.5rem' }}><HiArrowLeft /> Back to gallery</Link>
 			<Heading content={painting.title} />
 			<section className="painting">
 				<article className="painting-image">
