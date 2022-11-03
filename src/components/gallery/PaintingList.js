@@ -2,6 +2,7 @@ import { API } from "../../constants/api";
 import axios from "axios";
 import ErrorMessage from "../../common/ErrorMessage";
 import Heading from "../layout/typography/Heading";
+import { HiArrowLeft } from 'react-icons/hi'; 
 import { Link } from "react-router-dom";
 import Loader from "../layout/Loader";
 import PaintingItem from "./PaintingItem";
@@ -48,12 +49,7 @@ function PaintingList() {
 
     return (
 		<div className="gal" style={{ margin: '0 auto', maxWidth: '1000px', }}>
-			<div className="breadcrumb">
-			    <Link to={`/`}>
-				    Home
-			    </Link>
-				<span className="current-link"> / <b> Gallery</b></span>
-			</div>
+			<Link to="/" className="view" style={{ display: 'inline-block', marginBottom: '2.5rem' }}><HiArrowLeft /> Back to homepage</Link>
 		    <Heading content="Gallery" />
 				<Searchbar />
 				<section className="galleri">
