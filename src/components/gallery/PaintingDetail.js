@@ -71,7 +71,10 @@ function PaintingDetail() {
 					    <span className="category-tag">{painting.category}</span>
 					</div>
 					<p>{painting.description}</p>
-					<p><b>Created: </b>{painting.month} / {painting.year}</p>
+					<p>
+						<b>Created: </b>
+						{String(painting.month).padStart(2,'0')} / {painting.year}
+					</p>
 				</article>
 			</section>
 		</section>
