@@ -67,8 +67,8 @@
 }
 
 .view:hover {
-  padding-bottom: 0;
-  border-bottom: 2px solid $--link-blue;
+  text-decoration: underline;
+  text-underline-offset: .5rem;
 }
 
   .featured {
@@ -91,11 +91,11 @@
 }
 
 .painting-titles {
-    align-items: center;
+    align-items: baseline;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: .75rem 0 0;
+    margin: .75rem 0 .75rem;
 }
 
 .category-tag {
@@ -137,6 +137,7 @@
     align-items: start;
     flex-direction: column;
     gap: .75rem;
+    margin: 0 0 .5rem;
   }
   .subhead {
     flex-direction: column;
