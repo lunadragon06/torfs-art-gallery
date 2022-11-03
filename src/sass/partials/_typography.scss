@@ -55,9 +55,6 @@ h2 {
 }
 
 @media (max-width: $--mobile-screen) {
-    .breadcrumb {
-        margin: 1.5rem 0 0;
-    }
     h1:after, h1:before {
         border-bottom: none;
     }
