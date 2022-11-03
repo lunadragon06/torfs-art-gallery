@@ -53,14 +53,14 @@ function PaintingDetail() {
 
 	return (
 		<>
+			<div className="breadcrumb">
+			    <Link to={`/gallery`}>
+				    Gallery  
+			    </Link>
+				<span className="current-link"> / <b> {painting.title}</b></span>
+			</div>
 			<Heading content={painting.title} />
 			<section className="painting">
-				<div className="breadcrumb">
-			        <Link to={`/gallery`}>
-				        Gallery  
-			        </Link>
-					<span className="current-link"> / <b> {painting.title}</b></span>
-				</div>
 				<article className="painting-image">
 			        <img src={painting.image.url} 
 				         alt={painting.image.alternativeText} 
@@ -75,6 +75,7 @@ function PaintingDetail() {
 					    <span className="category-tag">{painting.category}</span>
 					</div>
 					<p>{painting.description}</p>
+					<p><b>Created: </b>{painting.month} / {painting.year}</p>
 				</article>
 			</section>
 		</>
