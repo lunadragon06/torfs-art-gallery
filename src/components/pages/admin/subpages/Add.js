@@ -57,16 +57,16 @@ function Add() {
     }
 
 	return (
-	<section className="add" style={{ margin: '0 auto', maxWidth: '1000px', }}>
-		<Heading content="Add new painting" />
-		<form onSubmit={handleSubmit(onSubmit)}>
-		{serverError && <FormError>{serverError}</FormError>}
-		<div className="breadcrumb" style={{ marginBottom: '4rem', }}>
+	<section className="add" style={{ margin: '0 auto', maxWidth: '500px', }}>
+		<div className="breadcrumb" style={{ marginBottom: '2.5rem', }}>
 			<Link to="/dashboard">
 				Dashboard
 			</Link>
 			<span className="current-link"> / <b> Add painting</b></span>
 		</div>
+		<Heading content="Add new painting" />
+		<form onSubmit={handleSubmit(onSubmit)}>
+		{serverError && <FormError>{serverError}</FormError>}
             <label htmlFor="title">
 				Title <span className="reqdot">*</span>
 			</label>
