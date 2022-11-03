@@ -48,13 +48,13 @@ function PaintingList() {
 
     return (
 		<div className="gal" style={{ margin: '0 auto', maxWidth: '1000px', }}>
-		    <Heading content="Gallery" />
 			<div className="breadcrumb">
-			        <Link to={`/`}>
-				        Home
-			        </Link>
-					<span className="current-link"> / <b> Gallery</b></span>
-				</div>
+			    <Link to={`/`}>
+				    Home
+			    </Link>
+				<span className="current-link"> / <b> Gallery</b></span>
+			</div>
+		    <Heading content="Gallery" />
 				<Searchbar />
 				<section className="galleri">
 			        {paintings.sort( (a,b) => a.id > b.id ? 1 : -1 ).reverse().map(function (painting) {
