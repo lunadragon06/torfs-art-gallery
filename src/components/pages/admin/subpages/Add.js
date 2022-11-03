@@ -1,6 +1,7 @@
 import * as yup from "yup";
 import FormError from "../../../../common/FormError"; 
 import Heading from "../../../layout/typography/Heading";
+import { HiArrowLeft } from 'react-icons/hi'; 
 import { Link, useHistory } from "react-router-dom";
 import React from "react";
 import useAxios from "../../../../hooks/useAxios";
@@ -58,12 +59,7 @@ function Add() {
 
 	return (
 	<section className="add" style={{ margin: '0 auto', maxWidth: '500px', }}>
-		<div className="breadcrumb" style={{ marginBottom: '2.5rem', }}>
-			<Link to="/dashboard">
-				Dashboard
-			</Link>
-			<span className="current-link"> / <b> Add painting</b></span>
-		</div>
+		<Link to="/dashboard" className="view" style={{ display: 'inline-block', marginBottom: '2.5rem' }}><HiArrowLeft /> Back to dashboard</Link>
 		<Heading content="Add new painting" />
 		<form onSubmit={handleSubmit(onSubmit)}>
 		{serverError && <FormError>{serverError}</FormError>}
