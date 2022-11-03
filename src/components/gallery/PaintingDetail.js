@@ -52,8 +52,8 @@ function PaintingDetail() {
 	}
 
 	return (
-		<>
-			<div className="breadcrumb">
+		<section style={{ margin: 'auto', maxWidth: '750px', }}>
+			<div className="breadcrumb" style={{ marginBottom: '2.5rem', }}>
 			    <Link to={`/gallery`}>
 				    Gallery  
 			    </Link>
@@ -78,7 +78,7 @@ function PaintingDetail() {
 					<p><b>Created: </b>{painting.month} / {painting.year}</p>
 				</article>
 			</section>
-		</>
+		</section>
 	);
 }
 
