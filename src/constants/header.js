@@ -1,1 +1,1 @@
-export const HEADER = "https://torfs-art-gallery.herokuapp.com/sliders";
+export const HEADER = "https://strapi-production-5073.up.railway.app/api/sliders?populate=%2A";
