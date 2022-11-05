@@ -20,8 +20,8 @@ function Slider() {
                 const response = await axios.get(url);
 
                 if (response.status === 200) {
-                    setSlider(response.data.data);
-					console.log(response.data.data);
+                    setSlider(response.data);
+					console.log(response.data);
                 } else {
                     setError("An error occurred");
                 }
@@ -46,12 +46,12 @@ function Slider() {
 
     return (
         <Carousel interval={null}>
-            {slide.filter(paint => paint.attributes.year > 2021).slice(0, 2).map(function (slider) {
+            {slide.filter(paint => paint.year > 2021).slice(0, 2).map(function (slider) {
             return <Carousel.Item key={slider.id} id={slider.id}>
                 {/* <Link to="#" style={{ display: 'block', padding: '0', }}> */}
                         <img className="sliderimg d-block w-100"
-                             src={slider.attributes.image.data.attributes.url}
-                             alt={slider.attributes.image.data.attributes.alternativeText}
+                             src={slider.image[0].url}
+                             alt={slider.title}
                              onContextMenu={(e) => {
                                 e.preventDefault(); 
                              }} 
@@ -62,13 +62,13 @@ function Slider() {
                             }}
                         />
                         <Carousel.Caption>
-                            <h2 style={{ fontSize: '21px', }}>{slider.attributes.title}</h2>
+                            <h2 style={{ fontSize: '21px', }}>{slider.title}</h2>
                             <p className="caption" 
                                style={{ 
                                 fontSize: '14px', 
                                 textTransform: 'capitalize', 
                             }}>
-                                {slider.attributes.year} | {slider.attributes.category}
+                                {slider.year} | {slider.category}
                             </p>
                         </Carousel.Caption>
                     {/* </Link> */}
