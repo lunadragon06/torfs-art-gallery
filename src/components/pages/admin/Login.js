@@ -1,7 +1,7 @@
 import * as yup from "yup";
 import axios from "axios";
 import AuthContext from "../../../context/AuthContext";
-import { BASE_URL, TOKEN_PATH } from "../../../constants/data";
+//import { BASE_URL, TOKEN_PATH } from "../../../constants/data";
 import FormError from "../../../common/FormError";
 import Heading from "../../layout/typography/Heading";
 import { useForm } from "react-hook-form";
@@ -9,10 +9,10 @@ import { useHistory } from "react-router-dom";
 import { useState, useContext } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 
-const url = BASE_URL + TOKEN_PATH;
+const url = "http://localhost:8082/auth/local";
 
 const schema = yup.object().shape({
-	username: yup.string().required("Please enter your username or email."),
+	identifier: yup.string().required("Please enter your username or email."),
 	password: yup.string().required("Please enter your correct password."),
 });
 
@@ -57,8 +57,8 @@ export default function LoginForm() {
 				<fieldset className="form-container" disabled={submitting}>
 					<div>
 					    <label>Username or Email</label>
-						<input name="username" placeholder="Username" {...register("username")} />
-						{errors.username && <FormError>{errors.username.message}</FormError>}
+						<input name="identifier" placeholder="Username" {...register("identifier")} />
+						{errors.identifier && <FormError>{errors.identifier.message}</FormError>}
 					</div>
 					<div>
 					    <label>Password</label>
