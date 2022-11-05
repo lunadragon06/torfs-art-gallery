@@ -28,11 +28,11 @@ export default function LoginForm() {
 
 	// eslint-disable-next-line
 	const [auth, setAuth] = useContext(AuthContext);
+	console.log(auth);
 
 	async function onSubmit(data) {
 		setSubmitting(true);
 		setLoginError(null);
-
 		console.log(data);
 
 		try {
@@ -44,6 +44,7 @@ export default function LoginForm() {
 			console.log("error", error);
 			setLoginError(error.toString());
 		} finally {
+			console.log(setSubmitting)
 			setSubmitting(false);
 		}
 	}
