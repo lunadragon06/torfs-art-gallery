@@ -9,7 +9,7 @@ import { useHistory } from "react-router-dom";
 import { useState, useContext } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 
-const url = "http://localhost:8082/auth/local";
+const url = "https://torfs-art-gallery.herokuapp.com/auth/local";
 
 const schema = yup.object().shape({
 	identifier: yup.string().required("Please enter your username or email."),
