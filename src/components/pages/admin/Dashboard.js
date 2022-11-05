@@ -6,7 +6,20 @@ import { Link } from "react-router-dom";
 import Heading from "../../layout/typography/Heading";
 import React from 'react';
 
+import { useHistory } from "react-router-dom";
+import { useContext } from 'react';
+import AuthContext from "../../../context/AuthContext";
+
 function AdminMenu() {
+    const history = useHistory();
+    
+    const [auth] = useContext(AuthContext);
+    console.log(auth);
+
+    if(auth === null) {
+        history.push("/");
+    }
+
     return ( 
         <>
             <Heading content="Dashboard" />
