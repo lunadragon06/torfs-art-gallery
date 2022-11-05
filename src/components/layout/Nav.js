@@ -11,7 +11,7 @@ function Nav() {
 
 	function logout() {
 		setAuth(null);
-		history("/");
+		history.push("/login");
 	}
 
 	return (
@@ -42,7 +42,7 @@ function Nav() {
                         <Link onClick={() => {document.getElementById("close-button").click()}} to="/dashboard">Dashboard</Link>
                     </li>
                     <li>
-                        <button onClick={logout}>Logout</button>
+                        <Link to="/login" onClick={logout}>Logout</Link>
                     </li> 
                     </>
                     ) : (
