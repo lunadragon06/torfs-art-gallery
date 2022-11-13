@@ -9,14 +9,34 @@ import { useForm } from 'react-hook-form';
 import { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 
-
 const schema = yup.object().shape({
     title: yup.string().required("A title for your painting is required."),
 	category: yup.string().required("Please select a painting category."),
 	year: yup.string(), 
-	month: yup.string(), 
-    file: yup.mixed().required("Please upload your painting image."),
+	month: yup.number().typeError("Month must be in numbers.").nullable()
+	.moreThan(0, "Invalid month number.")
+	.lessThan(13, "Month number doesn't exist")
+	.transform((_, valu) => (valu !== "" ? Number(valu) : null)), // make this validation optional if empty 
 	description: yup.string().required("Description for your painting is required."),
+	file: yup.mixed()
+	        .test("image", "You need to provide a file.", (va) => {
+		        if (va.length > 0) {
+		            return true;
+		        }
+		        return false;
+	        })
+	        .test("fileSize", "The image is too large (maximum file size: 200KB).", (value) => {
+				if (!value.length) {
+					return true;
+				}
+		        return value[0].size <= 204800;
+	        }).test("type", "Only the following formats are accepted: .jpeg and .jpg", (val) => {
+			    if (!val.length) return true;
+			    return val && (
+				    val[0].type === "image/jpeg" ||
+				    val[0].type === "image/jpg" 
+			);
+		}),
 });
 
 function Add() {
@@ -45,7 +65,7 @@ function Add() {
         formData.append("data", JSON.stringify(data));
 
         try {
-            const response = await http.post("/products", formData);
+            const response = await http.post("/paintings", formData);
 			console.log(response);
             history("/dashboard");
 
@@ -111,7 +131,11 @@ function Add() {
 			<label htmlFor="img">
 				Image <span className="reqdot">*</span>
 			</label>
-				<input className="file-input" name="file" type="file" multiple {...register("file")} />
+				<input className="file-input" 
+				       name="file" 
+					   type="file" 
+					   multiple {...register("file")} 
+				/>
 				{errors.file && <FormError>
                     {errors.file.message}
 				</FormError>}
