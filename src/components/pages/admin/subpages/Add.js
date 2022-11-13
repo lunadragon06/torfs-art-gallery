@@ -12,10 +12,11 @@ import { yupResolver } from "@hookform/resolvers/yup";
 const schema = yup.object().shape({
     title: yup.string().required("A title for your painting is required."),
 	category: yup.string().required("Please select a painting category."),
-	year: yup.string(), 
+	year: yup.string().nullable()
+	.length(4, "Must have a year format.").transform((_, v) => (v !== "" ? String(v) : null)), 
 	month: yup.number().typeError("Month must be in numbers.").nullable()
 	.moreThan(0, "Invalid month number.")
-	.lessThan(13, "Month number doesn't exist")
+	.lessThan(13, "Month number doesn't exist.")
 	.transform((_, valu) => (valu !== "" ? Number(valu) : null)), // make this validation optional if empty 
 	description: yup.string().required("Description for your painting is required."),
 	file: yup.mixed().required()
@@ -120,7 +121,7 @@ function Add() {
 				Category <span className="reqdot">*</span>
 			</label>
 				<select name="category" type="category" {...register("category")}>
-                    <option value="">Please select a painting category</option>
+                    <option value="">Select painting category</option>
                     <option className="subject-option" value="abstract">Abstract</option>
 					<option className="subject-option" value="maritime">Maritime</option>
 					<option className="subject-option" value="nature">Nature</option>
