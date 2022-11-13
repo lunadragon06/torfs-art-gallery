@@ -30,7 +30,7 @@ const schema = yup.object().shape({
 				if (!value.length) {
 					return true;
 				}
-		        return value[0].size <= 204800;
+		        return value[0].size <= 204800; // converted from KB to Bytes 
 	        }).test("type", "Only the following formats are accepted: .jpeg and .jpg", (val) => {
 			    if (!val.length) return true;
 			    return val && (
