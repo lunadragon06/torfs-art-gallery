@@ -20,8 +20,7 @@ function Inbox() {
     const [contacts, setContacts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-
-    const http = useAxios();
+    const http = useAxios(); // ... 
 
     useEffect(function () {
         async function showContact() {
