@@ -46,7 +46,7 @@ function Nav() {
                     </li> 
                     </>
                     ) : (
-                    <li className="logbtn" style={{ display: 'none', }}>
+                    <li className="logbtn">
                         <Link onClick={() => {document.getElementById("close-button").click()}} to="/login">Login</Link>
                     </li>
                     )}
