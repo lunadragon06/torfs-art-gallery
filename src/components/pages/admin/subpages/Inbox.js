@@ -5,11 +5,19 @@ import { Link } from "react-router-dom";
 import Loader from "../../../layout/Loader";
 import React from 'react';
 import useAxios from "../../../../hooks/useAxios";
+import { useHistory } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 
 function Inbox() {
-	const [auth] = useContext(AuthContext);
-	console.log(auth);
+    const history = useHistory();
+    
+    const [auth] = useContext(AuthContext);
+    console.log(auth);
+
+    if(auth === null) {
+        history.push("/");
+    }
+
     const [contacts, setContacts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
