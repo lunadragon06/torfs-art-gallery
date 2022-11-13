@@ -18,7 +18,7 @@ const schema = yup.object().shape({
 	.lessThan(13, "Month number doesn't exist")
 	.transform((_, valu) => (valu !== "" ? Number(valu) : null)), // make this validation optional if empty 
 	description: yup.string().required("Description for your painting is required."),
-	file: yup.mixed()
+	file: yup.mixed().required()
 	        .test("image", "You need to provide a file.", (va) => {
 		        if (va.length > 0) {
 		            return true;
