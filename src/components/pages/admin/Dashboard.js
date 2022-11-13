@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 import Heading from "../../layout/typography/Heading";
 import React from 'react';
 
+import AuthContext from "../../../context/AuthContext";
 import { useHistory } from "react-router-dom";
 import { useContext } from 'react';
-import AuthContext from "../../../context/AuthContext";
 
 function AdminMenu() {
     const history = useHistory();
