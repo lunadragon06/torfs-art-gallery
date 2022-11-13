@@ -6,7 +6,20 @@ import React from 'react';
 import useAxios from "../../../../hooks/useAxios";
 import { useState, useEffect } from "react";
 
+import AuthContext from "../../../../context/AuthContext"; 
+import { useHistory } from "react-router-dom";
+import { useContext } from 'react';
+
 function Enquiries() {
+    const history = useHistory();
+    
+    const [auth] = useContext(AuthContext);
+    console.log(auth);
+
+    if(auth === null) {
+        history.push("/");
+    }
+
 	const [enquiries, setEnquiries] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
