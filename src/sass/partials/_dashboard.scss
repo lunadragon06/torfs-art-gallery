@@ -31,14 +31,14 @@
     font-weight: normal;
 }
 
-/* ENQUIRIES */
-.post {
+/* ENQUIRIES & INBOX */
+.post, .inbox-msg {
     background: white;
     margin-bottom: 1.5rem;
     padding: 3rem 3rem 4rem;
 }
 
-.post-detail {
+.post-detail, .inbox-detail {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -50,20 +50,20 @@
     padding: .75rem 2rem .75rem;
 }
 
-.note {
+.note, .message-box {
     background: $--box-color;
     margin-top: 2rem;
     padding: 1.5rem 2rem 3rem;
 }
 
 @media (max-width: $--tablet-screen) {
-    .note {
+    .note, .message-box {
         padding: .75rem 1rem 2rem;
     }
-    .post {
+    .post, .inbox-msg {
         padding: 1.5rem 1.5rem 2rem;
     }
-    .post-detail {
+    .post-detail, .inbox-detail {
         flex-direction: column;
     }
     .post-subject {
