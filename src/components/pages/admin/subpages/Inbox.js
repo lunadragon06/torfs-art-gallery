@@ -1,6 +1,7 @@
 import AuthContext from "../../../../context/AuthContext";
 import FormError from "../../../../common/FormError";
 import Heading from "../../../layout/typography/Heading";
+import { HiArrowLeft } from 'react-icons/hi'; 
 import { Link, useHistory } from "react-router-dom";
 import Loader from "../../../layout/Loader";
 import React from 'react';
@@ -49,22 +50,19 @@ function Inbox() {
 
 	return (
 		<>
-			<div className="breadcrumb">
-			<Link to="/dashboard">
-				Dashboard
-			</Link>
-			<span className="current-link"> / <b> Inbox</b></span>
+			<div className="breadcrumb" style={{ margin: '0 auto', maxWidth: '1000px', }}>
+                <Link to="/dashboard" className="view" style={{ display: 'inline-block', marginBottom: '2.5rem' }}><HiArrowLeft /> Back to dashboard</Link>
 		    </div>
 			<Heading content="Inbox" />
 			<section>
 			{contacts.map((contact) => {
                             return (
-                                <div key={contact.id}>
+                                <article key={contact.id}>
                                         <p>{contact.created_at.slice(0, -5)}</p>
                                         <p>{contact.first_name}</p>
                                         <p>{contact.email}</p>
                                         <p>{contact.message}</p>
-                                </div>
+                                </article>
                             );
                         })}
 			</section>
