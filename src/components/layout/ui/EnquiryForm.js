@@ -20,7 +20,7 @@ const schema = yup.object().shape({
             .required("Please enter your email adress."),
     subject: yup.string()
             .required("Please enter your subject title."),
-    note: yup.string(),
+    note: yup.string().max(300, "Max 300 characters long."),
 });
 
 function EnquiryForm() {
