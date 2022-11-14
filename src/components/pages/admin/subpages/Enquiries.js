@@ -66,7 +66,9 @@ function Enquiries() {
                                             <b>{enquiry.name}</b>
                                             <span> (</span>{enquiry.email}<span>)</span>
                                         </p>
-                                        <p>{moment(enquiry.created_at).format("dddd DD.MM.YYYY. HH:mm")}</p>
+                                        <p>
+                                            {moment(enquiry.created_at).format("ddd, DD.MM.YYYY. (HH:mm)")}
+                                        </p>
                                     </div>
 										<p className="post-subject"><b>Subject:</b> {enquiry.subject}</p>
                                     <div className="note">
