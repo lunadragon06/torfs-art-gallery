@@ -17,10 +17,11 @@ const schema = yup.object().shape({
             .required("You must enter your name."),
     email: yup.string()
             .email("The email adress is not valid.")
-            .required("Please enter your email adress."),
+            .required("Email adress is required."),
     subject: yup.string()
-            .required("Please enter your subject title."),
-    note: yup.string().max(300, "Max 300 characters long."),
+            .required("Please enter your subject title.")
+            .matches(/^[aA-zZ\s]+$/, "Only letters are allowed."),
+    note: yup.string().max(300, "Text can't be over 300 characters."),
 });
 
 function EnquiryForm() {
@@ -31,6 +32,15 @@ function EnquiryForm() {
     const { register, handleSubmit, reset, formState: { errors } } = useForm({
         resolver: yupResolver(schema)
     });
+
+    // notefield word count
+    setInterval(function (){
+        const counter = document.getElementById('counter');
+        const input = document.getElementById('note');
+        const input_v = input.value;
+        const input_vl = input_v.length;
+        counter.innerHTML = input_vl;
+    },0)
 
     async function onSubmit(data) {
         setSubmitting(true);
@@ -111,6 +121,7 @@ function EnquiryForm() {
 			    <textarea type="note" 
                           name="note"
                           className="notetab" 
+                          id="note"
                           placeholder="Please spesify your request in more details here." {...register("note")}>
                 </textarea>
                 {errors.note && 
@@ -118,6 +129,7 @@ function EnquiryForm() {
                         {errors.note.message}
                     </FormError>
                 }
+                <p className="counter" id="counter"></p>
             <button className="sendbtn" id="enquirybtn" type="submit">
                 {submitting ? "Sending..." : "SEND"} 
             </button>
