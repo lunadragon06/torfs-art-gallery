@@ -57,7 +57,7 @@ function Enquiries() {
                 <Link to="/dashboard" className="view" style={{ display: 'inline-block', marginBottom: '2.5rem' }}><HiArrowLeft /> Back to dashboard</Link>
 		    </div>
 			<Heading content="Enquiries" />
-			<section style={{ margin: '0 auto', maxWidth: '1000px', }}>
+			<section className="enquiry-section" style={{ margin: '3rem auto 0', maxWidth: '1000px', }}>
 			{enquiries.sort( (a,b) => a.id > b.id ? 1 : -1 ).reverse().map((enquiry) => {
                             return (
                                 <article className="post" key={enquiry.id}>
@@ -67,7 +67,10 @@ function Enquiries() {
                                             <span> (</span>{enquiry.email}<span>)</span>
                                         </p>
                                         <p>
-                                            {moment(enquiry.created_at).format("ddd, DD.MM.YYYY. (HH:mm)")}
+                                            {moment(enquiry.created_at).format("ddd, DD.MM.YYYY.")}
+                                            <span className="post-time">
+                                                {moment(enquiry.created_at).format(" (HH:mm)")}
+                                            </span>
                                         </p>
                                     </div>
 										<p className="post-subject"><b>Subject:</b> {enquiry.subject}</p>
