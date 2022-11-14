@@ -13,7 +13,7 @@ const url = BASE_URL + "/contacts";
 const schema = yup.object().shape({
     first_name: yup.string()
             .required("Enter your first name."),
-    last_name: yup.string(),
+    last_name: yup.string().required().min(1, "Type in first letter of surname."),
     email: yup.string()
             .email("The email is not valid.")
             .required("Please enter your email."),
@@ -55,7 +55,7 @@ function Contact() {
     }
 
 	return (
-		<>
+		<div>
 			<Heading content="Contact" />
 			<form onSubmit={handleSubmit(onSubmit)}>
             {submitError && <FormError>{submitError}</FormError>}
@@ -74,7 +74,7 @@ function Contact() {
 				</div>
 				<div>
 			        <label className="label" htmlFor="fname">
-					    Last Name <span className="optxt">(optional)</span>
+					    Last Name <span className="optxt">(must have 1 letter).</span>
 				    </label>
                     <input className="input" 
                            id="last_name"
@@ -107,7 +107,7 @@ function Contact() {
                             {submitting ? "Sending..." : "SEND"}
                 </button>
             </form>
-		</>
+		</div>
 	);
 }
 
