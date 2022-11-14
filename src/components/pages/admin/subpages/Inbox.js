@@ -61,7 +61,7 @@ function Inbox() {
                                 <article className="inbox-msg" key={contact.id}>
                                     <div className="inbox-detail">
                                         <p>
-                                            <b>{contact.first_name}</b> ({contact.email})
+                                            <b>{contact.first_name} {contact.last_name.substring(0, 1)}.</b> ({contact.email})
                                         </p>
                                         <p>  
                                         {moment(contact.created_at).format("ddd, DD.MM.YYYY.")}
@@ -71,7 +71,7 @@ function Inbox() {
                                         </p>
                                     </div>
                                     <div className="message-box">
-                                        <p>{contact.message.substring(0, 250)} ...</p>
+                                        <p>{contact.message}</p>
                                     </div>
                                 </article>
                             );
