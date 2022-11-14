@@ -31,6 +31,25 @@
     font-weight: normal;
 }
 
+/* ENQUIRIES */
+.post {
+    background: white;
+    margin-bottom: 1.5rem;
+    padding: 3rem 3rem 4rem;
+}
+
+.post-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.note {
+    background: $--box-color;
+    margin-top: 2rem;
+    padding: 1.5rem 2rem 3rem;
+}
+
 @media (max-width: $--mobile-screen) {
     .adminav {
         margin-top: 2rem;
