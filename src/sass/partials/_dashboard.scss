@@ -56,6 +56,15 @@
     padding: 1.5rem 2rem 3rem;
 }
 
+@media (max-width: $--tablet-screen) {
+    .note, .post-subject {
+        padding: .75rem 1rem 2rem;
+    }
+    .post-detail {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: $--mobile-screen) {
     .adminav {
         margin-top: 2rem;
