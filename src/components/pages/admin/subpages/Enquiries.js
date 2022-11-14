@@ -1,5 +1,6 @@
 import FormError from "../../../../common/FormError";
 import Heading from "../../../layout/typography/Heading";
+import { HiArrowLeft } from 'react-icons/hi'; 
 import { Link } from "react-router-dom";
 import Loader from "../../../layout/Loader";
 import React from 'react';
@@ -53,18 +54,15 @@ function Enquiries() {
 
 	return (
 		<>
-			<div className="breadcrumb">
-			    <Link to="/dashboard">
-				    Dashboard
-			    </Link>
-			    <span className="current-link"> / <b> Enquiries</b></span>
+			<div className="breadcrumb" style={{ margin: '0 auto', maxWidth: '1000px', }}>
+                <Link to="/dashboard" className="view" style={{ display: 'inline-block', marginBottom: '2.5rem' }}><HiArrowLeft /> Back to dashboard</Link>
 		    </div>
 			<Heading content="Enquiries" />
 			<section>
 			{enquiries.map((enquiry) => {
                             return (
                                 <div key={enquiry.id}>
-                                        <p>{enquiry.created_at.slice(0, -5)}</p>
+                                        <p>{enquiry.created_at}</p>
                                         <p>{enquiry.name}</p>
                                         <p>{enquiry.mail}</p>
 										<p>{enquiry.subject}</p>
