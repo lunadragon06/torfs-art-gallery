@@ -62,12 +62,15 @@ function Enquiries() {
                             return (
                                 <article className="post" key={enquiry.id}>
                                     <div className="post-detail">
-                                        <p><b>{enquiry.name}</b> {enquiry.email}</p>
+                                        <p>
+                                            <b>{enquiry.name}</b>
+                                            <span> (</span>{enquiry.email}<span>)</span>
+                                        </p>
                                         <p>{moment(enquiry.created_at).format("dddd DD.MM.YYYY. HH:mm")}</p>
                                     </div>
-										<p><b>Subject:</b> {enquiry.subject}</p>
-                                    <b>Note:</b>
+										<p className="post-subject"><b>Subject:</b> {enquiry.subject}</p>
                                     <div className="note">
+                                        <b style={{display: 'inline-block', marginBottom: '.75rem', }}>Note:</b>
                                         <p>{enquiry.note}</p>
                                     </div>
                                 </article>
