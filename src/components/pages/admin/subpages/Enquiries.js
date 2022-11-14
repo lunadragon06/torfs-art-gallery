@@ -1,15 +1,14 @@
+import AuthContext from "../../../../context/AuthContext"; 
 import FormError from "../../../../common/FormError";
 import Heading from "../../../layout/typography/Heading";
 import { HiArrowLeft } from 'react-icons/hi'; 
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Loader from "../../../layout/Loader";
+import moment from "moment/moment";
 import React from 'react';
 import useAxios from "../../../../hooks/useAxios";
-import { useState, useEffect } from "react";
-
-import AuthContext from "../../../../context/AuthContext"; 
-import { useHistory } from "react-router-dom";
 import { useContext } from 'react';
+import { useState, useEffect } from "react";
 
 function Enquiries() {
     const history = useHistory();
@@ -58,16 +57,20 @@ function Enquiries() {
                 <Link to="/dashboard" className="view" style={{ display: 'inline-block', marginBottom: '2.5rem' }}><HiArrowLeft /> Back to dashboard</Link>
 		    </div>
 			<Heading content="Enquiries" />
-			<section>
-			{enquiries.map((enquiry) => {
+			<section style={{ margin: '0 auto', maxWidth: '1000px', }}>
+			{enquiries.sort( (a,b) => a.id > b.id ? 1 : -1 ).reverse().map((enquiry) => {
                             return (
-                                <div key={enquiry.id}>
-                                        <p>{enquiry.created_at}</p>
-                                        <p>{enquiry.name}</p>
-                                        <p>{enquiry.mail}</p>
-										<p>{enquiry.subject}</p>
+                                <article className="post" key={enquiry.id}>
+                                    <div className="post-detail">
+                                        <p><b>{enquiry.name}</b> {enquiry.email}</p>
+                                        <p>{moment(enquiry.created_at).format("dddd DD.MM.YYYY. HH:mm")}</p>
+                                    </div>
+										<p><b>Subject:</b> {enquiry.subject}</p>
+                                    <b>Note:</b>
+                                    <div className="note">
                                         <p>{enquiry.note}</p>
-                                </div>
+                                    </div>
+                                </article>
                             );
                         })}
 			</section>
