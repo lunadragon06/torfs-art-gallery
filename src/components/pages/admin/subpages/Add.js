@@ -64,6 +64,8 @@ function Add() {
 
         const { image, ...data } = inputData;
         formData.append("data", JSON.stringify(data));
+		//     formData.append("files.image", image[0]); <-- not working
+
 
         try {
             const response = await http.post("/paintings", formData);
