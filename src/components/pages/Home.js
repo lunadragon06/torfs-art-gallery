@@ -37,7 +37,7 @@ export default function Home() {
 						travelling in my homeland, as well as abstract pictures from 
 						time to time.
 					</p>
-					<b>Currently available for collaboration or networking.</b>
+					<b>Currently available for collaboration or/and networking.</b>
 				</article>
 			</section>
 			<EnquiryForm />
