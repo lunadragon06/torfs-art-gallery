@@ -19,7 +19,7 @@ const schema = yup.object().shape({
 	.lessThan(13, "Month number doesn't exist.")
 	.transform((_, valu) => (valu !== "" ? Number(valu) : null)), // make this validation optional if empty 
 	description: yup.string().required("Description for your painting is required."),
-	file: yup.mixed().required()
+	files: yup.mixed().required()
 	        .test("image", "You need to provide a file.", (va) => {
 		        if (va.length > 0) {
 		            return true;
@@ -59,7 +59,7 @@ function Add() {
 
         //Images
         const formData = new FormData();
-        for (const image of inputData.file) {
+        for (const image of inputData.files) {
             formData.append('files.images', image);
         }
 
@@ -137,10 +137,10 @@ function Add() {
 				<input className="file-input" 
 				       name="file" 
 					   type="file" 
-					   multiple {...register("file")} 
+					   multiple {...register("files")} 
 				/>
-				{errors.file && <FormError>
-                    {errors.file.message}
+				{errors.files && <FormError>
+                    {errors.files.message}
 				</FormError>}
 			<label htmlFor="description">
 				Description <span className="reqdot">*</span>
