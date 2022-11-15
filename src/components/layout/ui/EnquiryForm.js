@@ -34,13 +34,11 @@ function EnquiryForm() {
     });
 
     // notefield word count
-    setInterval(function (){
-        const counter = document.getElementById('counter');
-        const input = document.getElementById('note');
-        const input_v = input.value;
-        const input_vl = input_v.length;
-        counter.innerHTML = input_vl;
-    },0);
+    let [count, getCount] = useState(0);
+
+    const keyhandler = e => {
+      getCount(e.target.value.length);
+    };
 
     async function onSubmit(data) {
         setSubmitting(true);
@@ -124,6 +122,7 @@ function EnquiryForm() {
                           name="note"
                           className="notetab" 
                           id="note"
+                          onKeyUp={e => keyhandler(e)}
                           placeholder="Please spesify your request in more details here." {...register("note")}>
                 </textarea>
                 {errors.note && 
@@ -131,7 +130,7 @@ function EnquiryForm() {
                         {errors.note.message}
                     </FormError>
                 }
-                <p className="counter" id="counter"></p>
+                <p className="counter" id="counter">{count} / 300</p>
             <button className="sendbtn" id="enquirybtn" type="submit">
                 {submitting ? "Sending..." : "SEND"} 
             </button>
