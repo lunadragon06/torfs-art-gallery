@@ -41,13 +41,13 @@ function Nav() {
                     <li>
                         <Link onClick={() => {document.getElementById("close-button").click()}} to="/dashboard">Dashboard</Link>
                     </li>
-                    <li className="logbtn">
-                        <Link to="/login" onClick={logout}>Logout</Link>
+                    <li>
+                        <Link to="/login" className="logbtn" onClick={logout}>Logout</Link>
                     </li> 
                     </>
                     ) : (
-                    <li className="logbtn">
-                        <Link onClick={() => {document.getElementById("close-button").click()}} to="/login">Login</Link>
+                    <li>
+                        <Link className="logbtn" onClick={() => {document.getElementById("close-button").click()}} to="/login">Login</Link>
                     </li>
                     )}
                 </ul>
