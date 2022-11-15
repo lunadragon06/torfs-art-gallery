@@ -50,6 +50,7 @@ function Add() {
     const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(schema),
     });
+	
     async function onSubmit(inputData) {
         setSubmitting(true);
         setServerError(null);
@@ -64,8 +65,7 @@ function Add() {
 
         const { image, ...data } = inputData;
         formData.append("data", JSON.stringify(data));
-		//     formData.append("files.image", image[0]); <-- not working
-
+		// formData.append("files.image", image[0]); <-- not working
 
         try {
             const response = await http.post("/paintings", formData);
