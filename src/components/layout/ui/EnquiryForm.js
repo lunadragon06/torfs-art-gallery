@@ -70,9 +70,11 @@ function EnquiryForm() {
 
     return (
     <section className="request">
-    <h3 style={{ fontSize: '20px', textAlign: 'center', }}>Make a request?</h3>
+    <h3 style={{ fontSize: '20px', lineHeight: '1.75rem', textAlign: 'center', }}>
+        Wanna get in touch to discuss potential collaborations and assignments?
+    </h3>
         {/* TO OPEN THE ENQUIRY FORM */}  
-        <a href="#popUp" id="openPopUp">Make your request</a>
+        <a href="#popUp" id="openPopUp">Make a request</a>
         <aside id="popUp" className="popup">
           <div className="popUpContainer">
             <form className="enquiry" onSubmit={handleSubmit(onSubmit)}>
