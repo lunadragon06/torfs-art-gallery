@@ -59,7 +59,7 @@ function Add() {
         //Images
         const formData = new FormData();
         for (const image of inputData.file) {
-            formData.append('file.images', image);
+            formData.append('files.images', image);
         }
 
         const { image, ...data } = inputData;
@@ -68,7 +68,7 @@ function Add() {
         try {
             const response = await http.post("/paintings", formData);
 			console.log(response);
-            history("/dashboard");
+            history.push("/dashboard");
 
         } catch (error) {
             setServerError("Failed to add new painting! Please try again later.");
