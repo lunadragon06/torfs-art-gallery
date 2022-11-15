@@ -40,7 +40,7 @@ function EnquiryForm() {
         const input_v = input.value;
         const input_vl = input_v.length;
         counter.innerHTML = input_vl;
-    },0)
+    },0);
 
     async function onSubmit(data) {
         setSubmitting(true);
