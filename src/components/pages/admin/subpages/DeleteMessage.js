@@ -12,13 +12,17 @@ export default function DeleteMessage({ id }) {
 	const url = `/contacts/${id}`;
 
 	async function handleDelete() {
+        const confirmDelete = window.confirm("Delete this message?");
+
+        if (confirmDelete) {
 		try {
 			await http.delete(url);
 			history.push("/dashboard");
 		} catch (error) {
 			setError(error);
 		}
-	}
+	  }
+    }
 
 	return (
 		<button type="button" className="delbtn" onClick={handleDelete}>
