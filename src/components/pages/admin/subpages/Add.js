@@ -60,7 +60,7 @@ function Add() {
         //Images
         const formData = new FormData();
         for (const image of inputData.files) {
-            formData.append('files.images', image);
+            formData.append('files.image', image);
         }
 
         const { image, ...data } = inputData;
