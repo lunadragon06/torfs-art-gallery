@@ -1,4 +1,5 @@
 import AuthContext from "../../../../context/AuthContext";
+import DeleteMessage from "./DeleteMessage";
 import FormError from "../../../../common/FormError";
 import Heading from "../../../layout/typography/Heading";
 import { HiArrowLeft } from 'react-icons/hi'; 
@@ -73,6 +74,7 @@ function Inbox() {
                                     <div className="message-box">
                                         <p>{contact.message}</p>
                                     </div>
+                                    <DeleteMessage id={contact.id} />
                                 </article>
                             );
                         })}
