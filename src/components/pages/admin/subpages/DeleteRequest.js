@@ -12,7 +12,7 @@ export default function DeleteRequest({ id }) {
 	const url = `/requests/${id}`;
 
 	async function handleDelete() {
-        const confirmDelete = window.confirm("Delete this message?");
+        const confirmDelete = window.confirm("Delete this request?");
 
         if (confirmDelete) {
 		try {
