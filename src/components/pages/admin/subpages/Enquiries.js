@@ -1,4 +1,5 @@
 import AuthContext from "../../../../context/AuthContext"; 
+import DeleteRequest from "./DeleteRequest";
 import FormError from "../../../../common/FormError";
 import Heading from "../../../layout/typography/Heading";
 import { HiArrowLeft } from 'react-icons/hi'; 
@@ -78,6 +79,7 @@ function Enquiries() {
                                         <b style={{display: 'inline-block', marginBottom: '.75rem', }}>Note:</b>
                                         <p>{enquiry.note}</p>
                                     </div>
+                                    <DeleteRequest id={enquiry.id} />
                                 </article>
                             );
                         })}
