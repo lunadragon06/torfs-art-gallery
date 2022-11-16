@@ -35,7 +35,7 @@
 .post, .inbox-msg {
     background: white;
     margin-bottom: 1.5rem;
-    padding: 3rem 3rem 6rem;
+    padding: 3rem;
 }
 
 .post-detail, .inbox-detail {
@@ -60,10 +60,9 @@
 .delbtn {
     background: #FB5B5B;
     border: 1px solid #FB5B5B;
-    float: right;
     font-size: 14px;
     letter-spacing: 0.075rem;
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
     padding: .25rem 1rem;
     width: auto;
 }
@@ -91,6 +90,9 @@
 @media (max-width: $--mobile-screen) {
     .adminav {
         margin-top: 2rem;
+    }
+    .delbtn {
+        width: 100%;
     }
     .enquiry-section {
         margin-top: 2rem !important;
