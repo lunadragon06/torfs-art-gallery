@@ -69,17 +69,19 @@ function Contact() {
                            id="first_name"
                            type="text" 
                            name="first_name"
+                           placeholder="Enter your first name."
                            {...register("first_name")} />
                     {errors.first_name && <FormError>{errors.first_name.message}</FormError>}
 				</div>
 				<div>
 			        <label className="label" htmlFor="fname">
-					    Last Name <span className="optxt">(must have 1 letter).</span>
+					    Last Name <span className="reqdot">*</span>
 				    </label>
                     <input className="input" 
                            id="last_name"
                            type="text" 
-                           name="first_name"
+                           name="last_name"
+                           placeholder="First letter is required."
                            {...register("last_name")} />
                     {errors.last_name && <FormError>{errors.last_name.message}</FormError>}
 				</div>
@@ -91,6 +93,7 @@ function Contact() {
                     <input className="input" 
                            type="email" 
                            name="user_email" 
+                           placeholder="Please insert your emai adress."
                            {...register("email")} />
                     {errors.email && <FormError>{errors.email.message}</FormError>}
 				</div>
@@ -99,6 +102,7 @@ function Contact() {
 				</label>
 			        <textarea id="msg" 
                               name="message" 
+                              placeholder="Message must be at least 12 characters long."
                               {...register("message")}>
                     </textarea>
                     {errors.message && <FormError>{errors.message.message}</FormError>}
