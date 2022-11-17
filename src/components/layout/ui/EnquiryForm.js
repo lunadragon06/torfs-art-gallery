@@ -21,7 +21,9 @@ const schema = yup.object().shape({
     subject: yup.string()
             .required("Please enter your subject title.")
             .matches(/^[aA-zZ\s]+$/, "Only letters are allowed."),
-    note: yup.string().max(300, "Text can't be over 300 characters."),
+    note: yup.string()
+            .required("Request details are required.")
+            .max(300, "Text can't be over 300 characters."),
 });
 
 function EnquiryForm() {
@@ -116,14 +118,14 @@ function EnquiryForm() {
                     </FormError>
                 }
             <label htmlFor="note">
-				Note <span className="optxt">(optional)</span>
+				Note <span className="reqdot">*</span><span className="optxt"> (Can be max 300 characters long)</span>
 			</label>
 			    <textarea type="note" 
                           name="note"
                           className="notetab" 
                           id="note"
                           onKeyUp={e => keyhandler(e)}
-                          placeholder="Please spesify your request in more details here." {...register("note")}>
+                          placeholder="Please spesify your request in more details." {...register("note")}>
                 </textarea>
                 {errors.note && 
                     <FormError>
