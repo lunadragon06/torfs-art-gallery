@@ -19,7 +19,7 @@ $--default-line-height: 1.5rem;
 $--primary-font: 'IBM Plex Serif', serif;
 $--secondary-font: 'Inter', sans-serif;
 
-$--bread-text: 14px;
+$--bread-text: 15px;
 $--default-text: 16px;
 $--default-layout: 100%;
 $--layout-width: 1280px;
@@ -85,12 +85,12 @@ html {
 }
 
 .signature {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   width: 125px;
 }
 
 .what, .who {
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 }
 
 article, i {
@@ -117,8 +117,8 @@ i {
   .about {
     align-items: unset;
     flex-direction: column;
-    gap: 2rem;
-    margin: 0rem 0rem 4rem;
+    gap: 1.25rem;
+    margin: 2rem 0rem 3rem;
   }
   .intro:first-child {
     order: 2;
