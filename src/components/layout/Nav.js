@@ -41,7 +41,7 @@ function Nav() {
                     <li>
                         <Link onClick={() => {document.getElementById("close-button").click()}} to="/dashboard">Dashboard</Link>
                     </li>
-                    <li>
+                    <li onClick={() => {document.getElementById("close-button").click()}}>
                         <Link to="/login" className="logbtn" onClick={logout}>Logout</Link>
                     </li> 
                     </>
