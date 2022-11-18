@@ -65,7 +65,7 @@ function Slider() {
                             <h2 style={{ fontSize: '21px', }}>{slider.title}</h2>
                             <p className="caption" 
                                style={{ 
-                                fontSize: '14px', 
+                                fontSize: '16px', 
                                 textTransform: 'capitalize', 
                             }}>
                                 {slider.year} | {slider.category}
