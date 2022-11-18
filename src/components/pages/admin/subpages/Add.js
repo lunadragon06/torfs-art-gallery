@@ -12,12 +12,11 @@ import { yupResolver } from "@hookform/resolvers/yup";
 const schema = yup.object().shape({
     title: yup.string().required("A title for your painting is required."),
 	category: yup.string().required("Please select a painting category."),
-	year: yup.string().nullable()
-	.length(4, "Must have a year format.").transform((_, v) => (v !== "" ? String(v) : null)), 
-	month: yup.number().typeError("Month must be in numbers.").nullable()
+	year: yup.string().required("Publish year is required.")
+	.length(4, "Must have a year format.").min(2019, "Publish year can't go below 2019."), 
+	month: yup.number().typeError("Enter month in number value.")
 	.moreThan(0, "Invalid month number.")
-	.lessThan(13, "Month number doesn't exist.")
-	.transform((_, valu) => (valu !== "" ? Number(valu) : null)), // make this validation optional if empty 
+	.lessThan(13, "Can't be over 12."),
 	description: yup.string().required("Description for your painting is required."),
 	files: yup.mixed().required()
 	        .test("image", "You need to provide a file.", (va) => {
