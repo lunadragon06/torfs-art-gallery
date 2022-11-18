@@ -4,8 +4,8 @@
 
 .enquiry {
     background: white;
-    margin-bottom: 2.5rem;
-    margin-top: 4rem;
+    margin-bottom: 3.25rem;
+    margin-top: 4.75rem;
     padding: 0 2rem 0;
 }
 
@@ -14,12 +14,12 @@
 }
 
 .enquiry input, .enquiry textarea {
-    margin: 1rem 0 1.25rem;
+    margin: 1rem 0 1.5rem;
     padding: .5rem 1rem;
 }
 
 .enquiry label {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .notetab {
@@ -79,15 +79,17 @@
 
   /* The cancel button on popup dialog */
   .popup a.closePopUp {
-    color: $--required;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    margin: 0;
-    padding: 0 .5rem;
+    background: #FB5B5B;
+    color: white;
+    display: block;
+    font-size: 2rem;
     font-weight: bold;
-    font-size: 2.5em;
+    position: absolute;
+    right: 0;
+    text-align: center;
     text-decoration: none;
+    top: 0;
+    width: 50px;
   }
   /* The cancel button on popup dialog */
   .popup a:hover{
