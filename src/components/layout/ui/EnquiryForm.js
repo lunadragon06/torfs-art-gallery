@@ -80,10 +80,10 @@ function EnquiryForm() {
             <form className="enquiry" onSubmit={handleSubmit(onSubmit)}>
             {/* #! in order to get back to the same position as where the inquiry was after closing the form */} 
             <a href="#!" className="closePopUp">
-                <RiCloseFill />
+                <RiCloseFill /> 
             </a>
         {submitError && <FormError>{submitError}</FormError>}
-        {formSentMessage && <SentForm></SentForm>}
+        {formSentMessage && <SentForm style={{marginTop: '5rem',}}></SentForm>}
             <label htmlFor="name">
                 Name <span className="reqdot">*</span>
             </label>
