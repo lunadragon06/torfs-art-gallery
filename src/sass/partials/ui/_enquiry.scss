@@ -81,8 +81,8 @@
   .popup a.closePopUp {
     color: $--required;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 15px;
     margin: 0;
     padding: 0 .5rem;
     font-weight: bold;
@@ -113,13 +113,14 @@
   
   @media  (max-width: $--tablet-screen) {
     .popup .popUpContainer{
-      width: 80%;
+      width: 100%;
       max-width: none;
-      left: 10%;
+      left: 0;
       margin-left: 0;
+      height: 100%;
     }
     .popup:target .popUpContainer{
-      top: 50px;
+      top: 0;
     }
     .request {
       margin: 0 0 1rem;
