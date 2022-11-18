@@ -64,7 +64,7 @@ function Featured() {
                         <div className="galleri_content">
 							<span className="galleri_detail">
 							    <h3 style={{ fontSize: '20px', }}>{feature.title}</h3>
-								<p style={{ textTransform: 'capitalize', }}>
+								<p style={{ fontSize: '16px', textTransform: 'capitalize', }}>
 									{feature.category} | {feature.year}
 								</p>
 							</span>
