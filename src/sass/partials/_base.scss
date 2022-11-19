@@ -25,10 +25,6 @@ $--default-layout: 100%;
 $--layout-width: 1280px;
 $--unset: 0;
 
-$--laptop-screen: 1024px;
-$--mobile-screen: 600px;
-$--tablet-screen: 991px;
-
 //form elements 
 $--autofill: #f2faff;
 $--error: #fff3f3;
@@ -63,72 +59,6 @@ html {
 	height: $--default-layout;
 }
 
-/* ABOUT */
-.about {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  gap: 9rem;
-  justify-content: center;
-  margin: 0rem 0rem 4rem;
-}
-
-.bio {
-  margin: 0 auto;
-  max-width: 1000px;
-}
-
-.portrait {
-  height: 275px;
-  object-fit: cover;
-  width: 200px;
-}
-
-.signature {
-  margin-bottom: 2rem;
-  width: 125px;
-}
-
-.what, .who {
-  margin-bottom: 2.5rem;
-}
-
-article, i {
-  letter-spacing: $--default-letter-spacing;
-  line-height: $--default-line-height;
-}
-
-article {
-  font-size: $--bread-text;
-}
-
-i {
-  font-family: $--primary-font;
-  font-size: 18px;
-}
-
-@media only screen and (max-width: $--tablet-screen) {
-  .about {
-    gap: 3rem;
-  }
-} 
-
-@media only screen and (max-width: $--mobile-screen) {
-  .about {
-    align-items: unset;
-    flex-direction: column;
-    gap: 1.25rem;
-    margin: 2rem 0rem 3rem;
-  }
-  .intro:first-child {
-    order: 2;
-  }
-  .portrait {
-    height: 100%;
-    width: 100%;
-  }
-}
-
 /* HOME - ABOUT SECTION*/
 .welcome {
   display: flex;
@@ -150,7 +80,7 @@ hr {
   line-height: 1.25rem;
 }
 
-@media only screen and (max-width: $--tablet-screen) {
+@media only screen and (max-width: getScreenSize(tablet-width)) {
   hr {
     margin-bottom: 2rem;
   }
