@@ -1,0 +1,63 @@
+.bio {
+    margin: 0 auto;
+    max-width: 1000px;
+
+    // intro section 
+    .about {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        gap: 9rem;
+        justify-content: center;
+        margin: 0rem 0rem 4rem;
+    }
+    i {
+        font-family: $--primary-font;
+        font-size: 18px;
+    }
+    article {
+        font-size: $--bread-text;
+
+        i {
+            letter-spacing: $--default-letter-spacing;
+            line-height: $--default-line-height;
+        }
+    }
+    // image 
+    .portrait {
+        height: 275px;
+        object-fit: cover;
+        width: 200px;
+    }
+    // content text section 
+    .what, .who {
+        margin-bottom: 2.5rem;
+    
+        .signature {
+            margin-bottom: 2rem;
+            width: 125px;
+        }
+    }
+}
+  
+  @media only screen and (max-width: getScreenSize(tablet-width)) {
+    .about {
+      gap: 3rem;
+    }
+  } 
+  
+  @media only screen and (max-width: getScreenSize(mobile-width)) {
+    .about {
+      align-items: unset;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin: 2rem 0rem 3rem;
+    }
+    .intro:first-child {
+      order: 2;
+    }
+    .portrait {
+      height: 100%;
+      width: 100%;
+    }
+  }
