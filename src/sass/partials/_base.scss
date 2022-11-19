@@ -36,33 +36,6 @@ $--input: #ffffff;
 $--required: #fb2828; 
 $--success: #54c111;
 
-/* HOME */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background: $--white;
-  color: $--black; 
-  font-family: $--secondary-font;
-  margin: $--unset;
-}
-
-html,
-body {
-	height: $--default-layout;
-}
-
-html {
-  overflow-x: hidden;
-}
-
-#root {
-	display: flex;
-	flex-direction: column;
-	height: $--default-layout;
-}
-
 /* ABOUT */
 .about {
   align-items: center;
@@ -128,45 +101,3 @@ i {
     width: 100%;
   }
 }
-
-/* HOME - ABOUT SECTION*/
-.welcome {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.txt {
-  background: $--box-color;
-  color: $--green;
-  padding: 2rem 2rem 0rem;
-}
-
-hr {
-  width: 75px;
-}
-
-.sub h2 {
-  line-height: 1.25rem;
-}
-
-@media only screen and (max-width: getScreenSize(tablet-width)) {
-  hr {
-    margin-bottom: 2rem;
-  }
-  .welcome {
-    flex-direction: column-reverse;
-    margin: 2rem auto 2rem !important;
-  }
-  .img img {
-    width: 100% !important;
-  }
-  .sub h2 {
-    line-height: 30px;
-    margin-bottom: 0;
-  }
-  .txt {
-    padding-bottom: 4rem;
-  }
-}
-
