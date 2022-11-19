@@ -3,68 +3,61 @@
 Part 2 of 2 
 
 ## Project brief
-**Torf's Gallery of Art** is ...
-In the project directory, you can run:
+**Torf's Gallery of Art** is an online gallery that showcases a collection of artwork created by the (hobby) artist Torfinn Lie that he has been working on since he retired. Oil painting is a major technique he uses in most of his paintings, in addition to acrylic painting used occasionally. Torfinn is inspired by his homeland's maritime- and nature landscapes, which is reflected in many of his art. This website will serve as his personal art portfolio where he hopes he can come into contact with other art enthusiasts.
+<br><br>
+To view live website, [click here](https://torfs-gallery.netlify.app/).
+<br><br>
 
-### `npm start`
+## Project details
+This is a simple and minimalistic website built using React with JavaScript and SASS. The backend for development of this site is currently running on the remote server with Strapi, Heroku and Coludinary. 
+<br><br>
+**This project is build with:**
+* NPM 
+* React Bootstrap
+* React.js
+* SASS 
+* Strapi v3  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Login details
+<ins>**Note:**</ins> To get the login information to access the admin part of the website for marking, please review the attached message to this submission on Moodle. 
+<br><br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Run & install this project in 1-2-3
+If you choose to open the project directly through GitHub to VSC, you can skip point `1`, and `1.1.` from installation instructions.
+### Installment
+Please use node version <= 15
+<br><br>
+**1.** Clone the repo:
+```bash
+git clone https://github.com/Noroff-FEU-Assignments/project-exam-2-lunadragon666.git
+```
+**1.1.** Open the directory of the project like this:
+```bash
+cd project-exam-2-lunadragon666
+```
+**2.** Install the dependencies to be able to successfully run this project later on:
+```bash
+npm install
+```
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Run the project
+**3.** To run this app, type in the following command in terminal:
+```bash
+npm run start
+```
+And that's it!
+<br><br>
+## Contribution
+To contribute to this project please create a new branch that can be reviewed and merged.
+## Contact
+Please do not hesitate to reach out to me directly for any questions related to this project or problems while running this app. I can be reached at the following email address or on Discord, which I check 1-2 times a day every day:
+<br><br>
+<b>Discord</b>
+```bash
+Monika Lie - Jan 19 PT#8517
+```
+<b>Email</b>
+```bash
+MonLie16236@stud.noroff.no
+```
+<br><br>
