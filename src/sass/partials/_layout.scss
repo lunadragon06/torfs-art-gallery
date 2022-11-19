@@ -17,6 +17,11 @@ body {
 html {
     overflow-x: hidden;
 }
+
+  
+article {
+    font-size: $--bread-text;
+}
   
 #root {
     display: flex;
