@@ -1,9 +1,9 @@
 # Project Exam 2 - Torf's Gallery of Art
+<img src="/src/assets/home.png" alt="Alt text">
+__Torf's Gallery of Art__
 
-
-
-## Available Scripts
-
+## Project brief
+**Torf's Gallery of Art** is ...
 In the project directory, you can run:
 
 ### `npm start`
