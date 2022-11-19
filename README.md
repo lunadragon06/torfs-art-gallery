@@ -48,7 +48,7 @@ npm run start
 And that's it!
 <br><br>
 ## Contribution
-To contribute to this project please create a new branch that can be reviewed and merged.
+To contribute to this project, create a new branch that can be reviewed and merged.
 ## Contact
 Please do not hesitate to reach out to me directly for any questions related to this project or problems while running this app. I can be reached at the following email address or on Discord, which I check 1-2 times a day every day:
 <br><br>
@@ -60,4 +60,4 @@ Monika Lie - Jan 19 PT#8517
 ```bash
 MonLie16236@stud.noroff.no
 ```
-<br><br>
+<br>
