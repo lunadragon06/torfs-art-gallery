@@ -1,6 +1,6 @@
 # Project Exam 2 - Torf's Gallery of Art
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="/src/assets/homepage.png" alt="Alt text">
 
 ## Available Scripts
 
