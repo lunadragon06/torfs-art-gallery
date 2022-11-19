@@ -1,6 +1,6 @@
 # Project Exam 2 - Torf's Gallery of Art
 
-<img src="/src/assets/homepage.png" alt="Alt text">
+
 
 ## Available Scripts
 
