@@ -46,14 +46,11 @@
 .what, .who {
     margin-bottom: 2.5rem;
 }
-  
-article, i {
+
+article, 
+i {
     letter-spacing: $--default-letter-spacing;
     line-height: $--default-line-height;
-}
-  
-article {
-    font-size: $--bread-text;
 }
   
 i {
