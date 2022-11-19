@@ -60,4 +60,3 @@ Monika Lie - Jan 19 PT#8517
 ```bash
 MonLie16236@stud.noroff.no
 ```
-<br>
