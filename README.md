@@ -1,6 +1,6 @@
 # Project Exam 2 - Torf's Gallery of Art
 <img src="/src/assets/home.png" alt="Alt text">
-__Torf's Gallery of Art__
+Part 2 of 2 
 
 ## Project brief
 **Torf's Gallery of Art** is ...
