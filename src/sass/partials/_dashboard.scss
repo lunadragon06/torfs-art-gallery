@@ -3,14 +3,14 @@
     margin: 0 auto;
     max-width: 650px;
     padding: 2rem 0 3rem;
+
+    &__inner {
+        list-style: none;
+        padding: 1rem 0 0;
+    }
 }
 
-.adminav__inner {
-    list-style: none;
-    padding: 1rem 0 0;
-}
-
-.adminav_link, #active {
+.adminav_link {
     color: $--green;
     display: block;
     font-weight: bold;
@@ -18,18 +18,25 @@
     text-decoration: none;
     transition: .5s;
     width: 100%;
+
+    &:hover {
+        background: $--box-color;
+        color: $--dark-blue;
+    }
+
+    &#active {
+        background: $--green;
+        color: white;
+        display: block;
+        font-weight: normal;
+        padding: 1rem;
+        text-decoration: none;
+        transition: .5s;
+        width: 100%;
+    }
 }
 
-.adminav_link:hover {
-    background: $--box-color;
-    color: $--dark-blue;
-}
 
-#active {
-    background: $--green;
-    color: white;
-    font-weight: normal;
-}
 
 /* ENQUIRIES & INBOX */
 .post, .inbox-msg {
@@ -56,23 +63,7 @@
     padding: 1.5rem 2rem 3rem;
 }
 
-/* Delete message button */
-.delbtn {
-    background: #FB5B5B;
-    border: 1px solid #FB5B5B;
-    font-size: 14px;
-    letter-spacing: 0.075rem;
-    margin-top: 2.5rem;
-    padding: .75rem 1rem;
-    width: auto;
-}
-
-.delbtn:focus, .delbtn:hover {
-    background: #FB2828;
-    border: 1px solid #FB2828;
-}
-
-@media (max-width: $--tablet-screen) {
+@media (max-width: getScreenSize(tablet-width)) {
     .note, .message-box {
         margin-top: 1rem;
         padding: .75rem 1rem 2rem;
@@ -88,12 +79,9 @@
     }
 }
 
-@media (max-width: $--mobile-screen) {
+@media (max-width: getScreenSize(mobile-width)) {
     .adminav {
         margin-top: 2rem;
-    }
-    .delbtn {
-        width: 100%;
     }
     .enquiry-section {
         margin-top: 2rem !important;
