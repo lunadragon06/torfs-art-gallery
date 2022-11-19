@@ -1,1 +1,41 @@
+.welcome {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
+    hr {
+        width: 75px;
+    }
+    .txt {
+        background: $--box-color;
+        color: $--green;
+        padding: 2rem 2rem 0rem;
+    }
+}
+  
+.sub h2 {
+    line-height: 1.25rem;
+}
+  
+@media only screen and (max-width: getScreenSize(tablet-width)) {
+    .welcome {
+      flex-direction: column-reverse;
+      margin: 2rem auto 2rem !important;
+
+        hr {
+            margin-bottom: 2rem;
+        }
+        .txt {
+            padding-bottom: 4rem;
+        }
+    }
+    .img img {
+        width: 100% !important;
+    }
+    .sub h2 {
+        line-height: 30px;
+        margin-bottom: 0;
+    }
+}
+
+/* BIO SECTION FROM ABOUT PAGE */
