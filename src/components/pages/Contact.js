@@ -13,7 +13,7 @@ const url = BASE_URL + "/contacts";
 const schema = yup.object().shape({
     first_name: yup.string()
             .required("Enter your first name."),
-    last_name: yup.string().required().min(1, "Type in first letter of surname."),
+    last_name: yup.string().required("Must enter last name.").min(1, "Type in first letter of surname."),
     email: yup.string()
             .email("The email is not valid.")
             .required("Please enter your email."),
