@@ -1,0 +1,22 @@
+footer {
+  background: $--dark-blue;
+  color: $--input;  
+  flex-shrink: $--unset;
+  font-size: 14px;
+  letter-spacing: $--default-letter-spacing;
+  line-height: .5rem;
+  padding: 2.5rem 0 1.5rem;
+  text-align: center;
+}
+
+// keeps footer down
+.wrapper {
+  flex: 1 0 auto;
+  padding: 2rem 3rem 5rem;
+}
+
+@media only screen and (max-width: getScreenSize(mobile-width)) {
+  .wrapper {
+    padding: 1rem 1.5rem 3rem;
+  }
+}
