@@ -27,7 +27,7 @@ export default function Searchbar() {
 		let matches = []
 		if (text.length>0) {
 			matches = paintings.filter(paint=> {
-				return paint.title.match(text) || paint.year.match(text);
+				return paint.title.match(text) || paint.category.match(text);
 			})
 		}
 		setSuggestions(matches);
@@ -45,7 +45,7 @@ export default function Searchbar() {
                 }} />
 			    <input className="searchbar" 
 			           type="text" 
-				       placeholder="Search painting titles or year ..."
+				       placeholder="Search painting titles or categories ..."
 					   onChange={e=>onChangeHandler(e.target.value)} 
 					   value={text} 
 					   onBlur={()=>{ 
@@ -57,8 +57,8 @@ export default function Searchbar() {
                 <div className="tab" style={{ width: '100%', }}>
 				{suggestions && suggestions.map((suggestion, i) =>
 				    <Link to ={`painting/${suggestion.id}`} className="result" key={i} 
-				          onClick={() => onSuggestHandler(suggestion.title || suggestion.year)}>
-						    {suggestion.title} ({suggestion.year})
+				          onClick={() => onSuggestHandler(suggestion.title || suggestion.category)}>
+						    {suggestion.title} ({suggestion.category})
 				    </Link>
 				)}
                 </div>
