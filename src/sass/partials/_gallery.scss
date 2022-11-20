@@ -1,146 +1,144 @@
-.painting-image img {
-  width: 100%;
-}
-
 .galleri {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
-    margin: 1rem auto 0;
-    max-width: 1000px;
-  }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  margin: 1rem auto 0;
+  max-width: 1000px;
 
-  .galleri img {
+  img {
     width: 100%;
   }
 
-  /* overlay */
-  .galleri_item {
+  &_item {
     position: relative;
+
+    img {
+      display: block;
+    }
+    &:hover .galleri_content {
+      opacity: 1;
+    }
   }
-  
-  .galleri_item img {
-    display: block;
-  }
-  
-  .galleri_content {
-    position: absolute;
-    top: 0;
+  // hover image overlay 
+  &_content {
+    background: rgba(1,24,38,0.5);
     bottom: 0;
     left: 0;
-    right: 0;
     height: 100%;
-    width: 100%;
     opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
     transition: .5s ease;
-    background: rgba(1,24,38,0.5);
+    width: 100%;
   }
-  
-  .galleri_item:hover .galleri_content {
-    opacity: 1;
-  }
-  
-  .galleri_detail {
+  &_detail {
     color: white;
+    left: 50%;
     position: absolute;
     top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
     width: 85%;
   }
-
-  /* FEATURED */
-  .subhead {
-    align-items: baseline;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
+
+/* FEATURED PAINTINGS FROM HOMEPAGE */
+.featured {
+max-width: 1000px;
+margin: 0 auto;
+}
+
+.subhead {
+align-items: baseline;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
 
 .view {
   color: $--link-blue;
-  font-size: 16px;
+  font-size: 18px;
   text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: .5rem;
+  }
 }
-
-.view:hover {
-  text-decoration: underline;
-  text-underline-offset: .5rem;
-}
-
-  .featured {
-    max-width: 1000px;
-    margin: 0 auto;
 }
 
 /* PAINTING DETAIL PAGE */ 
 .painting {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 768px;
-}
+display: flex;
+flex-direction: column;
+margin: 0 auto;
+max-width: 768px;
 
 .painting-content {
-    background: white;
-    margin-top: -.4rem;
-    padding: 1.1rem 2rem 3rem;
+  background: white;
+  margin-top: -.4rem;
+  padding: 1.1rem 2rem 3rem;
+}
+.painting-image img {
+  width: 100%;
+}
 }
 
+// Painting details 
 .painting-titles {
-    align-items: baseline;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: .75rem 0 .75rem;
-}
+  align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: .75rem 0 .75rem;
 
-.category-tag {
+  .category-tag {
     background: $--light-green;
     margin-bottom: 1.25rem;
     padding: .5rem 1.5rem;
     text-transform: capitalize;
 }
+}
 
-@media only screen and (max-width: $--tablet-screen) {
-  .galleri {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .galleri_item img {
+@media only screen and (max-width: getScreenSize(tablet-width)) {
+.galleri {
+  grid-template-columns: repeat(2, 1fr);
+
+  &_item img {
     height: 275px;
     object-fit: cover;
   }
 }
+}
 
-@media only screen and (max-width: $--mobile-screen) {
+@media only screen and (max-width: getScreenSize(mobile-width)) {
+.galleri {
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1.75rem;
+  margin: 0 0 1rem;
+
+  &_item img {
+    height: auto;
+  }
+}
+.painting-content {
+  padding: 1.2rem 1.5rem 2rem;
+}
+.painting-image {
+  margin-top: 1rem;
+}
+.painting-titles {
+  align-items: start;
+  flex-direction: column;
+  gap: .75rem;
+  margin: 0 0 .5rem;
+
   .category-tag {
     margin-bottom: 1.25rem;
   }
-  .galleri {
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 1.75rem;
-    margin: 0 0 1rem;
-  }
-  .galleri_item img {
-    height: auto;
-  }
-  .painting-content {
-    padding: 1.2rem 1.5rem 2rem;
-  }
-  .painting-image {
-    margin-top: 1rem;
-  }
-  .painting-titles {
-    align-items: start;
-    flex-direction: column;
-    gap: .75rem;
-    margin: 0 0 .5rem;
-  }
-  .subhead {
-    flex-direction: column;
-    margin-bottom: 1.5rem;
-  }
+}
+.subhead {
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
 }
