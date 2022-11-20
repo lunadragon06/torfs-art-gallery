@@ -3,7 +3,7 @@
     cursor: pointer;
 
     &::before {
-        color: $--blue;
+        color: get(cta-color);
         content: url('../../assets/icons/upload.png');
         cursor: pointer;
         display: flex;
@@ -35,7 +35,7 @@ form {
         }
         // required fields
         .reqdot {
-            color: $--required;
+            color: get(required-field);
             font-weight: bold;
         }
     }
@@ -60,10 +60,10 @@ input, select, textarea {
         outline: none !important;
     }
     &::placeholder {
-        color: $--black;
+        color: get(black-value);
     }
     &[type="file"] {
-        background: $--input;
+        background: get(pure-white);
         transition: .5s;
     
         &:active, 
@@ -88,8 +88,8 @@ select {
     padding: .75rem 1rem;
 
     option {
-        background: $--box-color;
-        color: $--dark-blue;
+        background: get(box-color);
+        color: get(hover-color);
         font-size: 15px;
     }
 }
