@@ -27,27 +27,13 @@
     margin-bottom: 4rem;
   }
   
-  article, i {
-    letter-spacing: $--default-letter-spacing;
-    line-height: $--default-line-height;
-  }
-  
-  article {
-    font-size: $--bread-text;
-  }
-  
-  i {
-    font-family: $--primary-font;
-    font-size: 18px;
-  }
-  
-  @media only screen and (max-width: $--tablet-screen) {
+  @media (max-width: getScreenSize(tablet-width)) {
     .about {
       gap: 3rem;
     }
   } 
   
-  @media only screen and (max-width: $--mobile-screen) {
+  @media (max-width: getScreenSize(mobile-width)) {
     .about {
       align-items: unset;
       flex-direction: column;
@@ -84,7 +70,7 @@
     line-height: 1.25rem;
   }
   
-  @media only screen and (max-width: $--tablet-screen) {
+  @media (max-width: getScreenSize(tablet-width)) {
     hr {
       margin-bottom: 2rem;
     }
