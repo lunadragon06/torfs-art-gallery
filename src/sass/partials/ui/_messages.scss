@@ -1,14 +1,14 @@
 .errormsg {
-    background: #FFF3F3;
-    border: 1px solid #FB2828;
-    color: #FB2828;
+    background: get(error-background);
+    border: 1px solid get(required-field);
+    color: get(required-field);
     padding: 1rem;
 }
 
 .form-error {
-    background: $--error;
-    border: 1px solid $--required;
-    color: $--required;
+    background: get(error-background);
+    border: 1px solid get(required-field);
+    color: get(required-field);
     font-size: 14px;
     margin: -.5rem 0 1.25rem;
     padding: .5rem 1rem;
@@ -16,7 +16,7 @@
 
 /* SUCCESSFUL FORM MESSAGE */
 .message-sent {
-    background: $--success;
+    background: get(success-message);
     color: get(pure-white);
     font-size: 15px;
     letter-spacing: 1px;
