@@ -1,10 +1,10 @@
 import * as yup from "yup";
 import axios from "axios";
 import { BASE_URL } from "../../constants/data";
-import FormError from "../../common/FormError";
+import FormError from "../../common/form/FormError";
 import Heading from "../layout/typography/Heading";
 import React, { useState } from 'react';
-import SentForm from "../../common/SentForm";
+import SentForm from "../../common/form/SentForm";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
