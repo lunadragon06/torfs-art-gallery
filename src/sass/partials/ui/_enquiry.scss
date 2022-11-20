@@ -28,7 +28,7 @@
 
 /* ENQUIRY FORM ~ Opened */
 .popup .popUpContainer {
-  background: #ffffff;
+  background: get(pure-white);
   left: 50%;
   margin-left: -250px;
   max-width: 500px;
@@ -39,63 +39,62 @@
 }
 
 /* Open & close modal */
-  .popup {
-    background: rgba(1,24,38,0.75);
+.popup {
+  background: rgba(1,24,38,0.75);
+  left: 0;
+  height: 100vh;
+  opacity: 0;
+  position: fixed;
+  top: -100vh;
+  width: 100vw;
+  z-index: 9999999;
+
+  // The cancel/close button on popup dialog (enquiry modal) 
+  a.closePopUp {
+    background: #FB5B5B;
+    color: get(pure-white);
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-decoration: none;
+    top: 0;
+    transition: .5s;
+    width: 50px;
+
+    &:hover {
+      background: $--required;
+    }
+  }
+
+  // When popup is targeted, by clicking on link with #popup in HTML
+  &:target {
+    opacity: 1;
+    top: 0; // must be included as well to be able to open the modal on button click 
+  }
+
+  &:target .popUpContainer {
+    top: 0;
+  }
+}
+  
+@media  (max-width: getScreenSize(tablet-width)) {
+  .popup .popUpContainer {
     left: 0;
-    height: 100vh;
-    opacity: 0;
-    position: fixed;
-    top: -100vh;
-    width: 100vw;
-    z-index: 9999999;
-
-    // The cancel/close button on popup dialog (enquiry modal) 
-    a.closePopUp {
-      background: #FB5B5B;
-      color: white;
-      display: block;
-      font-size: 2rem;
-      font-weight: bold;
-      position: absolute;
-      right: 0;
-      text-align: center;
-      text-decoration: none;
-      top: 0;
-      transition: .5s;
-      width: 50px;
-
-      &:hover {
-        background: $--required;
-      }
-    }
-
-    // When popup is targeted, by clicking on link with #popup in HTML
-    &:target {
-      opacity: 1;
-      top: 0; // must be included as well to be able to open the modal on button click 
-    }
-
-    &:target .popUpContainer {
-      top: 0;
-    }
+    height: 100%;
+    margin-left: 0;
+    max-width: none;
+    width: 100%;
   }
-  
-  @media  (max-width: getScreenSize(tablet-width)) {
-    .popup .popUpContainer {
-      left: 0;
-      height: 100%;
-      margin-left: 0;
-      max-width: none;
-      width: 100%;
-    }
-    .request {
-      margin: 0 0 1rem;
-    }
+  .request {
+    margin: 0 0 1rem;
   }
+}
 
-  @media  (max-width: getScreenSize(mobile-width)) {
-    #openPopUp {
-      width: 100%;
-    }
+@media  (max-width: getScreenSize(mobile-width)) {
+  #openPopUp {
+    width: 100%;
   }
-  
+}
