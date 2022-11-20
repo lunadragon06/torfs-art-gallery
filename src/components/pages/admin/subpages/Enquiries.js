@@ -1,6 +1,6 @@
 import AuthContext from "../../../../context/AuthContext"; 
 import DeleteRequest from "./DeleteRequest";
-import FormError from "../../../../common/FormError";
+import FormError from "../../../../common/form/FormError";
 import Heading from "../../../layout/typography/Heading";
 import { HiArrowLeft } from 'react-icons/hi'; 
 import { Link, useHistory } from "react-router-dom";
