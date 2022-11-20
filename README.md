@@ -8,7 +8,7 @@ Part 2 of 2
 <br><br>
 To view live website, [click here](https://torfs-gallery.netlify.app/).
 <br><br>
-Visitors can currently search for paintings based on existing titles and year (which year paintings was created) and to access specific details about each painting being published either from `home` and/or `gallery` page. Users can also send messages directly to the artist through contact form and send him a request/assignment from enquiry form.  
+Visitors can currently search for paintings based on existing titles and exsisting categories, and to access specific details about each painting being published either from `home` and/or `gallery` page. Users can also send messages directly to the artist through contact form and send him a request/assignment from enquiry form.  
 <br>
 While website owner and admin users have the ability to add new paintings, which will be published both on the physical website and will be displayed in the API json.
 Admins can also access list of enquiries and contacts, in addition to delete enquiry requests and contact messages. 
@@ -24,16 +24,13 @@ This is a simple and minimalistic website built using React with JavaScript and 
 * React.js
 * SASS 
 * Strapi v3  
+<br>
 
 <!-- Login information -->
-### Login info
-<ins>**Note:**</ins> To get the login password to access the admin part of the website for marking, please review the attached message to this submission on Moodle. 
-<br><br>
-<b>Username or email-adress:</b>
+### Login info 
 ```bash
-GuestAdmin
-#or
-guest@admin.com
+username: GuestAdmin or guest@admin.com 
+password: Password12340 
 ```
 <br>
 
@@ -82,3 +79,7 @@ Monika Lie - Jan 19 PT#8517
 MonLie16236@stud.noroff.no
 ```
 <br>
+
+## Acknowledgements
+All acknowledgements are written in the attached report which is located inside `report` folder in this project. 
+<br><br>
