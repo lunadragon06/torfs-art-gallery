@@ -4,7 +4,7 @@
 
     /* SEARCHBAR */
     .icon {
-        color: $--black;
+        color: get(black-value);
     }
     .searchbar {
         font-size: .9rem;
@@ -16,19 +16,19 @@
         background: #e5f2f3;
         border: $--black-border;
         border-bottom: 0;
-        color: $--black;
+        color: get(black-value);
         display: block;
         font-size: 15px;
         max-width: 1000px;
         padding: .75rem 3rem .75rem;
         text-decoration: none;
         &:last-child {
-            border-bottom: 1px solid $--black;
+            border-bottom: 1px solid get(black-value);
             z-index: 999;
         }
         &:hover {
             background: $--light-green;
-            color: $--black;
+            color: get(black-value);
         }
     }
     // search results display
