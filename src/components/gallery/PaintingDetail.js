@@ -1,4 +1,4 @@
-import { API } from "../../constants/api";
+import { API, BASE_URL } from "../../constants/data";
 import axios from "axios";
 import ErrorMessage from "../../common/ErrorMessage";
 import Heading from '../../components/layout/typography/Heading';
@@ -13,10 +13,9 @@ function PaintingDetail() {
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
 
-    const http = API;
+    const http = BASE_URL + API;
 
     let history = useHistory();
-
     const { id } = useParams();
 
     if (!id) {
@@ -48,13 +47,18 @@ function PaintingDetail() {
 	if (loading) {
 		return <Loader />;
 	}
+	
 	if (error) {
 		return <ErrorMessage message={`Error: ${error}`} />;
 	}
 
 	return (
 		<section style={{ margin: 'auto', maxWidth: '750px', }}>
-			<Link to="/gallery" className="view" style={{ display: 'inline-block', marginBottom: '2.5rem' }}><HiArrowLeft /> Back to gallery</Link>
+			<Link to="/gallery" 
+			      className="view" 
+				  style={{ display: 'inline-block', marginBottom: '2.5rem' }}>
+				<HiArrowLeft /> Back to gallery
+			</Link>
 			<Heading content={painting.title} />
 			<section className="painting">
 				<article className="painting-image">
@@ -67,10 +71,16 @@ function PaintingDetail() {
 				</article>
 				<article className="painting-content">
 					<div className="painting-titles">
-                        <h2><b>Painting no.</b> {painting.id}</h2>
-					    <span className="category-tag">{painting.category}</span>
+                        <h2>
+							<b>Painting no.</b> {painting.id}
+						</h2>
+					    <span className="category-tag">
+							{painting.category}
+						</span>
 					</div>
-					<p>{painting.description}</p>
+					<p>
+						{painting.description}
+					</p>
 					<p>
 						<b>Created: </b>
 						{String(painting.month).padStart(2,'0')} / {painting.year}
