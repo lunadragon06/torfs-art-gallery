@@ -1,7 +1,7 @@
 button {
-    background: $--blue;
-    border: 2px solid $--blue;
-    color: $--input;
+    background: get(cta-color);
+    border: 2px solid get(cta-color);
+    color: get(pure-white);
     cursor: pointer;
     font-size: $--default-text;
     font-weight: bold;
@@ -14,14 +14,14 @@ button {
   
     &:focus, 
     &:hover {
-        background: $--dark-blue;
+        background: get(hover-color);
         border: $--blue-border;
     }
 }
 
 /* ENQUIRY MODAL BUTTON */
 #openPopUp {
-    background: $--blue;
+    background: get(cta-color);;
     color: get(pure-white);
     display: block;
     text-align: center;
@@ -32,7 +32,7 @@ button {
     width: 250px;
   
     &:hover {
-      background: $--black;
+      background: get(hover-color);
       cursor: pointer;
       font-weight: normal;      
     }
@@ -40,7 +40,7 @@ button {
 
 /* LOGIN - LOGOUT BUTTON */
 .logbtn {
-    background: $--blue;
+    background: get(cta-color);;
     color: get(pure-white) !important;
     font-size: 14px !important;
     letter-spacing: .2rem;
@@ -49,7 +49,7 @@ button {
   
     &:focus, 
     &:hover {
-      background: $--black;
+      background: get(hover-color);
       border-bottom: 0 !important;
       padding-bottom: .75rem !important;
     }
@@ -57,8 +57,8 @@ button {
   
 /* ADMIN ~ Delete button */
 .delbtn {
-    background: #FB5B5B;
-    border: 1px solid #FB5B5B;
+    background: get(del-btn);
+    border: 1px solid get(del-btn);
     font-size: 14px;
     letter-spacing: 0.075rem;
     margin-top: 2.5rem;
@@ -67,14 +67,14 @@ button {
 
     &:focus, 
     &:hover {
-        background: #FB2828;
-        border: 1px solid #FB2828;
+        background: get(required-field);
+        border: 1px solid get(required-field);
     }
 }
 
 @media (max-width: getScreenSize(laptop-width)) {
     .logbtn {
-        background: $--black;
+        background: get(black-value);
     }
 }
 
