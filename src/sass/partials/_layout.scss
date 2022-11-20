@@ -9,18 +9,28 @@ body {
     margin: $--unset;
 }
   
-html,
-body {
-    height: $--default-layout;
-}
-  
 html {
     overflow-x: hidden;
 }
-
   
 article {
     font-size: $--bread-text;
+}
+
+article, i {
+    letter-spacing: $--default-letter-spacing;
+    line-height: $--default-line-height;
+}
+  
+i {
+    font-family: $--primary-font;
+    font-size: 18px;
+}
+
+// keep footer down 
+html,
+body {
+    height: $--default-layout;
 }
   
 #root {
