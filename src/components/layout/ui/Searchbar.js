@@ -1,10 +1,10 @@
-import { API } from "../../../constants/api";
+import { API, BASE_URL } from "../../../constants/data";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { FaSearch } from 'react-icons/fa';
 import { useEffect, useState } from "react";
 
-const results = API;
+const results = BASE_URL + API;
 
 export default function Searchbar() {
 	const [paintings, setPaintings] = useState([]);
