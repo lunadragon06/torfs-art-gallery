@@ -2,11 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 $colors: (
+  background-color: #ebeff2,
+  black-value: #011826,
+  box-color: #cee6e9,  
+  cta-color: #0557a8,
+  hover-color: #071d49,  
+  link-color: #157be2,
   pure-white: #ffffff,
+  // form & admin values
+  del-btn: #fb5b5b,  
+  error-background: #fff3f3, 
+  required-field: #fb2828, 
+  success-message: #54c111,
 );
 
 @function get($color) {
   @return map-get($colors, $color);
+}
+
+@function getFont($font) {
+  @return map-get($fonts, $font);
 }
 
 $screens: (
@@ -21,13 +36,8 @@ $screens: (
 
 /* DESIGN VARIABLES */
 $--box-color: #cee6e9;
-$--black: #011826;
-$--blue: #0557a8;
-$--dark-blue: #071d49;
-$--link-blue: #157be2;
 $--green: #1e5359;
 $--light-green: #a7d4d9;
-$--white: #ebeff2;
 
 $--black-border: 1px solid #011826;
 $--blue-border: 2px solid #071d49;
@@ -42,14 +52,3 @@ $--default-text: 16px;
 $--default-layout: 100%;
 $--layout-width: 1280px;
 $--unset: 0;
-
-$--laptop-screen: 1024px;
-$--mobile-screen: 600px;
-$--tablet-screen: 991px;
-
-//form elements 
-$--autofill: #f2faff;
-$--error: #fff3f3;
-$--input: #ffffff;
-$--required: #fb2828; 
-$--success: #54c111;
