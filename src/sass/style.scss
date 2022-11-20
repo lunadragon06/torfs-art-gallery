@@ -1,18 +1,15 @@
 @import "partials/base";
 @import "partials/dashboard";
+@import "partials/footer";
 @import "partials/forms";
 @import "partials/gallery";
 @import "partials/layout";
+@import "partials/messages";
+@import "partials/nav";
 @import "partials/slider";
 @import "partials/typography";
-@import "partials/variables";
 
 /* UI components */
-@import "partials/ui/about";
-@import "partials/ui/buttons";
 @import "partials/ui/enquiry";
-@import "partials/ui/footer";
 @import "partials/ui/loader";
-@import "partials/ui/messages";
-@import "partials/ui/nav";
 @import "partials/ui/searchbar";
