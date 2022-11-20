@@ -56,7 +56,7 @@ flex-direction: row;
 justify-content: space-between;
 
 .view {
-  color: $--link-blue;
+  color: get(link-color);
   font-size: 18px;
   text-decoration: none;
   
