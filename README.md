@@ -16,7 +16,7 @@ Admins can also access list of enquiries and contacts, in addition to delete enq
 
 <!-- Project detail -->
 ## Project details
-This is a simple and minimalistic website built using React with JavaScript and SASS. The backend for development of this site is currently running on the remote server with Strapi, Heroku and Coludinary. 
+This is a simple and minimalistic website built using React with JavaScript and SASS. The backend for development of Torf's Gallery is currently running on the remote server with Strapi, Heroku and Coludinary. 
 <br><br>
 **This project is build with:**
 * NPM 
