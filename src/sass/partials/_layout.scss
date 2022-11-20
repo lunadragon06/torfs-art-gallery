@@ -1,1 +1,30 @@
-// Place homepage styling here 
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    background: $--white;
+    color: $--black; 
+    font-family: $--secondary-font;
+    margin: $--unset;
+}
+  
+html,
+body {
+    height: $--default-layout;
+}
+  
+html {
+    overflow-x: hidden;
+}
+
+  
+article {
+    font-size: $--bread-text;
+}
+  
+#root {
+    display: flex;
+    flex-direction: column;
+    height: $--default-layout;
+}
