@@ -13,7 +13,7 @@ const schema = yup.object().shape({
     title: yup.string().required("A title for your painting is required."),
 	category: yup.string().required("Please select a painting category."),
 	year: yup.string().required("Publish year is required.")
-	.length(4, "Must have a year format.").min(2019, "Publish year can't go below 2019."), 
+	.length(4, "Must have a year format."), 
 	month: yup.number().typeError("Enter month in number value.")
 	.moreThan(0, "Invalid month number.")
 	.lessThan(13, "Can't be over 12."),
@@ -64,7 +64,6 @@ function Add() {
 
         const { image, ...data } = inputData;
         formData.append("data", JSON.stringify(data));
-		// formData.append("files.image", image[0]); <-- not working
 
         try {
             const response = await http.post("/paintings", formData);
@@ -81,7 +80,9 @@ function Add() {
 
 	return (
 	<section className="add" style={{ margin: '0 auto', maxWidth: '500px', }}>
-		<Link to="/dashboard" className="view" style={{ display: 'inline-block', marginBottom: '2.5rem' }}><HiArrowLeft /> Back to dashboard</Link>
+		<Link to="/dashboard" className="view" style={{ display: 'inline-block', marginBottom: '2.5rem' }}>
+			<HiArrowLeft /> Back to dashboard
+		</Link>
 		<Heading content="Add new painting" />
 		<form onSubmit={handleSubmit(onSubmit)}>
 		{serverError && <FormError>{serverError}</FormError>}
@@ -92,11 +93,10 @@ function Add() {
 				{errors.title && <FormError>
                     {errors.title.message}
 				</FormError>}
-
 				<section className="rowform" style={{ gap: '2rem', }}>
 				<div>
 			        <label className="label" htmlFor="year">
-					    Year 
+					    Year <span className="reqdot">*</span> 
 				    </label>
                     <input className="input" 
                            id="year"
@@ -107,7 +107,7 @@ function Add() {
 				</div>
 				<div>
 			        <label className="label" htmlFor="month">
-					    Month 
+					    Month <span className="reqdot">*</span> 
 				    </label>
                     <input className="input" 
                            id="month"
