@@ -33,7 +33,7 @@
     width: 100%;
   }
   &_detail {
-    color: white;
+    color: get(pure-white);
     left: 50%;
     position: absolute;
     top: 50%;
@@ -75,7 +75,7 @@ margin: 0 auto;
 max-width: 768px;
 
 .painting-content {
-  background: white;
+  background: get(pure-white);
   margin-top: -.4rem;
   padding: 1.1rem 2rem 3rem;
 }
