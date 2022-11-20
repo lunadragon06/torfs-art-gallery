@@ -1,5 +1,5 @@
 import AuthContext from "../../../../context/AuthContext";
-import DeleteMessage from "./DeleteMessage";
+import DeleteMessage from "./additionals/DeleteMessage";
 import FormError from "../../../../common/FormError";
 import Heading from "../../../layout/typography/Heading";
 import { HiArrowLeft } from 'react-icons/hi'; 
