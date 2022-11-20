@@ -79,7 +79,7 @@ input, select, textarea {
 
 select {
     appearance: none;
-    background-color: white;
+    background-color: get(pure-white);
     background-image: url('../../assets/icons/dropbtn.svg');
     background-repeat: no-repeat;
     background-position-x: 97.5%;
