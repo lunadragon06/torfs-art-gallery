@@ -2,21 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 $colors: (
-    pure-white: #ffffff,
+  pure-white: #ffffff,
 );
 
 @function get($color) {
-    @return map-get($colors, $color);
+  @return map-get($colors, $color);
 }
 
 $screens: (
-    mobile-width: 600px,
-    tablet-width: 991px,
-    laptop-width: 1084px,
+  mobile-width: 600px,
+  tablet-width: 991px,
+  laptop-width: 1084px,
 );
 
 @function getScreenSize($screen) {
-    @return map-get($screens, $screen);
+  @return map-get($screens, $screen);
 }
 
 /* DESIGN VARIABLES */
@@ -37,7 +37,7 @@ $--default-line-height: 1.5rem;
 $--primary-font: 'IBM Plex Serif', serif;
 $--secondary-font: 'Inter', sans-serif;
 
-$--bread-text: 14px;
+$--bread-text: 15px;
 $--default-text: 16px;
 $--default-layout: 100%;
 $--layout-width: 1280px;
