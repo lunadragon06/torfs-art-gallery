@@ -1,4 +1,4 @@
-import { API } from "../../../constants/api"
+import { API, BASE_URL } from "../../../constants/data"
 import axios from 'axios';
 import ErrorMessage from "../../../common/ErrorMessage";
 import { HiArrowRight } from 'react-icons/hi'; 
@@ -8,7 +8,7 @@ import React from 'react';
 import SubHeading from "../../layout/SubHeading";
 import { useState, useEffect } from 'react';
 
-const url = API;
+const url = BASE_URL + API;
 
 function Featured() {
     const [feature, setFeatured] = useState([]);
@@ -39,7 +39,6 @@ function Featured() {
     if (loading) {
         return <Loader />;
     }
-
     if (error) {
         console.log(error);
         return <ErrorMessage message={`Error: ${error}.`} />
