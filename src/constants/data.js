@@ -1,9 +1,3 @@
-/* 
-.env
-REACT_APP_BASE_URL=https://torfs-art-gallery.herokuapp.com
-export const BASE_URL = process.env.REACT_APP_BASE_URL; 
-*/
-
 export const API = "/paintings";
 export const BASE_URL = "https://torfs-art-gallery.herokuapp.com";
 
