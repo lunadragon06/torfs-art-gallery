@@ -18,7 +18,7 @@
     // slider buttons 
     &-control-prev, 
     &-control-next {
-        background: $--dark-blue;
+        background: get(hover-color);
         opacity: 0.75;
         width: 10%;
 
