@@ -1,0 +1,26 @@
+.errormsg {
+    background: #FFF3F3;
+    border: 1px solid #FB2828;
+    color: #FB2828;
+    padding: 1rem;
+}
+
+.form-error {
+    background: $--error;
+    border: 1px solid $--required;
+    color: $--required;
+    font-size: 14px;
+    margin: -.5rem 0 1.25rem;
+    padding: .5rem 1rem;
+}
+
+/* SUCCESSFUL FORM MESSAGE */
+.message-sent {
+    background: $--success;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 1.25rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+}
