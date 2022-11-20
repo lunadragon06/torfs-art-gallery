@@ -37,7 +37,7 @@
     width: 75px;
   }
   .txt {
-    background: $--box-color;
+    background: get(box-color);
     color: $--green;
     padding: 2rem 2rem 0rem;
   }
