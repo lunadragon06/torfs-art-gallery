@@ -3,18 +3,14 @@
 }
   
 body {
-    background: $--white;
-    color: $--black; 
+    background: get(background-color);
+    color: get(black-value); 
     font-family: $--secondary-font;
     margin: $--unset;
 }
   
 html {
     overflow-x: hidden;
-}
-  
-article {
-    font-size: $--bread-text;
 }
 
 article, i {
