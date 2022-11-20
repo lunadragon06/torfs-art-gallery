@@ -22,7 +22,7 @@ button {
 /* ENQUIRY MODAL BUTTON */
 #openPopUp {
     background: $--blue;
-    color: white;
+    color: get(pure-white);
     display: block;
     text-align: center;
     padding: 15px 15px;
@@ -33,7 +33,6 @@ button {
   
     &:hover {
       background: $--black;
-      color: white;
       cursor: pointer;
       font-weight: normal;      
     }
@@ -42,7 +41,7 @@ button {
 /* LOGIN - LOGOUT BUTTON */
 .logbtn {
     background: $--blue;
-    color: white !important;
+    color: get(pure-white) !important;
     font-size: 14px !important;
     letter-spacing: .2rem;
     padding: .75rem 1.5rem;
