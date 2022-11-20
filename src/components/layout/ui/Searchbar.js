@@ -45,7 +45,7 @@ export default function Searchbar() {
                 }} />
 			    <input className="searchbar" 
 			           type="text" 
-				       placeholder="Search painting titles or categories ..."
+				       placeholder="Search painting titles & categories ..."
 					   onChange={e=>onChangeHandler(e.target.value)} 
 					   value={text} 
 					   onBlur={()=>{ 
