@@ -51,7 +51,7 @@
 
   // The cancel/close button on popup dialog (enquiry modal) 
   a.closePopUp {
-    background: #FB5B5B;
+    background: get(del-btn);
     color: get(pure-white);
     display: block;
     font-size: 2rem;
@@ -65,7 +65,7 @@
     width: 50px;
 
     &:hover {
-      background: $--required;
+      background: get(required-field);
     }
   }
 
