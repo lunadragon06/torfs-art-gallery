@@ -2,7 +2,7 @@ import * as yup from "yup";
 import axios from "axios";
 import AuthContext from "../../../context/AuthContext";
 //import { BASE_URL, TOKEN_PATH } from "../../../constants/data";
-import FormError from "../../../common/FormError";
+import FormError from "../../../common/form/FormError";
 import Heading from "../../layout/typography/Heading";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
