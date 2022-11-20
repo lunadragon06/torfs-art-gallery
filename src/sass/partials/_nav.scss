@@ -17,13 +17,13 @@
 
   // hamburger menu color
   svg path {
-    stroke: $--dark-blue;
+    stroke: get(hover-color);
   }
 }
 
 /* NAME TAG */
 .logo {
-  color: $--dark-blue;
+  color: get(hover-color);
   font-family: $--primary-font;
   font-size: 2rem;
   font-weight: bold;
@@ -33,7 +33,7 @@
   transition: .5s;
 
   &:hover {
-    color: $--link-blue;
+    color: get(cta-color);
   }
 }
   
@@ -50,16 +50,16 @@
     margin: 0px 20px;
   }
   li a {
-    color: $--blue;
+    color: get(cta-color);
     text-decoration: none;
     font-size: 18px;
     transition: all 0.3s linear 0s;
 
     &:focus, 
     &:hover {
-      color: $--link-blue;
+      color: get(black-value);
       padding-bottom: 8px;
-      border-bottom: 2px solid $--dark-blue;
+      border-bottom: 2px solid get(hover-color);
     }
   }
 }
@@ -76,7 +76,7 @@
     display: block;
   }
   .navlinks {
-    background: $--blue;
+    background: get(cta-color);
     height: 100vh;
     left: -100%;
     line-height: 3.5rem;
