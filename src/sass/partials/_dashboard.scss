@@ -38,7 +38,7 @@
 
 /* ENQUIRIES & INBOX */
 .post, .inbox-msg {
-    background: white;
+    background: get(pure-white);
     margin-bottom: 1.5rem;
     padding: 3rem;
 }
