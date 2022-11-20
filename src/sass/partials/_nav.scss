@@ -8,7 +8,7 @@
 
 /* HAMBURGER MENU */
 .menu-btn {
-  color: white;
+  color: get(pure-white);
   display: none;
   float: right;
   font-size: 25px;
@@ -91,12 +91,12 @@
       margin: 0;
     }
     li a {
-      color: white;
+      color: get(pure-white);
       font-size: 20px;
 
       &:hover {
         border-bottom: none;
-        color: white;
+        color: get(pure-white);
       }
     }
   }
