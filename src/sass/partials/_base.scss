@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+$screens: (
+    mobile-width: 600px,
+    tablet-width: 991px,
+    laptop-width: 1084px,
+);
+
+@function getScreenSize($screen) {
+    @return map-get($screens, $screen);
+}
+
 /* DESIGN VARIABLES */
 $--box-color: #cee6e9;
 $--black: #011826;
