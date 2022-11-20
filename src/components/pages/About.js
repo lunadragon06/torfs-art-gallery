@@ -1,5 +1,5 @@
 import Heading from "../layout/typography/Heading";
-import portrait from "../../assets/portrait.jpg";
+import portrait from "../../assets/images/portrait.jpg";
 import signature from "../../assets/signature.png";
 import SubHeading from "../layout/SubHeading";
 
