@@ -6,7 +6,7 @@ import Loader from "../../../components/layout/Loader";
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-const url = BASE_URL + SLIDER;
+const header = BASE_URL + SLIDER;
 
 function Slider() {
     const [slide, setSlider] = useState([]);
@@ -14,15 +14,13 @@ function Slider() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        async function axiosData() {
+        async function getHeader() {
             try {
-                const response = await axios.get(url);
-
+                const response = await axios.get(header);
                 if (response.status === 200) {
                     setSlider(response.data);
-					console.log(response.data);
                 } else {
-                    setError("An error occurred");
+                    setError("An error occurred!");
                 }
             } catch (error) {
                 setError(error.toString());
@@ -31,9 +29,8 @@ function Slider() {
                 setLoading(false);
             }
         }
-        axiosData();
+        getHeader();
     }, []);
-
     if (loading) {
         return <Loader />;
     }
