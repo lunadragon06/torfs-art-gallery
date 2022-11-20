@@ -22,7 +22,6 @@ function Featured() {
 
                 if (response.status === 200) {
                     setFeatured(response.data);
-					console.log(response.data);
                 } else {
                     setError("An error occurred");
                 }
@@ -48,12 +47,18 @@ function Featured() {
         <section className="featured">
         <article className="subhead">
             <SubHeading subcontent="Featured paintings" />
-            <Link to="/gallery" className="view">View all <HiArrowRight /></Link>
+            <Link to="/gallery" 
+                  className="view">
+                    View all <HiArrowRight />
+            </Link>
         </article>
         <div className="galleri">
             {feature.filter(paint => paint.featured === true).sort( (a,b) => a.id > b.id ? 1 : -1 ).reverse().map(function (feature) {
-            return <article key={feature.id} id={feature.id} className="galleri_item" >
-                <Link to={`painting/${feature.id}`} style={{ display: 'block', padding: '0', }}>
+            return <article key={feature.id} 
+                            id={feature.id} 
+                            className="galleri_item" 
+                        >
+                        <Link to={`painting/${feature.id}`} style={{ display: 'block', padding: '0', }}>
                         <img src={feature.image.url}
                              alt={feature.title}
                              onContextMenu={(e) => {
@@ -62,7 +67,9 @@ function Featured() {
                         />
                         <div className="galleri_content">
 							<span className="galleri_detail">
-							    <h3 style={{ fontSize: '20px', }}>{feature.title}</h3>
+							    <h3 style={{ fontSize: '20px', }}>
+                                    {feature.title}
+                                </h3>
 								<p style={{ fontSize: '16px', textTransform: 'capitalize', }}>
 									{feature.category} | {feature.year}
 								</p>
