@@ -1,7 +1,7 @@
 import axios from 'axios';
+import { BASE_URL, SLIDER } from '../../../constants/data';
 import { Carousel } from 'react-bootstrap';
 import ErrorMessage from "../../../common/ErrorMessage";
-import { BASE_URL, SLIDER } from '../../../constants/data';
 import Loader from "../../../components/layout/Loader";
 import React from 'react';
 import { useState, useEffect } from 'react';
