@@ -1,0 +1,106 @@
+.about {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 9rem;
+    justify-content: center;
+    margin: 0rem 0rem 4rem;
+  }
+  
+  .bio {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+  
+  .portrait {
+    height: 275px;
+    object-fit: cover;
+    width: 200px;
+  }
+  
+  .signature {
+    margin-bottom: 2.5rem;
+    width: 125px;
+  }
+  
+  .what, .who {
+    margin-bottom: 4rem;
+  }
+  
+  article, i {
+    letter-spacing: $--default-letter-spacing;
+    line-height: $--default-line-height;
+  }
+  
+  article {
+    font-size: $--bread-text;
+  }
+  
+  i {
+    font-family: $--primary-font;
+    font-size: 18px;
+  }
+  
+  @media only screen and (max-width: $--tablet-screen) {
+    .about {
+      gap: 3rem;
+    }
+  } 
+  
+  @media only screen and (max-width: $--mobile-screen) {
+    .about {
+      align-items: unset;
+      flex-direction: column;
+      gap: 2rem;
+      margin: 0rem 0rem 4rem;
+    }
+    .intro:first-child {
+      order: 2;
+    }
+    .portrait {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  
+  /* HOME - ABOUT SECTION*/
+  .welcome {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .txt {
+    background: $--box-color;
+    color: $--green;
+    padding: 2rem 2rem 0rem;
+  }
+  
+  hr {
+    width: 75px;
+  }
+  
+  .sub h2 {
+    line-height: 1.25rem;
+  }
+  
+  @media only screen and (max-width: $--tablet-screen) {
+    hr {
+      margin-bottom: 2rem;
+    }
+    .welcome {
+      flex-direction: column-reverse;
+      margin: 2rem auto 2rem !important;
+    }
+    .img img {
+      width: 100% !important;
+    }
+    .sub h2 {
+      line-height: 30px;
+      margin-bottom: 0;
+    }
+    .txt {
+      padding-bottom: 4rem;
+    }
+  }
+  
