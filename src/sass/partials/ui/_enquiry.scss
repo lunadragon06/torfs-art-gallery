@@ -1,99 +1,132 @@
 .request {
   margin: 0 0 3rem;
+}
 
-  /* ENQUIRY FORM LAYOUT */
-  .enquiry {
-    margin-bottom: 3.25rem;
-    margin-top: 4.75rem;
+.enquiry {
+    background: white;
+    margin-bottom: 2.5rem;
+    margin-top: 4rem;
     padding: 0 2rem 0;
+}
 
-    // word count function  
-    .counter {
-      font-size: 14px;
-      margin-top: -.5rem;
-    }
+#enquirybtn {
+    padding: 1rem;
+}
 
-    &input, 
-    &textarea {
-      margin: 1rem 0 1.5rem;
-      padding: .5rem 1rem;
-    }
+.enquiry input, .enquiry textarea {
+    margin: 1rem 0 1.25rem;
+    padding: .5rem 1rem;
+}
 
-    // overwrite default textarea height 
-    .notetab {
-      height: 75px;
-    }
+.enquiry label {
+    font-size: 14px;
+}
+
+.notetab {
+    height: 75px;
+}
+
+// Optional field 
+.optxt {
+    font-weight: normal;
+}
+
+.counter {
+  font-size: 14px;
+  margin-top: -.5rem;
+}
+
+#openPopUp {
+    display: block;
+    text-align: center;
+    background: $--blue;
+    color: white !important;
+    padding: 15px 15px;
+    color: $--dark-blue;
+    margin: 2rem auto 0;
+    text-decoration: none;
+    transition: all .5s;
+    width: 250px;
   }
-}
 
-/* ENQUIRY FORM ~ Opened */
-.popup .popUpContainer {
-  background: #ffffff;
-  left: 50%;
-  margin-left: -250px;
-  max-width: 500px;
-  position: absolute; 
-  top: -110vh;
-  width: 100%;
-  z-index: 9999999; 
-}
+  a#openPopUp:hover {
+    color: white;
+    cursor: pointer;
+    background-color: $--black;
+    font-weight: normal;
+  }
 
-/* Open & close modal */
-  .popup {
-    background: rgba(1,24,38,0.75);
-    left: 0;
-    height: 100vh;
-    opacity: 0;
+  .popup{
     position: fixed;
     top: -100vh;
-    width: 100vw;
+    left: 0;
     z-index: 9999999;
+    background: rgba(0,0,0, 0.75);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+  }
+  .popup .popUpContainer{
+    width: 100%;
+    max-width: 500px;
+    position: absolute; 
+    left: 50%;
+    top: -110vh;
+    margin-left: -250px;
+    background-color: #ffffff;
+    z-index: 9999999; 
+  }
 
-    // The cancel/close button on popup dialog (enquiry modal) 
-    a.closePopUp {
-      background: #FB5B5B;
-      color: white;
-      display: block;
-      font-size: 2rem;
-      font-weight: bold;
-      position: absolute;
-      right: 0;
-      text-align: center;
-      text-decoration: none;
-      top: 0;
-      transition: .5s;
-      width: 50px;
+  /* The cancel button on popup dialog */
+  .popup a.closePopUp {
+    color: $--required;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0 .5rem;
+    font-weight: bold;
+    font-size: 2.5em;
+    text-decoration: none;
+  }
+  /* The cancel button on popup dialog */
+  .popup a:hover{
+    color: $--required;
+  }
+  /* When popup is targeted, by clicking on link with #popup in HTML */
+  .popup:target {
+    opacity: 1;
+    top: 0;
+  }
 
-      &:hover {
-        background: $--required;
-      }
-    }
-
-    // When popup is targeted, by clicking on link with #popup in HTML
-    &:target {
-      opacity: 1;
-      top: 0; // must be included as well to be able to open the modal on button click 
-    }
-
-    &:target .popUpContainer {
-      top: 0;
-    }
+  .popup .closePopUpOutSide {
+    cursor: unset;
+    position: absolute;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999991; 
+  }
+  .popup:target .popUpContainer{
+    top: 2.5%;
   }
   
-  @media  (max-width: getScreenSize(tablet-width)) {
-    .popup .popUpContainer {
-      left: 0;
-      height: 100%;
-      margin-left: 0;
+  @media  (max-width: $--tablet-screen) {
+    .popup .popUpContainer{
+      width: 80%;
       max-width: none;
-      width: 100%;
+      left: 10%;
+      margin-left: 0;
+    }
+    .popup:target .popUpContainer{
+      top: 50px;
     }
     .request {
       margin: 0 0 1rem;
     }
   }
 
-  @media  (max-width: getScreenSize(mobile-width)) {
+  @media  (max-width: $--mobile-screen) {
     #openPopUp {
       width: 100%;
     }
