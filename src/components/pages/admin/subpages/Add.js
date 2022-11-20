@@ -68,7 +68,7 @@ function Add() {
         try {
             const response = await http.post("/paintings", formData);
 			console.log(response);
-            history.push("/dashboard");
+            history.push("/gallery");
 
         } catch (error) {
             setServerError("Failed to add new painting! Please try again later.");
