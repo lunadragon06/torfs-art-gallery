@@ -1,4 +1,4 @@
-import { API } from "../../constants/api";
+import { API, BASE_URL } from "../../constants/data";
 import axios from "axios";
 import ErrorMessage from "../../common/ErrorMessage";
 import Heading from "../layout/typography/Heading";
@@ -9,7 +9,7 @@ import PaintingItem from "./PaintingItem";
 import Searchbar from "../layout/ui/Searchbar";
 import {useState, useEffect} from "react";
 
-const api = API;
+const api = BASE_URL + API;
 
 function PaintingList() {
     const [paintings, setPainting] = useState([]);
@@ -22,7 +22,6 @@ function PaintingList() {
                 const response = await axios.get(api);
                 if (response.status === 200) {
                     setPainting(response.data);
-					console.log(response.data);
                 } else {
                     setError("A server error occured! Failed to upload paintings.");
 					console.log(setError);
@@ -40,7 +39,6 @@ function PaintingList() {
     if (loading) {
 		return <Loader />;
 	}
-
 	if (error) {
 		return <>
 		            <ErrorMessage message={`Error: ${error}.`} />
@@ -48,8 +46,14 @@ function PaintingList() {
 	}
 
     return (
-		<div className="gal" style={{ margin: '0 auto', maxWidth: '1000px', }}>
-			<Link to="/" className="view" style={{ display: 'inline-block', marginBottom: '2.5rem' }}><HiArrowLeft /> Back to homepage</Link>
+		<div className="gal" 
+		     style={{ margin: '0 auto', maxWidth: '1000px', }}
+			>
+			<Link to="/" 
+			      className="view" 
+				  style={{ display: 'inline-block', marginBottom: '2.5rem' }}>
+					<HiArrowLeft /> Back to homepage
+			</Link>
 		    <Heading content="Gallery" />
 				<Searchbar />
 				<section className="galleri">
