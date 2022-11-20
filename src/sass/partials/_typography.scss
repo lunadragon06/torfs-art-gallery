@@ -1,10 +1,7 @@
-h1, 
-h2, 
-h3 {
+h1, h2, h3 {
     font-family: $--primary-font;
 }
 
-/* HEADING DECORATION ~ displayed on tablets, laptops and desktops */
 h1 {
     display: grid;
     font-size: 28px;
@@ -14,35 +11,55 @@ h1 {
     justify-content: center;
     margin-bottom: 1rem;
     text-align: center;
-
-    &:after, 
-    &:before {
-        border-bottom: $--black-border;
-        content: " ";
-        display: block;
-    }
 }
 
-/* SUBHEADING */
+h1:after, h1:before {
+    border-bottom: $--black-border;
+    content: " ";
+    display: block;
+}
+
 h2 {
     font-size: 21px;
 }
 
-@media (max-width: getScreenSize(tablet-width)) {
+.wordmark {
+    color: $--dark-blue;
+    font-family: $--primary-font;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.breadcrumb {
+    display: block;
+    margin: 0 0 1.5rem;
+}
+
+.breadcrumb a {
+    padding: 0rem 0rem;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.breadcrumb a:hover {
+    font-weight: bold;
+    color: $--link-blue;
+}
+
+@media (max-width: 768px) {
     h1 {
         grid-gap: 1rem;
         grid-template-rows: 1.25rem 0;
     }  
 }
 
-@media (max-width: getScreenSize(mobile-width)) {
+@media (max-width: $--mobile-screen) {
+    h1:after, h1:before {
+        border-bottom: none;
+    }
     h1 {
         display: block;
         text-align: left;
-
-        &:after, 
-        &:before {
-            border-bottom: none; // remove heading decor to improve user-experience 
-        }
     }
 }
