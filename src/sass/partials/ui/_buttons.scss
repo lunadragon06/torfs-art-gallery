@@ -1,0 +1,86 @@
+button {
+    background: $--blue;
+    border: 2px solid $--blue;
+    color: $--input;
+    cursor: pointer;
+    font-size: $--default-text;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    margin: 1rem 0 0;
+    padding: 1rem;
+    text-transform: uppercase;
+    transition: .5s;
+    width: 100%;
+  
+    &:focus, 
+    &:hover {
+        background: $--dark-blue;
+        border: $--blue-border;
+    }
+}
+
+/* ENQUIRY MODAL BUTTON */
+#openPopUp {
+    background: $--blue;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 15px 15px;
+    margin: 2rem auto 0;
+    text-decoration: none;
+    transition: all .5s;
+    width: 250px;
+  
+    &:hover {
+      background: $--black;
+      color: white;
+      cursor: pointer;
+      font-weight: normal;      
+    }
+}
+
+/* LOGIN - LOGOUT BUTTON */
+.logbtn {
+    background: $--blue;
+    color: white !important;
+    font-size: 14px !important;
+    letter-spacing: .2rem;
+    padding: .75rem 1.5rem;
+    text-transform: uppercase;
+  
+    &:focus, 
+    &:hover {
+      background: $--black;
+      border-bottom: 0 !important;
+      padding-bottom: .75rem !important;
+    }
+}
+  
+/* ADMIN ~ Delete button */
+.delbtn {
+    background: #FB5B5B;
+    border: 1px solid #FB5B5B;
+    font-size: 14px;
+    letter-spacing: 0.075rem;
+    margin-top: 2.5rem;
+    padding: .75rem 1.25rem;
+    width: auto;
+
+    &:focus, 
+    &:hover {
+        background: #FB2828;
+        border: 1px solid #FB2828;
+    }
+}
+
+@media (max-width: getScreenSize(laptop-width)) {
+    .logbtn {
+        background: $--black;
+    }
+}
+
+@media (max-width: getScreenSize(mobile-width)) {
+    .delbtn {
+        width: 100%;
+    }
+}
