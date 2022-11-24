@@ -82,4 +82,5 @@ MonLie16236@stud.noroff.no
 
 ## Acknowledgements
 All acknowledgements are written in the attached report which is located inside `report` folder in this project. 
-<br><br>
+<br>
+<br>
