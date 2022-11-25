@@ -1,70 +1,45 @@
 # 🎨 Torf's Gallery of Art
 <img src="mockups.jpg" alt="Torf's Gallery of Art website mockup.">
 
-A simple overview of the use/purpose of the project.
+Link to the live site can be found [here](https://torfs-gallery.netlify.app/).
 
-## Description
-
-Add a more detailed description of what your project entails and set out to do.
-
-You can add some bullet points if you'd like to:
-
-- List item 1
-- List item 2
-- List item 3
-
-## Built With
-
-You can list a the tech stack that you've used over here
-
+## 📜 Description
+More description about this project is coming soon ...
+## 🔧 Built With
+I used these following tech stack to build this project:
+- [NPM](https://www.npmjs.com/)
+- [React Bootstrap](https://https://react-bootstrap.github.io/)
 - [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com)
-
-## Getting Started
-
-### Installing
-
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
-
-1. Clone the repo:
-
+- [SASS](https://sass-lang.com/)
+- [Strapi](https://strapi.io/) 
+## 🚀 Getting Started
+### Installing ✨
+Please use node version <= 15 to make sure to be able to run this project successfully. I used [this](https://www.npackd.org/p/org.nodejs.NodeJS/14.18.1) node version when I was building and running the following project. 
+1. Clone the repo from the original account resource:
 ```bash
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
+git clone https://github.com/Noroff-FEU-Assignments/project-exam-2-lunadragon666.git
 ```
-
 2. Install the dependencies:
-
 ```
 npm install
 ```
-
-### Running
-
-Here is where you detail how to run the app. It typically involves the commands you'd need to run to start the project e.g.
-
-To run the app, run the following commands:
-
+### Running backend 👩‍💻
+To run this app, run the following command in the terminal:
 ```bash
 npm run start
 ```
-
-## Contributing
-
-Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
-
-## Contact
-
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
-
-[My Twitter page](www.twitter.com)
-
-[My LinkedIn page](www.linkedin.com)
-
-## License
-
-You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
-
-## Acknowledgments
-
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
+And that should be just it!
+## 🔗 Contributing
+To contribute to this project, please create a new branch that can be reviewed and merged.
+## 🤙 Contact info
+[LinkedIn](https://www.linkedin.com/in/monika-lie/)
+<br>
+[Student email](mailto:monlie16236@stud.noroff.no) 
+## 🏅 License
+This project is forked and taken from my other GitHub [user account](https://www.github.com/LunaDragon666), since I will probably eventually switch to use only this account instead because I'll share my new account with future employers. 
+<br>
+## 🗨️ Acknowledgments
+I would like to thank [MJ Phillip](https://www.github.com/MJPhillip) for giving me permission to use this project in this exam and [Connor O'Brien](https://www.github.com/cnnrbrn) for helping me the time when I got stuck with login authentication issues. Special thanks also goes to [Tiffany](https://www.github.com/utvaer) for helping me when I had problems with POST requests and [Priscila](https://www.github.com/pkderlam87). Nor will I forget to thank both of them the times when I needed guidance on how to deploy Strapi to Heroku to make the database go online, in addition to all the support and feedback you have given me so far. 
+<br><br>
+I also want to thank the client so much for giving me this excellent timing opportunity, and for having the trust and faith in me 🙏
 <br><br>
