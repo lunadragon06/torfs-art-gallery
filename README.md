@@ -1,5 +1,5 @@
-# 🎨 Torf's Gallery of Art
-<img src="mockups.jpg" alt="Torf's Gallery of Art website mockup.">
+# 🎨 Project Exam 2: Torf's Gallery of Art
+<img src="/src/assets/home.png" alt="Torf's Gallery of Art homepage screenshot.">
 
 Link to the live site can be found [here](https://torfs-gallery.netlify.app/).
 
