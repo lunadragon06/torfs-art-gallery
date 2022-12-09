@@ -1,7 +1,7 @@
 # 🎨 Project Exam 2: Torf's Gallery of Art
 <img src="/src/assets/home.png" alt="Torf's Gallery of Art homepage screenshot.">
 
-Link to the live site can be found [here](https://torfs-gallery.netlify.app/).
+Link to the 1st launch live site can be found [here](https://torfs-gallery.netlify.app/).
 
 ## 📜 Description
 <b>Torf's Gallery of Art</b> is an online gallery that showcases a collection of artwork created by the (hobby) artist Torfinn Lie that he has been working on since he retired from his last job. Oil painting is a major technique he uses in most of his paintings, in addition to acrylic painting used occasionally. Torfinn is inspired by his homeland's maritime- and nature landscapes, which is reflected in many of his art. This website will serve as his personal art portfolio where he hopes he can come into contact with other art enthusiasts.
