@@ -9,6 +9,7 @@ import { useHistory } from "react-router-dom";
 import { useState, useContext } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 
+// this field is now corrected
 const url = BASE_URL + TOKEN_PATH;
 
 const schema = yup.object().shape({
