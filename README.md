@@ -63,6 +63,6 @@ To contribute to this project, please create a new branch that can be reviewed a
 ## 🗨️ Acknowledgments
 I would like to thank [MJ Phillip](https://www.github.com/MJPhillip) for giving me permission to use this project in this exam and [Connor O'Brien](https://www.github.com/cnnrbrn) for helping me the time when I got stuck with login authentication issues. Special thanks also goes to [Tiffany](https://www.github.com/utvaer) for helping me when I had problems with POST requests and [Priscila](https://www.github.com/pkderlam87) to give me easy follow-up guidance on how to deploy this react project to Netlify.
 <br><br>
-I also want to thank the client so much for giving me this excellent timing opportunity, and for having the trust and faith in me 🙏
+I also want to thank client so much for giving me this excellent opportunity, and for having the trust and faith in me 🙏
 <br>
 <br>
