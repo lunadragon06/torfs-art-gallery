@@ -1,7 +1,7 @@
 import * as yup from "yup";
 import axios from "axios";
 import AuthContext from "../../../context/AuthContext";
-//import { BASE_URL, TOKEN_PATH } from "../../../constants/data";
+import { BASE_URL, TOKEN_PATH } from "../../../constants/data";
 import FormError from "../../../common/form/FormError";
 import Heading from "../../layout/typography/Heading";
 import { useForm } from "react-hook-form";
@@ -9,7 +9,7 @@ import { useHistory } from "react-router-dom";
 import { useState, useContext } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 
-const url = "https://torfs-art-gallery.herokuapp.com/auth/local";
+const url = BASE_URL + TOKEN_PATH;
 
 const schema = yup.object().shape({
 	identifier: yup.string().required("Please enter your username or email."),
@@ -26,7 +26,6 @@ export default function LoginForm() {
         resolver: yupResolver(schema),
     });
 
-	// eslint-disable-next-line
 	const [auth, setAuth] = useContext(AuthContext);
 	console.log(auth);
 
