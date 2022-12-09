@@ -34,6 +34,10 @@ I used these following tech stack to build this project:
 - [React.js](https://reactjs.org/)
 - [SASS](https://sass-lang.com/)
 - [Strapi](https://strapi.io/) 
+## ✎ Update information 
+Although this project was graded in advance before submission of Portfolio assignment, I have only been able to make small adjustments based on feedback I received on this exam where I have so far managed to: 
++ Move the common folder into the components folder.
++ Edit the Login.js file so it's not displayed as inline API link (an omission that occurred before submission).
 ## 🏅 License
 This project is forked and taken from my other GitHub [user account](https://www.github.com/LunaDragon666), since I will probably eventually switch to use only this account instead because I'll share my new account with future employers. 
 <br>
