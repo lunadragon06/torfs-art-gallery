@@ -14,7 +14,7 @@ This site uses Strapi API trough Heroku as a content manager system. You can do 
 + Abstract
 + Maritime
 + Nature
-- [x] Send messages via contact form (contact page) and requests through enquiry form (from homepage) directly to the artist
+- [x] Send messages via contact form (contact page) and requests through enquiry form (from homepage) directly to artist
 ### While admin can ⚙️
 - [x] View contact- and enquiry messages
 - [x] Delete messages
@@ -38,6 +38,7 @@ I used these following tech stack to build this project:
 Although this project was graded in advance before submission of Portfolio assignment, I have only been able to make small adjustments based on feedback I received on this exam where I have so far managed to: 
 + Move the common folder into the components folder.
 + Edit the Login.js file so it's not displayed as inline API link (an omission that occurred before submission).
++ All changes and adjustments to project will be located in ``master`` branch from this repo. 
 ## 🏅 License
 This project is forked and taken from my other GitHub [user account](https://www.github.com/LunaDragon666), since I will probably eventually switch to use only this account instead because I'll share my new account with future employers. 
 <br>
@@ -59,14 +60,14 @@ npm run start
 ```
 And that should be just it!
 ## 🔗 Contributing
-To contribute to this project, please create a new branch that can be reviewed and merged.
-## 🤙 Contact me
-[LinkedIn](https://www.linkedin.com/in/monika-lie/)
-<br>
-[Student email](mailto:monlie16236@stud.noroff.no) 
+To contribute to this project, please create a new branch that can be reviewed and merged. 
 ## 🗨️ Acknowledgments
 I would like to thank [MJ Phillip](https://www.github.com/MJPhillip) for giving me permission to use this project in this exam and [Connor O'Brien](https://www.github.com/cnnrbrn) for helping me the time when I got stuck with login authentication issues. Special thanks also goes to [Tiffany](https://www.github.com/utvaer) for helping me when I had problems with POST requests and [Priscila](https://www.github.com/pkderlam87) to give me easy follow-up guidance on how to deploy this react project to Netlify.
 <br><br>
 I also want to thank client so much for giving me this excellent opportunity, and for having trust and faith in me 🙏
+## 🤙 Contact me
+[LinkedIn](https://www.linkedin.com/in/monika-lie/)
+<br>
+[Student email](mailto:monlie16236@stud.noroff.no)
 <br>
 <br>
