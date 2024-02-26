@@ -1,14 +1,13 @@
-# Project Exam 2 - Torf's Gallery of Art
+# Project Exam - Torf's Gallery of Art
 <img src="/src/assets/home.png" alt="Alt text">
-Part 2 of 2 
 
 <!-- Intro -->
 ## Project brief
-**Torf's Gallery of Art** is an online gallery that showcases a collection of artwork created by the (hobby) artist Torfinn Lie that he has been working on since he retired from his last job. Oil painting is a major technique he uses in most of his paintings, in addition to acrylic painting used occasionally. Torfinn is inspired by his homeland's maritime- and nature landscapes, which is reflected in many of his art. This website will serve as his personal art portfolio where he hopes he can come into contact with other art enthusiasts.
+**Torf's Gallery of Art** is an online gallery that showcases a collection of artwork created by the (hobby) artist Torfinn Lie that he has been working on since he retired from his last job. Oil painting is a major technique he uses in most of his paintings, in addition to acrylic painting used occasionally. Torfinn is inspired by his homeland's maritime (also influenced as a former sailor from his former past) - and Norwegian nature landscapes, which is reflected in many of his artwork. This website will serve as his personal art portfolio in memory of him 🥀
 <br><br>
 To view live website, [click here](https://torfs-gallery.netlify.app/).
 <br><br>
-Visitors can currently search for paintings based on existing titles and exsisting categories, and to access specific details about each painting being published either from `home` and/or `gallery` page. Users can also send messages directly to the artist through contact form and send him a request/assignment from enquiry form.  
+Visitors can currently search for paintings based on existing titles and exsisting categories, and to access specific details about each painting being published either from `home` and/or `gallery` page. Users can also send messages directly to the artist's admin through contact form and send a request from enquiry form.  
 <br>
 While website owner and admin users have the ability to add new paintings, which will be published both on the physical website and will be displayed in the API json.
 Admins can also access list of enquiries and contacts, in addition to delete enquiry requests and contact messages. 
@@ -27,12 +26,14 @@ This is a simple and minimalistic website built using React with JavaScript and 
 <br>
 
 <!-- Login information -->
+<!--
 ### Login info 
 ```bash
 username: GuestAdmin or guest@admin.com 
 password: Password12340 
 ```
 <br>
+-->
 
 <!-- Install react app -->
 ## Run & install this project in 1-2-3
@@ -68,18 +69,9 @@ To contribute to this project, please create a new branch that can be reviewed a
 <br><br>
 
 ## Contact
-Please do not hesitate to reach out to me directly for any questions related to this project or problems while running this app. I can be reached at the following email address or on Discord, which I check 1-2 times a day every day:
-<br><br>
-<b>Discord</b>
-```bash
-Monika Lie - Jan 19 PT#8517
-```
-<b>Email</b>
-```bash
-MonLie16236@stud.noroff.no
-```
+Please do not hesitate to reach out to me directly for any questions related to this project or problems while running this app.
 <br>
 
 ## Acknowledgements
-All acknowledgements are written in the attached report which is located inside `report` folder in this project. 
+All acknowledgements are written in the attached report which is located inside `report` folder in this project. All constructive feedback will be well appreciated, and thank you in advance! 
 <br><br>
