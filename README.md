@@ -3,7 +3,7 @@
 
 <!-- Intro -->
 ## Project brief
-**Torf's Gallery of Art** is an online gallery that showcases a collection of artwork created by the (hobby) artist Torfinn Lie that he has been working on since he retired from his last job. Oil painting is a major technique he uses in most of his paintings, in addition to acrylic painting used occasionally. Torfinn is inspired by his homeland's maritime (also influenced as a former sailor from his former past) - and Norwegian nature landscapes, which is reflected in many of his artwork. This website will serve as his personal art portfolio in memory of him 🥀
+**Torf's Gallery of Art** is an online gallery that showcases a collection of artwork created by the (hobby) artist Torfinn Lie that he has been working on since he retired from his last job. Oil painting is a major technique he uses in most of his paintings, in addition to acrylic painting used occasionally. Torfinn is inspired by his homeland's maritime (also influenced as a former sailor from his former past) - and Norwegian nature landscapes, which is reflected in many of his artwork. This website will serve as his personal art portfolio in memory of him 🥀 
 <br><br>
 To view live website, [click here](https://torfs-gallery.netlify.app/).
 <br><br>
