@@ -1,73 +1,77 @@
-# 🎨 Project Exam 2: Torf's Gallery of Art
-<img src="/src/assets/home.png" alt="Torf's Gallery of Art homepage screenshot.">
+# Project Exam - Torf's Gallery of Art
+<img src="/src/assets/home.png" alt="Alt text">
 
-Link to the 1st launch live site can be found [here](https://torfs-gallery.netlify.app/).
-
-## 📜 Description
-<b>Torf's Gallery of Art</b> is an online gallery that showcases a collection of artwork created by the (hobby) artist Torfinn Lie that he has been working on since he retired from his last job. Oil painting is a major technique he uses in most of his paintings, in addition to acrylic painting used occasionally. Torfinn is inspired by his homeland's maritime- and nature landscapes, which is reflected in many of his art. This website will serve as his personal art portfolio where he hopes he can come into contact with other art enthusiasts.
+<!-- Intro -->
+## Project brief
+**Torf's Gallery of Art** is an online gallery that showcases a collection of artwork created by the (hobby) artist Torfinn Lie that he has been working on since he retired from his last job. Oil painting is a major technique he uses in most of his paintings, in addition to acrylic painting used occasionally. Torfinn is inspired by his homeland's maritime (also influenced as a former sailor from his former past) - and Norwegian nature landscapes, which is reflected in many of his artwork. This website will serve as his personal art portfolio in memory of him 🥀
 <br><br>
-This site uses Strapi API trough Heroku as a content manager system. You can do the following when you visit site (depending on your role): 
-### Users can 👤
-- [x] Find paintings from both home- and gallery page 
-- [x] View a bit of more details about each painting users click on
-- [x] Search for paintings based on titles and existing categories:
-+ Abstract
-+ Maritime
-+ Nature
-- [x] Send messages via contact form (contact page) and requests through enquiry form (from homepage) directly to artist
-### While admin can ⚙️
-- [x] View contact- and enquiry messages
-- [x] Delete messages
-- [x] Add new paintings (products)
-- [ ] New functionalities for both users and admin will be added gradually
-#### Login info 🔐
-```bash
-username: GuestAdmin
-email: guest@admin.com
-password: Password12340
-```
-<b>Note!</b> The login info that is provided above can be used when you log in from the live website. You can either test login with either the following username or email adress. 
-## 🔧 Built With
-I used these following tech stack to build this project:
-- [NPM](https://www.npmjs.com/)
-- [React Bootstrap](https://https://react-bootstrap.github.io/)
-- [React.js](https://reactjs.org/)
-- [SASS](https://sass-lang.com/)
-- [Strapi](https://strapi.io/) 
-## ✎ Update information 
-Although this project was graded in advance before submission of Portfolio assignment, I have only been able to make small adjustments based on feedback I received on this exam where I have so far managed to: 
-+ Move the common folder into the components folder.
-+ Edit the Login.js file so it's not displayed as inline API link (an omission that occurred before submission).
-+ All changes and adjustments to project will be located in ``master`` branch from this repo. 
-## 🏅 License
-This project is forked and taken from my other GitHub [user account](https://www.github.com/LunaDragon666), since I will probably eventually switch to use only this account instead because I'll share my new account with future employers. 
+To view live website, [click here](https://torfs-gallery.netlify.app/).
+<br><br>
+Visitors can currently search for paintings based on existing titles and exsisting categories, and to access specific details about each painting being published either from `home` and/or `gallery` page. Users can also send messages directly to the artist's admin through contact form and send a request from enquiry form.  
 <br>
-## 🚀 Getting Started
-### Installing ✨
-Please use node version <= 15 to make sure to be able to run this project successfully. I used [this](https://www.npackd.org/p/org.nodejs.NodeJS/14.18.1) node version when I was building and running the following project. 
-1. Clone the repo from the original account resource:
+While website owner and admin users have the ability to add new paintings, which will be published both on the physical website and will be displayed in the API json.
+Admins can also access list of enquiries and contacts, in addition to delete enquiry requests and contact messages. 
+<br><br>
+
+<!-- Project detail -->
+## Project details
+This is a simple and minimalistic website built using React with JavaScript and SASS. The backend for development of Torf's Gallery is currently running on the remote server with Strapi, Heroku and Coludinary. 
+<br><br>
+**This project is build with:**
+* NPM 
+* React Bootstrap
+* React.js
+* SASS 
+* Strapi v3  
+<br>
+
+<!-- Login information -->
+<!--
+### Login info 
+```bash
+username: GuestAdmin or guest@admin.com 
+password: Password12340 
+```
+<br>
+-->
+
+<!-- Install react app -->
+## Run & install this project in 1-2-3
+If you choose to open the project directly through GitHub to VSC, you can skip point `1`, and `1.1.` from installation instructions.
+<br><br>
+### Installment
+Please use node version <= 15
+<br><br>
+**1.** Clone the repo:
 ```bash
 git clone https://github.com/Noroff-FEU-Assignments/project-exam-2-lunadragon666.git
 ```
-2. Install the dependencies:
+**1.1.** Open the directory of the project like this:
+```bash
+cd project-exam-2-lunadragon666
 ```
+**2.** Install the dependencies to be able to successfully run this project later on:
+```bash
 npm install
 ```
-### Running backend 👩‍💻
-To run this app, run the following command in the terminal:
+<!-- Run react app -->
+### Run the project
+**3.** To run this app, type in the following command in terminal:
 ```bash
 npm run start
 ```
-And that should be just it!
-## 🔗 Contributing
-To contribute to this project, please create a new branch that can be reviewed and merged. 
-## 🗨️ Acknowledgments
-I would like to thank [MJ Phillip](https://www.github.com/MJPhillip) for giving me permission to use this project in this exam and [Connor O'Brien](https://www.github.com/cnnrbrn) for helping me the time when I got stuck with login authentication issues. Special thanks also goes to [Tiffany](https://www.github.com/utvaer) for helping me when I had problems with POST requests and [Priscila](https://www.github.com/pkderlam87) to give me easy follow-up guidance on how to deploy this react project to Netlify.
+And that's it!
 <br><br>
-I also want to thank client so much for giving me this excellent opportunity, and for having trust and faith in me 🙏
-## 🤙 Contact me
-[LinkedIn](https://www.linkedin.com/in/monika-lie/)
+
+<!-- Contact details -->
+## Contribution
+To contribute to this project, please create a new branch that can be reviewed and merged.
+<br><br>
+
+## Contact
+Please do not hesitate to reach out to me directly for any questions related to this project or problems while running this app.
 <br>
-[Student email](mailto:monlie16236@stud.noroff.no)
-<br>
-<br>
+
+## Acknowledgements
+All acknowledgements are written in the attached report which is located inside `report` folder in this project. All constructive feedback will be well appreciated, and thank you in advance! 
+<br><br>
