@@ -1,6 +1,6 @@
 import { API, BASE_URL } from "../../../constants/data"
 import axios from 'axios';
-import ErrorMessage from "../../../common/ErrorMessage";
+import ErrorMessage from "../../common/ErrorMessage";
 import { HiArrowRight } from 'react-icons/hi'; 
 import { Link } from "react-router-dom";
 import Loader from "../../layout/Loader";

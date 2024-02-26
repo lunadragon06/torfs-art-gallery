@@ -1,10 +1,10 @@
 import * as yup from "yup";
 import axios from "axios";
 import { BASE_URL } from "../../../constants/data";
-import FormError from "../../../common/form/FormError";
+import FormError from "../../common/form/FormError";
 import { Link } from "react-router-dom";
 import React from "react";
-import SentForm from "../../../common/form/SentForm";
+import SentForm from "../../common/form/SentForm";
 import { RiCloseFill } from 'react-icons/ri';
 import { useForm } from "react-hook-form";
 import { useState } from "react";
