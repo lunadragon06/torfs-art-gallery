@@ -74,4 +74,4 @@ Please do not hesitate to reach out to me directly for any questions related to 
 
 ## Acknowledgements
 All acknowledgements are written in the attached report which is located inside `report` folder in this project. All constructive feedback will be well appreciated, and thank you in advance! 
-<br><br>
+<br><br> 
