@@ -1,4 +1,4 @@
-# Project Exam - Torf's Gallery of Art
+# 🎨 Torf's Gallery of Art
 <img src="/src/assets/home.png" alt="Alt text">
 
 <!-- Intro -->
