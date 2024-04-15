@@ -68,10 +68,6 @@ And that's it!
 To contribute to this project, please create a new branch that can be reviewed and merged.
 <br><br>
 
-## Contact
-Please do not hesitate to reach out to me directly for any questions related to this project or problems while running this app.
-<br>
-
 ## Acknowledgements
 All acknowledgements are written in the attached report which is located inside `report` folder in this project. All constructive feedback will be well appreciated, and thank you in advance! 
-<br><br> 
+<br><br><br>
