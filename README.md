@@ -22,9 +22,11 @@ This is a simple and minimalistic website built using React with JavaScript and 
 * React Bootstrap
 * React.js
 * SASS 
-* Strapi v3  
-<br>
-
+* Strapi v3
+  <br><br>
+  
+For more detailed about the process behind this project, read the reports inside the folder `reports`. Styleguide belonging to this website is located inside `reports/2022-09-18_project-exam2_Monika-Lie_wf.pdf`. Both styleguide and prototype were made in Figma ✨     
+  <br><br>
 <!-- Login information -->
 <!--
 ### Login info 
@@ -34,7 +36,6 @@ password: Password12340
 ```
 <br>
 -->
-
 <!-- Install react app -->
 ## Run & install this project in 1-2-3
 If you choose to open the project directly through GitHub to VSC, you can skip point `1`, and `1.1.` from installation instructions.
@@ -69,5 +70,5 @@ To contribute to this project, please create a new branch that can be reviewed a
 <br><br>
 
 ## Acknowledgements
-All acknowledgements are written in the attached report which is located inside `report` folder in this project. All constructive feedback will be well appreciated, and thank you in advance! 
+All acknowledgements are written in the attached report which is located inside `reports/2022-11-20_Project-Exam-2_Monika-Lie_report.pdf` folder in this project. All constructive feedback will be well appreciated, and thank you in advance! 
 <br><br><br>
